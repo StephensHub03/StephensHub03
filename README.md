@@ -1,14 +1,14 @@
 <h1>JEYA STEPHEN</h1>
 
 <h2 align="left">Full-stack code chef — cooking up MERN 💻</h2>
+<p align="center">
+  <img height="130" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmD6FTKC-9IWR7VE4pQSeWyaRKawd7Avj-kQ&s" />
+</p>
 
 <p align="left"> Reach Out Me 📲↴ </p>
 
 [Portfolio](https://stephenshub03.github.io/personal_website/) | [LinkedIn](https://www.linkedin.com/in/stephen-profile/) | [GitHub](https://github.com/StephensHub03)
 
-<p align="center">
-  <img height="130" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmD6FTKC-9IWR7VE4pQSeWyaRKawd7Avj-kQ&s" />
-</p>
 
 <h2>🧑‍💻 About Me</h2>
 
