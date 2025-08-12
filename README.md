@@ -1,7 +1,6 @@
 <h1>JEYA STEPHEN</h1>
 
 <h3 align="left">Full-stack code chef — cooking up MERN 🍳💻🇮🇳</h3>
-###
 
 <p align="center">
   <img height="142" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmD6FTKC-9IWR7VE4pQSeWyaRKawd7Avj-kQ&s" />
