@@ -12,11 +12,11 @@
 
 <h2 align="center">🧑‍💻 About Me</h2>
 
-<p align="center">📚 Prefinal Year B.Tech student in <b>Artificial Intelligence & Data Science</b></p>
-<p align="center">❤️ Love building responsive <b>MERN Stack</b> applications with clean UI & scalable backends</p>
-<p align="center">🤖 Exploring <b>AI integration</b> into modern web apps</p>
-<p align="center">☕ Powered by <b>coffee & curiosity</b></p>
-<p align="center">💬 Open to <b>collaboration</b> on exciting full-stack and AI projects</p>
+<p>📚 Prefinal Year B.Tech student in <b>Artificial Intelligence & Data Science</b></p>
+<p>📈 Love building responsive <b>MERN Stack</b> applications with clean UI & scalable backends</p>
+<p>🤖 Exploring <b>AI integration</b> into modern web apps</p>
+<p>🔍 Always learning new technologies and improving problem-solving skills  
+<p>💬 Open to <b>collaboration</b> on exciting full-stack and AI projects</p>
 
 
 ###
