@@ -2,17 +2,14 @@
 
 ###
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=StephensHub03&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false" height="130" alt="stats graph"  />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=StephensHub03&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="150" alt="languages graph"  />
-</div>
+
 
 ###
 
-<img align="right" height="142" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmD6FTKC-9IWR7VE4pQSeWyaRKawd7Avj-kQ&s"  />
+<img align="centre" height="142" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmD6FTKC-9IWR7VE4pQSeWyaRKawd7Avj-kQ&s"  />
 
 ###
-
+<h1>Skills</h1>
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" height="30" alt="html5 logo"  />
   <img width="12" />
@@ -54,36 +51,6 @@
 
 <br clear="both">
 
-<img src="https://raw.githubusercontent.com/StephensHub03/StephensHub03/output/snake.svg" alt="Snake animation" />
 
-###
-
-<p align="left">Hello World!!</p>
-
-###
-
-<img src="https://raw.githubusercontent.com/StephensHub03/StephensHub03/output/snake.svg" alt="Snake animation" />
-
-###
-
-<div align="center" style="width: 100%">
-  <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@undefined/0">
-    <img style="width: 100%" src="https://github-readme-medium-recent-article.vercel.app/medium/@undefined/0" alt="Medium post 1"  />
-  </a>
-  <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@undefined/1">
-    <img style="width: 100%" src="https://github-readme-medium-recent-article.vercel.app/medium/@undefined/1" alt="Medium post 2"  />
-  </a>
-  <a target="_blank" href="https://github-readme-medium-recent-article.vercel.app/medium/@undefined/2">
-    <img style="width: 100%" src="https://github-readme-medium-recent-article.vercel.app/medium/@undefined/2" alt="Medium post 3"  />
-  </a>
-</div>
-
-###
-
-<img src="https://raw.githubusercontent.com/StephensHub03/StephensHub03/output/snake.svg" alt="Snake animation" />
-
-###
-
-<img src="https://raw.githubusercontent.com/StephensHub03/StephensHub03/output/snake.svg" alt="Snake animation" />
 
 ###
