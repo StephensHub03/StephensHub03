@@ -5,7 +5,7 @@
   <img height="130" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmD6FTKC-9IWR7VE4pQSeWyaRKawd7Avj-kQ&s" />
 </p>
 
-<p align="left"> Reach Out Me 📲↴ </p>
+<h4 align="left"> Reach Out Me 📲↴ </h4>
 
 [Portfolio](https://stephenshub03.github.io/personal_website/) | [LinkedIn](https://www.linkedin.com/in/stephen-profile/) | [GitHub](https://github.com/StephensHub03)
 
