@@ -1,7 +1,7 @@
 <h1>JEYA STEPHEN</h1>
-###
+
 <h2 align="left">Full-stack code chef — cooking up MERN 🍳💻🇮🇳</h2>
-###
+
 <p align="left"> Reach Out 📲 </p>
 
 [Portfolio](https://stephenshub03.github.io/personal_website/) | [LinkedIn](https://www.linkedin.com/in/stephen-profile/) | [GitHub](https://github.com/StephensHub03)
