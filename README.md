@@ -10,7 +10,7 @@
   <img height="130" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmD6FTKC-9IWR7VE4pQSeWyaRKawd7Avj-kQ&s" />
 </p>
 
-<h2 align="center">🧑‍💻 About Me</h2>
+<h2>🧑‍💻 About Me</h2>
 
 <p>📚 Prefinal Year B.Tech student in <b>Artificial Intelligence & Data Science</b></p>
 <p>📈 Love building responsive <b>MERN Stack</b> applications with clean UI & scalable backends</p>
