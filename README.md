@@ -9,7 +9,7 @@
 <img align="right" height="142" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmD6FTKC-9IWR7VE4pQSeWyaRKawd7Avj-kQ&s"  />
 
 ###
-
+<h1>Skills</h1>
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" height="30" alt="html5 logo"  />
   <img width="12" />
