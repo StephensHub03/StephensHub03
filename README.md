@@ -54,10 +54,6 @@
 </div>
 
 ###
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=StephensHub03&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="150" alt="languages graph"  />
-</div>
 <h2>🎓 Education</h2>
 <p><b>Ramco Institute of Technology</b> | <i>2023 - Present</i><br>
 B.Tech in <b>Artificial Intelligence & Data Science</b></p>
