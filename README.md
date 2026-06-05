@@ -12,7 +12,7 @@
 
 <h2>🧑‍💻 About Me</h2>
 
-<p>📚 Prefinal Year B.Tech student in <b>Artificial Intelligence & Data Science</b></p>
+<p>📚 final Year B.Tech student in <b>Artificial Intelligence & Data Science</b></p>
 <p>📈 Love building responsive <b>MERN Stack</b> applications with clean UI & scalable backends</p>
 <p>🤖 Exploring <b>AI integration</b> into modern web apps</p>
 <p>🔍 Always learning new technologies and improving problem-solving skills  
