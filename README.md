@@ -1,36 +1,44 @@
-<!-- ================= ANIMATED HEADER ================= -->
+<!-- ================= ANIMATED RAINBOW HEADER ================= -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:6a11cb,100:2575fc&height=200&section=header&text=Hi%20There!%20I'm%20Jeya%20Stephen&fontSize=38&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Full-Stack%20Code%20Chef%20—%20Cooking%20up%20MERN%20💻&descAlignY=55&descSize=18" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=Hey,%20I'm%20Jeya%20Stephen%20👋&fontSize=36&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=Full-Stack%20Code%20Chef%20—%20Cooking%20up%20MERN%20🍳💻&descAlignY=55&descSize=18" width="100%" />
 </p>
 
-<!-- ================= TYPING ANIMATION ================= -->
+<!-- ================= TYPING ANIMATION (multi-line, colorful) ================= -->
 <p align="center">
-  <a href="https://github.com/DevJeyaStephen">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=2575FC&center=true&vCenter=true&width=600&lines=Final+Year+AI+%26+DS+Student;MERN+Stack+Developer;Exploring+AI+Integration+in+Web+Apps;Always+Learning+%F0%9F%9A%80" alt="Typing SVG" />
-  </a>
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=26&duration=2500&pause=800&color=F72585,7209B7,3A0CA3,4361EE,4CC9F0&center=true&vCenter=true&multiline=true&width=700&height=100&lines=Final+Year+AI+%26+DS+Student+%F0%9F%8E%93;MERN+Stack+Developer+%E2%9A%9B%EF%B8%8F;Exploring+AI+x+Web+Integration+%F0%9F%A4%96;Always+Shipping+Something+New+%F0%9F%9A%80" alt="Typing SVG" />
 </p>
 
-<!-- ================= SOCIAL / CONTACT BADGES ================= -->
+<!-- ================= WAVING GIF ================= -->
+<p align="center">
+  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="160">
+</p>
+
+<!-- ================= BADGES ================= -->
 <p align="center">
   <a href="https://digital-empire-pearl.vercel.app/">
-    <img src="https://img.shields.io/badge/Portfolio-2575FC?style=for-the-badge&logo=vercel&logoColor=white" />
+    <img src="https://img.shields.io/badge/Portfolio-FF5733?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
   <a href="https://www.linkedin.com/in/stephen-profile/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
   <a href="mailto:connect.stephen01@gmail.com">
-    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=DevJeyaStephen&label=Profile%20Views&color=2575fc&style=flat" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=StephensHub03&label=Profile%20Views&color=blueviolet&style=for-the-badge" />
+  <img src="https://img.shields.io/github/followers/StephensHub03?label=Followers&style=for-the-badge&color=orange" />
+  <img src="https://img.shields.io/badge/Status-Open%20to%20Collab-brightgreen?style=for-the-badge" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" width="100%" />
 </p>
 
 ---
 
-<!-- ================= ABOUT ME ================= -->
-### 🧑‍💻 About Me
+## 🧑‍💻 About Me
 
 - 📚 Final year **B.Tech** student in **Artificial Intelligence & Data Science**
 - 📈 Love building responsive **MERN Stack** applications with clean UI & scalable backends
@@ -38,86 +46,97 @@
 - 🔍 Always learning new technologies and improving problem-solving skills
 - 💬 Open to **collaboration** on exciting full-stack and AI projects
 
-<p align="center">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmD6FTKC-9IWR7VE4pQSeWyaRKawd7Avj-kQ&s" height="130" />
-</p>
+<details>
+<summary>⚡ Fun facts about me (click to expand)</summary>
+<br>
+
+- 🌱 Currently leveling up my **AI + Full-Stack** skills
+- 🛠️ I debug with `console.log` before I debug with anything fancy — no shame
+- 🎯 2026 goal: ship a full production-grade AI-powered SaaS
+- ☕ Powered by coffee and Stack Overflow tabs
+
+</details>
+
+<details>
+<summary>🧭 What I'm currently working on (click to expand)</summary>
+<br>
+
+- 🔨 Building full-stack apps with the MERN stack
+- 🧠 Integrating LLMs into web applications
+- 📖 Sharpening DSA & problem-solving skills
+
+</details>
 
 ---
 
-<!-- ================= SKILLS ================= -->
-### 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 <div align="center">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" height="55" alt="html5" title="HTML5" />
-  <img width="10" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" height="55" alt="css3" title="CSS3" />
-  <img width="10" />
-  <img src="https://skillicons.dev/icons?i=js" height="55" alt="javascript" title="JavaScript" />
-  <img width="10" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" height="55" alt="react" title="React" />
-  <img width="10" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain-wordmark.svg" height="55" alt="nodejs" title="Node.js" />
-  <img width="10" />
-  <img src="https://skillicons.dev/icons?i=express" height="55" alt="express" title="Express" />
-  <img width="10" />
-  <img src="https://skillicons.dev/icons?i=mongodb" height="55" alt="mongodb" title="MongoDB" />
-  <img width="10" />
-  <img src="https://skillicons.dev/icons?i=firebase" height="55" alt="firebase" title="Firebase" />
-  <img width="10" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg" height="55" alt="tailwind" title="Tailwind CSS" />
-  <img width="10" />
-  <img src="https://skillicons.dev/icons?i=vite" height="55" alt="vite" title="Vite" />
-  <img width="10" />
-  <img src="https://skillicons.dev/icons?i=vscode" height="55" alt="vscode" title="VS Code" />
-  <img width="10" />
-  <img src="https://skillicons.dev/icons?i=vercel" height="55" alt="vercel" title="Vercel" />
-  <img width="10" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" height="55" alt="python" title="Python" />
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![VSCode](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
 </div>
 
 ---
 
-<!-- ================= GITHUB STATS ================= -->
-### 📊 GitHub Stats
+## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=DevJeyaStephen&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="165" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=DevJeyaStephen&theme=tokyonight&hide_border=true" height="165" />
+  <img src="https://github-readme-stats.vercel.app/api?username=StephensHub03&show_icons=true&theme=radical&hide_border=true&count_private=true&include_all_commits=true" height="170" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=StephensHub03&theme=radical&hide_border=true" height="170" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DevJeyaStephen&layout=compact&theme=tokyonight&hide_border=true" height="165" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=StephensHub03&layout=compact&theme=radical&hide_border=true" height="170" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=StephensHub03&theme=radical&utcOffset=8" height="170" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=DevJeyaStephen&theme=tokyo-night&hide_border=true" width="100%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=StephensHub03&theme=redical&hide_border=true&color=f72585&line=4cc9f0&point=ffffff" width="100%" />
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=DevJeyaStephen&theme=tokyonight&no-frame=true&row=1&column=6" width="100%" />
+  <img src="https://github-profile-trophy.vercel.app/?username=StephensHub03&theme=radical&no-frame=true&row=1&column=6" width="100%" />
 </p>
-
-<!-- ================= SNAKE CONTRIBUTION ANIMATION ================= -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/DevJeyaStephen/DevJeyaStephen/output/github-contribution-grid-snake.svg" width="100%" />
-</p>
-
-> 🐍 The snake animation above needs a one-time GitHub Actions setup — instructions are in the notes at the bottom of this file.
 
 ---
 
-### 🎓 Education
+## 💬 Random Dev Quote
 
-**Ramco Institute of Technology** | *2023 – Present*
-B.Tech in **Artificial Intelligence & Data Science**
+<p align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" />
+</p>
 
 ---
 
-### 📢 Let's Connect
+## 🎓 Education
+
+<details open>
+<summary><b>Ramco Institute of Technology</b> | <i>2023 – Present</i></summary>
+<br>
+B.Tech in <b>Artificial Intelligence & Data Science</b>
+</details>
+
+---
+
+## 📢 Let's Connect
 
 <p align="center">💡 Feel free to explore my GitHub repositories for more code and projects!</p>
 <p align="center">📩 Have a question or want to collaborate? Reach out via <a href="https://www.linkedin.com/in/stephen-profile/">LinkedIn</a> or email at <b>connect.stephen01@gmail.com</b>.</p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2575fc,100:6a11cb&height=120&section=footer" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=20,11,6&height=120&section=footer" width="100%" />
 </p>
