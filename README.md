@@ -40,25 +40,46 @@
 
 ## 🧑‍💻 About Me
 
-- 📚 Final year **B.Tech** student in **Artificial Intelligence & Data Science**
-- 📈 Love building responsive **MERN Stack** applications with clean UI & scalable backends
-- 🤖 Exploring **AI integration** into modern web apps
-- 🔍 Always learning new technologies and improving problem-solving skills
-- 💬 Open to **collaboration** on exciting full-stack and AI projects
+<p align="center">
+  <img src="https://img.shields.io/badge/🎓_Final_Year_Student-AI_%26_DS-8A2BE2?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/💻_MERN-Stack_Developer-FF4500?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/🤖_AI-Enthusiast-00BFFF?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/🔍_Problem-Solver-2E8B57?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/🤝_Open_to-Collaborate-FF1493?style=for-the-badge" />
+</p>
 
-<details>
-<summary>⚡ Fun facts about me (click to expand)</summary>
+```typescript
+const jeyaStephen = {
+  role: "Full-Stack Developer 🍳",
+  status: "Final Year B.Tech — AI & Data Science 🎓",
+  stack: ["React", "Node.js", "Express", "MongoDB"],
+  currentlyExploring: "AI integration into modern web apps 🤖",
+  currentGoal: "Ship a production-grade AI-powered SaaS 🚀",
+  funFact: "Debugs with console.log() before anything fancy 😄",
+  openTo: "collaboration on full-stack & AI projects 🤝",
+};
+```
+
+<table align="center">
+<tr>
+<td valign="top" width="50%">
+
+<details open>
+<summary><b>⚡ Fun facts about me</b></summary>
 <br>
 
 - 🌱 Currently leveling up my **AI + Full-Stack** skills
-- 🛠️ I debug with `console.log` before I debug with anything fancy — no shame
+- 🛠️ I debug with `console.log` before anything fancy — no shame
 - 🎯 2026 goal: ship a full production-grade AI-powered SaaS
 - ☕ Powered by coffee and Stack Overflow tabs
 
 </details>
 
-<details>
-<summary>🧭 What I'm currently working on (click to expand)</summary>
+</td>
+<td valign="top" width="50%">
+
+<details open>
+<summary><b>🧭 What I'm working on right now</b></summary>
 <br>
 
 - 🔨 Building full-stack apps with the MERN stack
@@ -66,6 +87,10 @@
 - 📖 Sharpening DSA & problem-solving skills
 
 </details>
+
+</td>
+</tr>
+</table>
 
 ---
 
