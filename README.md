@@ -10,11 +10,7 @@
 
 <!-- ================= INTRO VIDEO ================= -->
 <p align="center">
-  <video src="https://github.com/user-attachments/assets/fe77bfb8-763b-41b0-9509-2c11976d323c"
-
-
-
- width="400" autoplay loop muted controls></video>
+  <img src="https://raw.githubusercontent.com/StephensHub03/StephensHub03/main/public/github.gif" width="400" />
 </p>
 
 <!-- ================= BADGES ================= -->
