@@ -1,8 +1,7 @@
 <!-- ================= SHARK-STYLE HEADER ================= -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=shark&color=0:F8B6C6,100:6a11cb&height=200&section=header&text=JEYA%20STEPHEN&fontSize=60&fontColor=ffffff&fontAlignY=38&desc=FULL-STACK%20DEVELOPER%20%7C%7C%20AI%20ENTHUSIAST&descAlignY=58&descSize=18&animation=fadeIn" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=shark&color=0:F8B6C6,100:6a11cb&height=200&section=header&text=JEYA%20STEPHEN&fontSize=55&fontColor=ffffff&fontAlignY=30&desc=FULL-STACK%20DEVELOPER%20%7C%7C%20AI%20ENTHUSIAST&descAlignY=48&descSize=16&animation=fadeIn" width="100%" />
 </p>
-
 <!-- ================= TYPING ANIMATION (multi-line, colorful) ================= -->
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=26&duration=2500&pause=800&color=F72585,7209B7,3A0CA3,4361EE,4CC9F0&center=true&vCenter=true&multiline=true&width=700&height=100&lines=Final+Year+AI+%26+DS+Student+%F0%9F%8E%93;MERN+Stack+Developer+%E2%9A%9B%EF%B8%8F;Exploring+AI+x+Web+Integration+%F0%9F%A4%96;Always+Shipping+Something+New+%F0%9F%9A%80" alt="Typing SVG" />
