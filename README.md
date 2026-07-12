@@ -159,7 +159,7 @@ const jeyaStephen = {
 
 <img src="https://img.shields.io/badge/2023-Present-blueviolet?style=flat-square" />
 <img src="https://img.shields.io/badge/Final_Year-🎯-orange?style=flat-square" />
-<img src="https://img.shields.io/badge/CGPA-Available_on_request-2E8B57?style=flat-square" />
+<img src="https://img.shields.io/badge/CGPA-7.2%2F10-2E8B57?style=flat-square" />
 
 </td>
 </tr>
