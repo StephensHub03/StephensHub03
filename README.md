@@ -149,18 +149,50 @@ const jeyaStephen = {
 
 ## 🎓 Education
 
-<details open>
-<summary><b>Ramco Institute of Technology</b> | <i>2023 – Present</i></summary>
-<br>
-B.Tech in <b>Artificial Intelligence & Data Science</b>
-</details>
+<table align="center">
+<tr>
+<td align="center" width="90">🎓</td>
+<td>
+
+**Ramco Institute of Technology**
+📍 B.Tech in **Artificial Intelligence & Data Science**
+
+<img src="https://img.shields.io/badge/2023-Present-blueviolet?style=flat-square" />
+<img src="https://img.shields.io/badge/Final_Year-🎯-orange?style=flat-square" />
+<img src="https://img.shields.io/badge/CGPA-Available_on_request-2E8B57?style=flat-square" />
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## 📢 Let's Connect
 
-<p align="center">💡 Feel free to explore my GitHub repositories for more code and projects!</p>
-<p align="center">📩 Have a question or want to collaborate? Reach out via <a href="https://www.linkedin.com/in/stephen-profile/">LinkedIn</a> or email at <b>connect.stephen01@gmail.com</b>.</p>
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&pause=1000&color=4CC9F0&center=true&vCenter=true&width=550&lines=Let's+build+something+cool+together!;Always+up+for+a+good+tech+conversation+%E2%98%95" alt="connect typing" />
+</p>
+
+<p align="center">
+  💡 Feel free to explore my GitHub repositories for more code and projects!<br/>
+  📩 Have a question or want to collaborate? Reach out below 👇
+</p>
+
+<p align="center">
+  <a href="https://digital-empire-pearl.vercel.app/">
+    <img src="https://img.shields.io/badge/🌐_Portfolio-FF5733?style=for-the-badge&logoColor=white" />
+  </a>
+  <a href="https://www.linkedin.com/in/stephen-profile/">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="mailto:connect.stephen01@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Say_Hi-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/⭐_Star_my_repos-if_you_find_them_useful-yellow?style=for-the-badge" />
+</p>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=20,11,6&height=120&section=footer" width="100%" />
