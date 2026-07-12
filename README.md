@@ -124,23 +124,7 @@ const jeyaStephen = {
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=StephensHub03&layout=compact&theme=radical&hide_border=true" height="170" />
-</p>
-
-<p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=StephensHub03&theme=redical&hide_border=true&color=f72585&line=4cc9f0&point=ffffff" width="100%" />
-</p>
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=StephensHub03&theme=radical&no-frame=true&row=1&column=6" width="100%" />
-</p>
-
----
-
-## 💬 Random Dev Quote
-
-<p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" />
 </p>
 
 ---
