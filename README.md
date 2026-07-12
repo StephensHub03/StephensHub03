@@ -47,7 +47,7 @@
   <img src="https://img.shields.io/badge/🤝_Open_to-Collaborate-FF1493?style=for-the-badge" />
 </p>
 
-```typescript
+\`\`\`typescript
 const jeyaStephen = {
   role: "Full-Stack Developer 🍳",
   status: "Final Year B.Tech — AI & Data Science 🎓",
@@ -57,7 +57,7 @@ const jeyaStephen = {
   funFact: "Debugs with console.log() before anything fancy 😄",
   openTo: "collaboration on full-stack & AI projects 🤝",
 };
-```
+\`\`\`
 
 <table align="center">
 <tr>
@@ -68,7 +68,7 @@ const jeyaStephen = {
 <br>
 
 - 🌱 Currently leveling up my **AI + Full-Stack** skills
-- 🛠️ I debug with `console.log` before anything fancy — no shame
+- 🛠️ I debug with \`console.log\` before anything fancy — no shame
 - 🎯 2026 goal: ship a full production-grade AI-powered SaaS
 - ☕ Powered by coffee and Stack Overflow tabs
 
@@ -125,7 +125,6 @@ const jeyaStephen = {
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=StephensHub03&layout=compact&theme=radical&hide_border=true" height="170" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=StephensHub03&theme=radical&utcOffset=8" height="170" />
 </p>
 
 <p align="center">
