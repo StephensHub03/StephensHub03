@@ -125,7 +125,7 @@ const jeyaStephen = {
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=StephensHub03&layout=compact&theme=radical&hide_border=true" height="170" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=StephensHub03&theme=radical&utcOffset=8" height="170" />
+ 
 </p>
 
 <p align="center">
