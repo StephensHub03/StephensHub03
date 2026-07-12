@@ -10,7 +10,7 @@
 
 <!-- ================= INTRO VIDEO ================= -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/StephensHub03/StephensHub03/main/public/github.gif" width="500" />
+  <img src="https://raw.githubusercontent.com/StephensHub03/StephensHub03/main/public/github.gif" width="700" />
 </p>
 
 <!-- ================= BADGES ================= -->
