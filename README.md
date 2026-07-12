@@ -1,6 +1,6 @@
-<!-- ================= ANIMATED RAINBOW HEADER ================= -->
+<!-- ================= SLICE-STYLE HEADER ================= -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=Hey,%20I'm%20Jeya%20Stephen%20👋&fontSize=36&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=Full-Stack%20Code%20Chef%20—%20Cooking%20up%20MERN%20🍳💻&descAlignY=55&descSize=18" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=slice&color=0:F8B6C6,100:6a11cb&height=260&section=header&text=JEYA%20STEPHEN&fontSize=64&fontColor=ffffff&fontAlignY=32&desc=FULL-STACK%20DEVELOPER%20%7C%7C%20AI%20ENTHUSIAST&descAlignY=52&descSize=18&animation=fadeIn" width="100%" />
 </p>
 
 <!-- ================= TYPING ANIMATION (multi-line, colorful) ================= -->
