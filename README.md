@@ -14,7 +14,7 @@
 
 <!-- ================= BADGES ================= -->
 <p align="center">
-  <a href="https://digital-empire-pearl.vercel.app/">
+  <a href="https://stephen-virtual-resume.vercel.app/">
     <img src="https://img.shields.io/badge/Portfolio-FF5733?style=for-the-badge&logo=vercel&logoColor=white" />
   </a>
   <a href="https://www.linkedin.com/in/stephen-profile/">
@@ -160,7 +160,7 @@ const jeyaStephen = {
 </p>
 
 <p align="center">
-  <a href="https://digital-empire-pearl.vercel.app/">
+  <a href="https://stephen-virtual-resume.vercel.app/">
     <img src="https://img.shields.io/badge/🌐_Portfolio-FF5733?style=for-the-badge&logoColor=white" />
   </a>
   <a href="https://www.linkedin.com/in/stephen-profile/">
