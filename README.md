@@ -1,6 +1,6 @@
 <!-- ================= SHARK-STYLE HEADER ================= -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=shark&color=0:F8B6C6,100:6a11cb&height=200&section=header&text=JEYA%20STEPHEN&fontSize=55&fontColor=ffffff&fontAlignY=30&desc=FULL-STACK%20DEVELOPER%20%7C%7C%20AI%20ENTHUSIAST&descAlignY=48&descSize=16&animation=fadeIn" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=shark&color=0:F8B6C6,100:6a11cb&height=200&section=header&text=JEYA%20STEPHEN&fontSize=55&fontColor=ffffff&fontAlignY=30&desc=SOFTWARE%20DEVELOPER%20%7C%7C%20AI%20ENTHUSIAST&descAlignY=48&descSize=16&animation=fadeIn" width="100%" />
 </p>
 <!-- ================= TYPING ANIMATION (multi-line, colorful) ================= -->
 <p align="center">
