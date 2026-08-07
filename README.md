@@ -64,7 +64,7 @@ const jeyaStephen = {
 <td valign="top" width="50%">
 
 <details open>
-<summary><b>⚡ Fun facts about me</b></summary>
+<summary><b>⚡ About me</b></summary>
 <br>
 
 - 🌱 Currently leveling up my **AI + Full-Stack** skills
