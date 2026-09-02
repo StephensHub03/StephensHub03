@@ -44,7 +44,7 @@
   <img src="https://img.shields.io/badge/💻_MERN-Stack_Developer-FF4500?style=for-the-badge" />
   <img src="https://img.shields.io/badge/🤖_AI-Enthusiast-00BFFF?style=for-the-badge" />
   <img src="https://img.shields.io/badge/🔍_Problem-Solver-2E8B57?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/🤝_Open_to-Collaborate-FF1493?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/👋_Open_to-Collaborate-FF1493?style=for-the-badge" />
 </p>
 
 \`\`\`typescript
