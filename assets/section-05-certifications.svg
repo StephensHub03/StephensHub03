@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="1000" height="480" role="img" aria-label="Certifications — Twelve credentials, verified">
+  <title>Certifications — Twelve credentials, verified</title>
+  <defs>
+    <!-- Background gradients -->
+    <linearGradient id="soc-card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#160910"/>
+      <stop offset="50%"  stop-color="#1a0b14"/>
+      <stop offset="100%" stop-color="#240e1b"/>
+    </linearGradient>
+
+    <linearGradient id="soc-tile-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#1c0b15" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#12070e" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="soc-gold-node" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#C5A46D" stop-opacity="0"/>
+      <stop offset="45%"  stop-color="#C5A46D" stop-opacity="0.8"/>
+      <stop offset="50%"  stop-color="#F2EAE0"/>
+      <stop offset="55%"  stop-color="#C5A46D" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#C5A46D" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="soc-gold-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ═══ SECTION HEADER (MATCHING REFERENCE IMAGE 5) ═══ -->
+  <text x="32" y="32" font-family="'SF Mono', Monaco, monospace" font-size="11" letter-spacing="3" fill="#C5A46D" font-weight="600">06  CERTIFICATIONS</text>
+  <text x="968" y="32" font-family="'SF Mono', Monaco, monospace" font-size="11" letter-spacing="3" fill="#A79A98" text-anchor="end">AWS · ACCENTURE · CISCO · GUVI · INFOSYS</text>
+
+  <!-- Large Editorial Headline -->
+  <text x="30" y="80" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" fill="#F2EAE0">Twelve credentials, <tspan font-style="italic" fill="#C5A46D">verified.</tspan></text>
+
+  <!-- Thin Horizontal Rule with Center Node -->
+  <line x1="30" y1="102" x2="970" y2="102" stroke="#40202B" stroke-width="1"/>
+  <rect x="360" y="101" width="160" height="2" fill="url(#soc-gold-node)"/>
+  <circle cx="440" cy="102" r="3.5" fill="#C5A46D" filter="url(#soc-gold-glow)"/>
+
+  <!-- ═══ MAIN LARGE ROUNDED PANEL ═══ -->
+  <rect x="30" y="126" width="940" height="330" rx="16" fill="url(#soc-card-bg)" stroke="#40202B" stroke-width="1.2"/>
+
+  <!-- ═════════ ROW 1 (4 CARDS) ═════════ -->
+
+  <!-- CARD 1: AWS · FORAGE -->
+  <g transform="translate(52, 146)">
+    <rect width="210" height="136" rx="10" fill="url(#soc-tile-bg)" stroke="#40202B" stroke-width="1"/>
+    <text x="16" y="24" font-family="'SF Mono', Monaco, monospace" font-size="9" letter-spacing="1.5" fill="#C5A46D" font-weight="600">AWS · FORAGE</text>
+    <circle cx="186" cy="20" r="2.5" fill="#C5A46D"/>
+    <circle cx="194" cy="20" r="2.5" fill="#C5A46D"/>
+    <text x="16" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#F2EAE0">Solutions Architecture</text>
+    <text x="16" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">Cloud Architecture</text>
+    <text x="16" y="100" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#76243B">AWS Core Services</text>
+  </g>
+
+  <!-- CARD 2: ACCENTURE · FORAGE -->
+  <g transform="translate(280, 146)">
+    <rect width="210" height="136" rx="10" fill="url(#soc-tile-bg)" stroke="#40202B" stroke-width="1"/>
+    <text x="16" y="24" font-family="'SF Mono', Monaco, monospace" font-size="9" letter-spacing="1.5" fill="#C5A46D" font-weight="600">ACCENTURE</text>
+    <circle cx="178" cy="20" r="2.5" fill="#C5A46D"/>
+    <circle cx="186" cy="20" r="2.5" fill="#C5A46D"/>
+    <circle cx="194" cy="20" r="2.5" fill="#C5A46D"/>
+    <text x="16" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#F2EAE0">Software Engineering</text>
+    <text x="16" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">System Architecture</text>
+    <text x="16" y="100" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#76243B">Testing &amp; Code Quality</text>
+  </g>
+
+  <!-- CARD 3: ERROR MAKES CLEVER -->
+  <g transform="translate(508, 146)">
+    <rect width="210" height="136" rx="10" fill="url(#soc-tile-bg)" stroke="#40202B" stroke-width="1"/>
+    <text x="16" y="24" font-family="'SF Mono', Monaco, monospace" font-size="9" letter-spacing="1.5" fill="#C5A46D" font-weight="600">ERROR MAKES CLEVER</text>
+    <circle cx="194" cy="20" r="2.5" fill="#C5A46D"/>
+    <text x="16" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#F2EAE0">Full Stack Development</text>
+    <text x="16" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">Prompt Engineering</text>
+    <text x="16" y="100" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#76243B">Modern Web Applications</text>
+  </g>
+
+  <!-- CARD 4: GUVI -->
+  <g transform="translate(736, 146)">
+    <rect width="210" height="136" rx="10" fill="url(#soc-tile-bg)" stroke="#40202B" stroke-width="1"/>
+    <text x="16" y="24" font-family="'SF Mono', Monaco, monospace" font-size="9" letter-spacing="1.5" fill="#C5A46D" font-weight="600">GUVI</text>
+    <circle cx="186" cy="20" r="2.5" fill="#C5A46D"/>
+    <circle cx="194" cy="20" r="2.5" fill="#C5A46D"/>
+    <text x="16" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#F2EAE0">Python Programming</text>
+    <text x="16" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">Data Structures</text>
+    <text x="16" y="100" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#76243B">Algorithms &amp; Logic</text>
+  </g>
+
+  <!-- ═════════ ROW 2 (4 CARDS) ═════════ -->
+
+  <!-- CARD 5: CISCO NETWORKING ACADEMY -->
+  <g transform="translate(52, 298)">
+    <rect width="210" height="136" rx="10" fill="url(#soc-tile-bg)" stroke="#40202B" stroke-width="1"/>
+    <text x="16" y="24" font-family="'SF Mono', Monaco, monospace" font-size="9" letter-spacing="1.5" fill="#C5A46D" font-weight="600">CISCO ACADEMY</text>
+    <circle cx="162" cy="20" r="2" fill="#C5A46D"/>
+    <circle cx="170" cy="20" r="2" fill="#C5A46D"/>
+    <circle cx="178" cy="20" r="2" fill="#C5A46D"/>
+    <circle cx="186" cy="20" r="2" fill="#C5A46D"/>
+    <circle cx="194" cy="20" r="2" fill="#C5A46D"/>
+    <text x="16" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#F2EAE0">Data Science</text>
+    <text x="16" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">Data Analytics Essentials</text>
+    <text x="16" y="100" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#76243B">Statistical Analysis</text>
+  </g>
+
+  <!-- CARD 6: INFOSYS SPRINGBOARD -->
+  <g transform="translate(280, 298)">
+    <rect width="210" height="136" rx="10" fill="url(#soc-tile-bg)" stroke="#40202B" stroke-width="1"/>
+    <text x="16" y="24" font-family="'SF Mono', Monaco, monospace" font-size="9" letter-spacing="1.5" fill="#C5A46D" font-weight="600">INFOSYS</text>
+    <circle cx="194" cy="20" r="2.5" fill="#C5A46D"/>
+    <text x="16" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#F2EAE0">Machine Learning</text>
+    <text x="16" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">ML with Python</text>
+    <text x="16" y="100" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#76243B">Predictive Modeling</text>
+  </g>
+
+  <!-- CARD 7: SCALER TOPICS -->
+  <g transform="translate(508, 298)">
+    <rect width="210" height="136" rx="10" fill="url(#soc-tile-bg)" stroke="#40202B" stroke-width="1"/>
+    <text x="16" y="24" font-family="'SF Mono', Monaco, monospace" font-size="9" letter-spacing="1.5" fill="#C5A46D" font-weight="600">SCALER TOPICS</text>
+    <circle cx="194" cy="20" r="2.5" fill="#C5A46D"/>
+    <text x="16" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#F2EAE0">Quora System Design</text>
+    <text x="16" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">Scalable Feed Architecture</text>
+    <text x="16" y="100" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#76243B">Distributed Systems</text>
+  </g>
+
+  <!-- CARD 8: SIMPLILEARN SKILLUP -->
+  <g transform="translate(736, 298)">
+    <rect width="210" height="136" rx="10" fill="url(#soc-tile-bg)" stroke="#40202B" stroke-width="1"/>
+    <text x="16" y="24" font-family="'SF Mono', Monaco, monospace" font-size="9" letter-spacing="1.5" fill="#C5A46D" font-weight="600">SIMPLILEARN</text>
+    <circle cx="194" cy="20" r="2.5" fill="#C5A46D"/>
+    <text x="16" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#F2EAE0">AWS S3 Cloud</text>
+    <text x="16" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">Storage Architecture</text>
+    <text x="16" y="100" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#76243B">Cloud Security &amp; IAM</text>
+  </g>
+</svg>
