@@ -1,0 +1,91 @@
+@font-face{font-family:Journey Bodoni;src:url('../../public/fonts/bodonimoda-400.woff2') format('woff2');font-display:swap}
+.journey{position:relative;isolation:isolate;width:100%;aspect-ratio:1586/992;background:#0b0907;color:#eee7dc;overflow:hidden;container-type:inline-size;scroll-margin-top:var(--hdr-h)}
+@media(prefers-reduced-motion:no-preference){
+  .journey{translate:var(--experience-slide,0%) 0}
+  .journey:focus-within{translate:0 0}
+}
+.journey__scene{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1}
+.journey__intro{position:absolute;left:2.8%;top:9%;width:min(42cqw,42%);max-width:41%;padding:1.2cqw 1.4cqw 1.4cqw 0;text-shadow:0 2px 16px #000c}
+.journey__chapter-number{font:1.5cqw Georgia,serif}
+.journey__chapter{margin:1.2cqw 0 2cqw;padding-left:1cqw;border-left:1px solid #ddd;font: .65cqw/1.7 var(--ui);letter-spacing:.24em;text-transform:uppercase;color:#a49b8f}
+.journey__chapter strong{font-weight:400;color:#eee7dc;letter-spacing:.35em}
+.journey h2{max-width:12ch;font:400 clamp(40px,3.12cqw,70px)/.92 'Journey Bodoni',Georgia,serif;text-transform:uppercase;letter-spacing:-.035em;margin:0;color:#fff4e6}
+.journey h2 span{color:#edc891}
+.journey__rule{display:block;width:2.9cqw;height:1px;background:#eee5d6;margin:2.1cqw 0}
+.journey__description{max-width:24ch;font:clamp(14px,.92cqw,22px)/1.45 var(--ui);color:#f0e8dc;margin:0}
+.journey__signoff{display:grid;gap:.4cqw;align-items:start;width:max-content;max-width:100%;margin-top:.9cqw}
+.journey__signature{font:italic clamp(32px,2.55cqw,58px)/.9 'Brush Script MT','Segoe Script',cursive;color:#e9bd76;transform:rotate(-6deg);transform-origin:left center;margin:0;text-shadow:0 3px 18px #000}
+.journey__micro{font:.62cqw/1.7 var(--ui);letter-spacing:.24em;text-transform:uppercase;color:#d4c9b8;margin:0}
+.journey__wall{position:absolute;top:14%;left:37.5%;font:1.05cqw/1.8 var(--ui);letter-spacing:.44em;text-transform:uppercase;color:#bc956d66;transform:skewY(-14deg)}
+.journey__bench{position:absolute;left:28.5%;top:78%;font:1.1cqw/1.65 var(--ui);letter-spacing:.22em;text-transform:uppercase;color:#beb7ab;transform:skewY(8deg)}
+.journey__corner{position:absolute;left:2.5%;bottom:3%}
+.journey__topics{position:absolute;right:2%;top:7.5%}
+.journey__history{position:absolute;left:51.5%;right:2.5%;top:9.5%;bottom:9%}
+.journey blockquote{font:italic 1.5cqw/1.15 Georgia,serif;color:#a8a199;margin:0 0 3cqw 15cqw}
+.journey blockquote:before{content:'”';position:absolute;left:12.8cqw;font:3cqw Georgia;color:#716d67}
+.journey__timeline{list-style:none;margin:0;padding:0;position:relative;display:grid;gap:2.05cqw}
+.journey__timeline:before{content:'';position:absolute;left:6.4cqw;top:-2cqw;bottom:-1.5cqw;width:1px;background:#b18342;box-shadow:0 0 12px #dcaa66}
+.journey__milestone{position:relative;padding-left:8.6cqw;min-height:8.3cqw;display:flex;align-items:center}
+.journey__date{position:absolute;left:.7cqw;top:50%;transform:translateY(-50%) rotate(-5deg);font:300 1.6cqw var(--ui);color:#e9b365}
+.journey__date small{display:block;font:.65cqw var(--ui);text-transform:uppercase;letter-spacing:.2em;margin-top:.2cqw}
+.journey__node{position:absolute;left:5.55cqw;top:50%;transform:translateY(-50%);width:1.8cqw;height:1.8cqw;border:1px solid #ffd49a;border-radius:50%;box-shadow:0 0 1.4cqw #f5a536;background:#ad7325}
+.journey__node:before{content:'';position:absolute;inset:.3cqw;background:#fff7de;border-radius:50%;box-shadow:0 0 .6cqw #fff0cd}
+.journey__node:after{content:'';position:absolute;left:100%;top:50%;width:1.35cqw;height:1px;background:#d6a75f}
+.journey__card{display:grid;grid-template-columns:3.3cqw 10.6cqw 12.9cqw 1fr;gap:1cqw;align-items:center;width:100%;min-height:8.15cqw;padding:.8cqw 1cqw;border:1px solid #ad854d99;background:linear-gradient(120deg,#1b150bc9,#0a0a09e8);border-radius:2px;transform:perspective(1000px) rotateY(-5deg);box-shadow:0 5px 25px #0004}
+.journey__icon{width:2.6cqw;height:2.6cqw;color:#f1e6d5}
+.journey__copy h3{font:500 1.05cqw/1.2 var(--ui);margin:0 0 .65cqw}
+.journey__copy p{font:.76cqw/1.5 var(--ui);color:#b9b7b2;margin:0}
+.journey__thumbnail{height:6.6cqw;border:1px solid #7b68534d;background-image:url('../../assets/journey/timeline-thumbnails.png');background-size:200% 200%;background-repeat:no-repeat}
+.journey__thumbnail--0{background-position:0 0}.journey__thumbnail--1{background-position:100% 0}.journey__thumbnail--2{background-position:0 100%}.journey__thumbnail--3{background-position:100% 100%}
+.journey__card-note{align-self:stretch;position:relative;font:.63cqw/1.6 var(--ui);letter-spacing:.18em;text-transform:uppercase;color:#96918a;margin:.4cqw 0 0 .3cqw}
+.journey__card-note span{position:absolute;right:0;bottom:0;font:1.2cqw Arial;color:#eee7dc}
+.journey__copy{min-width:0}
+.journey__copy .journey__company{color:#edc891;font-weight:600;margin:0 0 .55cqw}
+.journey__stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:3.4cqw;width:72%}
+.journey__stats div{text-align:center;border-right:1px solid #bd9c6c}.journey__stats div:last-child{border:0}
+.journey__stats strong{display:block;font:300 1.7cqw/1 var(--ui)}.journey__stats span{display:block;margin-top:.5cqw;font:.62cqw var(--ui);text-transform:uppercase;letter-spacing:.15em}
+.journey__next{position:absolute;right:2.5%;bottom:4%;display:flex;align-items:center;gap:1.2cqw;color:#eee7dc;text-decoration:none;font:.65cqw/1.8 var(--ui);letter-spacing:.25em;text-transform:uppercase}
+.journey__next>span:first-child{display:grid;place-items:center;width:3cqw;height:3cqw;border:1px solid #ccaa74;border-radius:50%;font:1.4cqw Arial;transition:background .2s}.journey__next:hover>span:first-child{background:#b7844544}.journey__next:focus-visible{outline:2px solid #edc891;outline-offset:8px}
+@media(max-width:900px){
+/* Stacked mobile flow: intro copy, then the full-bleed portrait, then the timeline.
+   Flex order rearranges the DOM (portrait is first in markup) without absolute offsets. */
+.journey{display:flex;flex-direction:column;aspect-ratio:auto;min-height:0;padding:0;container-type:normal}
+.journey__scene{order:2;position:relative;inset:auto;z-index:0;width:100%;height:min(78svh,640px);object-fit:cover;object-position:31% center;-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
+.journey__intro{order:1;position:relative;inset:auto;width:auto;max-width:none;padding:64px 20px 36px;text-shadow:0 2px 12px #000}
+.journey__chapter-number{font-size:20px}.journey__chapter{font-size:9px;margin:15px 0 25px;padding-left:10px}.journey h2{max-width:10.5ch;font-size:clamp(38px,10.8vw,58px);line-height:.93}
+.journey__rule{width:42px;margin:16px 0}.journey__description{max-width:27ch;font-size:15px;line-height:1.55}.journey__signoff{display:grid;gap:8px;margin-top:0;width:max-content}.journey__signature{font-size:32px;line-height:.92;margin:0;transform:rotate(-5deg)}.journey__micro{font-size:10px;line-height:1.75;margin:0;letter-spacing:.24em}
+.journey__wall,.journey__bench,.journey__topics,.journey__corner{display:none}
+.journey__history{order:3;position:relative;inset:auto;margin:-24px 0 0;padding:0 20px}.journey blockquote{position:relative;font-size:22px;margin:0 0 38px 40px}.journey blockquote:before{font-size:38px;left:-32px;top:-6px}
+.journey__timeline{gap:20px}.journey__timeline:before{left:53px;top:0;bottom:0}.journey__milestone{padding-left:74px;min-height:150px}.journey__date{left:0;font-size:20px}.journey__date small{font-size:8px;letter-spacing:.1em}.journey__node{left:45px;width:17px;height:17px}.journey__node:before{inset:3px}.journey__node:after{width:13px}
+.journey__card{grid-template-columns:minmax(0,1fr);gap:10px;padding:14px;transform:none;min-height:150px}.journey__icon{width:24px;height:24px}.journey__copy h3{font-size:16px;margin-bottom:7px}.journey__copy p{font-size:12px}.journey__copy .journey__company{margin-bottom:8px;font-size:12px}.journey__thumbnail{grid-column:2;height:85px}
+.journey__card-note{display:block;grid-column:1;margin:0;color:#d9b781;font-size:10px;line-height:1.6;letter-spacing:.08em;overflow-wrap:anywhere}
+.journey__stats{margin-top:32px;width:100%}.journey__stats div{padding:0 4px}.journey__stats strong{font-size:26px}.journey__stats span{font-size:8px;margin-top:7px;letter-spacing:.08em}
+.journey__next{order:4;position:relative;inset:auto;align-self:flex-end;margin:36px 24px 40px;font-size:10px;gap:12px}.journey__next>span:first-child{width:40px;height:40px;font-size:20px}
+}
+
+/* Local entrances layer over the section's horizontal scroll motion. */
+@media(prefers-reduced-motion:no-preference){
+  .journey-reveal{opacity:0;translate:0 24px;transition:opacity .8s ease,translate .9s cubic-bezier(.16,1,.3,1);transition-delay:var(--reveal-delay,0ms)}
+  .journey-reveal.journey-revealed,.journey-reveal:focus-within{opacity:1;translate:0 0}
+  .journey__card{transition:translate .35s ease,border-color .35s ease,box-shadow .35s ease}
+  .journey__icon,.journey__next>span:first-child{transition:translate .35s ease,background .35s ease}
+  .journey-revealed .journey__node:before{animation:journey-node-arrive 1.2s ease-out both;animation-delay:var(--reveal-delay,0ms)}
+}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  .journey__card:hover{translate:0 -4px;border-color:#edc891;box-shadow:0 10px 30px #0007,0 0 20px #edc89118}
+  .journey__card:hover .journey__icon{translate:0 -3px}
+  .journey__next:hover>span:first-child{translate:4px 0}
+}
+@keyframes journey-node-arrive{0%{scale:.4;opacity:.3}55%{scale:1.25;opacity:1}100%{scale:1;opacity:1}}
+
+/* Project details determine the timeline height so longer copy stays visible. */
+@media(min-width:901px){
+  .journey{aspect-ratio:auto;min-height:62.55vw}
+  .journey__history{position:relative;inset:auto;margin-left:51.5%;margin-right:2.5%;padding:5.9cqw 0 9cqw}
+  .journey__card{grid-template-columns:2.6cqw minmax(0,1fr);gap:.7cqw 1cqw;padding:1cqw}
+  .journey__icon{align-self:start}
+  .journey__copy h3{font-size:clamp(14px,1.15cqw,22px);margin-bottom:.5cqw}
+  .journey__copy p{font-size:clamp(11px,.8cqw,16px)}
+  .journey__card-note{grid-column:2;font-size:clamp(9px,.63cqw,12px);letter-spacing:.1em;color:#d9b781;margin:0;line-height:1.6}
+}
+}

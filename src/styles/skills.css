@@ -1,0 +1,117 @@
+@font-face{font-family:'Bodoni Moda';src:url('../../public/fonts/bodonimoda-400.woff2') format('woff2');font-weight:400;font-display:swap}
+.skills-scene{position:relative;isolation:isolate;width:100%;overflow:clip;background:#090705;color:#f5ecdf;container-type:inline-size}
+@media(prefers-reduced-motion:no-preference){
+  .skills-scene{translate:var(--skills-slide,0%) 0}
+  .skills-scene:focus-within{translate:0 0}
+}
+.skills-composition{position:relative;aspect-ratio:1276/672;min-height:560px}
+.skills-photo{position:absolute;inset:0;overflow:hidden}
+.skills-scene-portrait{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.skills-photo::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 75% 77%,#ef9e3410,transparent 25%);animation:skills-light 12s ease-in-out infinite alternate}
+.skills-wall-note{position:absolute;left:4.3%;top:8.2%;margin:0;color:#bb9767;font:300 1.15cqw/1.8 var(--sans,'Oswald',sans-serif);letter-spacing:.18em;text-transform:uppercase;transform:rotate(4deg)}
+.skills-book-labels{position:absolute;left:2.3%;bottom:1.9%;display:grid;gap:.8cqw;transform:rotate(-5deg);color:#b7a38a;font:400 .73cqw/1 var(--sans,'Oswald',sans-serif);letter-spacing:.23em;text-transform:uppercase}
+.skills-mug-label{position:absolute;left:23%;top:83%;color:#e0c594;font:italic .77cqw/.94 'Bodoni Moda',serif;transform:rotate(2deg);margin:0;text-align:center}
+.skills-scene__content{position:absolute;left:44.7%;right:2.1%;top:3.6%;z-index:2}
+.skills-heading{margin-left:11%;height:11.5cqw}
+.skills-scene__scene{margin:0 0 .4cqw;color:#b78c54;font-size:.83cqw;letter-spacing:.52em;text-transform:uppercase}
+.skills-heading h2{font:400 7.8cqw/.83 'Bodoni Moda',Georgia,serif;letter-spacing:-.045em;margin:0;text-transform:uppercase;color:#fff2e3}
+.skills-scene__subtitle{font-size:.88cqw;letter-spacing:.53em;text-transform:uppercase;margin:.85cqw 0 0;white-space:nowrap}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.05cqw .8cqw}
+.skill-card{min-width:0;margin:0;padding:1.1cqw .95cqw 1.2cqw;border:1px solid #bd945976;border-radius:.6cqw;background:linear-gradient(135deg,#39291c75,#090907dc 48%,#100d08e8);box-shadow:inset 0 0 .55cqw #ecb76726,0 .25cqw 1cqw #0007;backdrop-filter:blur(5px);transition:transform .35s,border-color .35s,box-shadow .35s}
+.skill-card:hover{transform:translateY(-3px);border-color:#d5ab6c;box-shadow:inset 0 0 1.2cqw #ecb76724,0 .5cqw 1.8cqw #0009}
+.skill-card header{display:flex;gap:.8cqw;align-items:center;margin-bottom:1.25cqw;white-space:nowrap}
+.skill-number{font-size:1.25cqw;color:#c39b6b;font-weight:300}
+.skill-card h3{font-size:.98cqw;font-weight:400;letter-spacing:.02em;text-transform:uppercase;margin:0}
+.skill-card header i{height:1px;flex:1;min-width:.7cqw;background:#aa89534f}
+.skill-card header p{font-size:.52cqw;letter-spacing:.12em;text-transform:uppercase;color:#9e9585;margin:0}
+.skill-card ul{display:grid;grid-template-columns:repeat(var(--items),minmax(0,1fr));gap:.6cqw;padding:0;margin:0;list-style:none}
+.skill-card li{min-width:0;text-align:center}
+.skill-symbol{height:3.7cqw;display:grid;place-items:center;border:1px solid #ac87551a;background:linear-gradient(145deg,#090a08,#070706);border-radius:.55cqw;box-shadow:0 .2cqw .5cqw #0005;transition:transform .3s}
+.skill-symbol svg{width:2.25cqw;height:2.25cqw}
+.skill-symbol b{font:600 1.05cqw/1 Arial,sans-serif}
+.skill-card li:hover .skill-symbol{transform:translateY(-2px) scale(1.04)}
+.skill-card li>span{display:block;font-size:.67cqw;line-height:1.25;margin-top:.45cqw;color:#dcd6ce;overflow-wrap:anywhere}
+.skills-scene__script{position:absolute;right:5.3%;top:5.4%;font:italic 1.65cqw/1.1 'Bodoni Moda',cursive;color:#bc8b4e;transform:rotate(-15deg);margin:0;text-align:center}
+.skills-navigation{position:absolute;right:2.3%;bottom:2.7%;font-size:.65cqw;letter-spacing:.14em;text-transform:uppercase}
+.skills-navigation a{color:#bc9c70;text-decoration:none;padding:10px}
+.skills-navigation a:focus-visible{outline:2px solid #d5ab6c;outline-offset:4px}
+.skills-composition.is-visible .skill-card{animation:skills-reveal .85s both;animation-delay:calc(var(--order)*90ms)}
+@keyframes skills-reveal{from{opacity:0;translate:0 14px;filter:blur(3px)}to{opacity:1;translate:0 0;filter:blur(0)}}
+@keyframes skills-light{from{opacity:.25}to{opacity:1}}
+@media(min-width:901px) and (max-width:1063px){.skills-composition{min-height:0}}
+@media(max-width:900px){
+.skills-composition{aspect-ratio:auto;min-height:0;padding-bottom:26px}
+.skills-photo{position:relative;height:620px;margin-bottom:-60px}
+.skills-scene-portrait{width:190%;max-width:none;height:100%;object-position:left center}
+.skills-photo::after{background:linear-gradient(0deg,#090705,transparent 25%)}
+.skills-wall-note{left:6%;top:10%;font-size:14px}
+.skills-book-labels{display:none}.skills-mug-label{display:none}
+.skills-scene__content{position:relative;inset:auto;margin:0 24px}
+.skills-heading{position:relative;margin:0 0 26px;height:auto}
+.skills-scene__scene{font-size:10px;margin-bottom:12px}.skills-heading h2{font-size:84px}.skills-scene__subtitle{font-size:10px;letter-spacing:.3em;margin-top:14px}
+.skills-grid{gap:14px}.skill-card{padding:16px 12px;border-radius:7px}
+.skill-card header{gap:8px;margin-bottom:18px}.skill-number{font-size:17px}.skill-card h3{font-size:14px}.skill-card header p{display:none}
+.skill-card ul{gap:6px}.skill-symbol{height:44px;border-radius:6px}.skill-symbol svg{width:25px;height:25px}.skill-symbol b{font-size:12px}.skill-card li>span{font-size:10px;margin-top:8px}
+.skills-scene__script{right:7%;top:30px;font-size:21px}.skills-navigation{position:relative;inset:auto;text-align:right;margin:24px;font-size:11px}
+}
+@media(max-width:600px){.skills-photo{height:490px}.skills-scene-portrait{width:225%;object-position:8% center}.skills-scene__content{margin:0 16px}.skills-grid{grid-template-columns:1fr}.skills-heading h2{font-size:76px}.skill-card{padding:16px 12px 18px}.skill-card header p{display:block;font-size:8px;letter-spacing:.06em}.skills-scene__script{font-size:17px;right:6%;top:22px}.skills-wall-note{font-size:12px}.skill-symbol{height:48px}.skill-card li>span{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.skills-photo::after,.skills-composition.is-visible .skill-card{animation:none}.skill-card,.skill-symbol{transition:none}}
+@media(min-width:901px) and (prefers-reduced-motion:no-preference){.skills-scene-portrait{transform:translateX(var(--portrait-shift,0px)) scale(1.004);transition:transform .7s ease-out}}
+@font-face{font-family:'Bodoni Moda';src:url('../../public/fonts/bodonimoda-500.woff2') format('woff2');font-weight:500;font-display:swap}
+.skills-heading h2{font-weight:500;letter-spacing:0}
+.skill-asset{display:block;width:2.25cqw;height:2.25cqw;background:currentColor;mask-size:contain;mask-position:center;mask-repeat:no-repeat}
+@media(max-width:900px){.skill-asset{width:25px;height:25px}.skills-scene__script{top:560px;right:24px}}
+@media(max-width:600px){.skills-scene__script{top:460px;right:20px;font-size:15px}}
+
+/* Keep the typography in the office photo's open areas. */
+.skills-wall-note{left:5%;top:5.5%;color:#f1dfc4;font-size:1.02cqw;line-height:1.6;letter-spacing:.16em;transform:none;text-shadow:0 2px 12px #000c}
+.skills-heading{margin-left:0}
+.skills-heading h2{color:#fff3e2;text-shadow:0 3px 24px #0005}
+.skills-scene__subtitle{color:#eddbc2;letter-spacing:.38em;text-shadow:0 2px 8px #000}
+.skill-card{background:linear-gradient(135deg,#241c14eb,#0d0c0aef);border-color:#b58d577d}
+.skill-card h3{color:#fff0db}
+.skill-card header p{color:#c7bba9}
+.skill-number{color:#dfb67d}
+.skill-card li>span{color:#eee5d8}
+.skills-portrait-caption{position:absolute;z-index:1;left:5%;bottom:4%;color:#f4e3c9;text-shadow:0 2px 10px #000}
+.skills-portrait-caption p{font:italic 1.65cqw/1.3 'Bodoni Moda',Georgia,serif;margin:0 0 .65cqw}
+.skills-portrait-caption span{font-size:.7cqw;letter-spacing:.16em;text-transform:uppercase;color:#e0c7a3}
+.skills-photo::before{content:'';position:absolute;z-index:1;inset:75% 58% 0 0;background:linear-gradient(transparent,#090705bd);pointer-events:none}
+.skills-scene__script{left:44.7%;right:auto;top:auto;bottom:3.4%;font-size:1.05cqw;line-height:1.4;color:#f0d4aa;transform:none;text-align:left;text-shadow:0 2px 8px #000}
+.skills-navigation{bottom:3.4%;font-size:.72cqw}
+.skills-navigation a{color:#f0d4aa;text-shadow:0 2px 8px #000}
+@media(max-width:900px){
+.skills-wall-note{left:6%;top:6%;font-size:13px}
+.skills-photo::before{inset:65% 0 0;background:linear-gradient(transparent,#090705)}
+.skills-portrait-caption{left:24px;bottom:75px}
+.skills-portrait-caption p{font-size:24px;margin-bottom:9px}
+.skills-portrait-caption span{font-size:10px;letter-spacing:.12em}
+.skills-scene__subtitle{white-space:normal;line-height:1.7}
+.skills-scene__script{position:relative;inset:auto;margin:28px 24px 0;font-size:17px}
+.skills-navigation{inset:auto;font-size:11px;margin:18px 24px 0;text-align:left}
+.skills-navigation a{display:inline-block;padding:8px 0}
+}
+@media(max-width:600px){
+.skills-portrait-caption{left:16px;right:16px;bottom:75px}
+.skills-portrait-caption p{font-size:22px}
+.skills-portrait-caption span{font-size:9px}
+.skills-wall-note{font-size:11px}
+.skills-scene__script{margin:24px 16px 0;font-size:16px}
+.skills-navigation{margin:14px 16px 0}
+.skill-card header p{font-size:7px;letter-spacing:.02em}
+}
+
+/* Staged typography entrances complement the existing staggered cards. */
+@media(prefers-reduced-motion:no-preference){
+  .skills-composition.is-visible .skills-heading h2{animation:skills-title-arrive 1s cubic-bezier(.16,1,.3,1) both}
+  .skills-composition.is-visible .skills-scene__subtitle{animation:skills-reveal .9s .15s both}
+  .skills-composition.is-visible .skills-portrait-caption{animation:skills-reveal 1.1s .25s both}
+  .skills-composition.is-visible .skills-scene__script{animation:skills-reveal 1s .4s both}
+  .skills-composition.is-visible .skills-navigation{animation:skills-reveal .8s .55s both}
+  .skills-navigation a{transition:color .3s ease,translate .3s ease}
+}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  .skills-navigation a:hover{color:#fff2e3;translate:4px 0}
+  .skill-card li:hover .skill-symbol{transform:translateY(-4px) rotate(-4deg) scale(1.08)}
+}
+@keyframes skills-title-arrive{from{opacity:0;translate:0 30px;clip-path:inset(0 0 100% 0)}to{opacity:1;translate:0 0;clip-path:inset(0)}}

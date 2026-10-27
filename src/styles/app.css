@@ -1,0 +1,791 @@
+/* ==========================================================================
+   STEPHEN — hero
+   The artwork itself (background, wordmark, the three people) is drawn on the
+   WebGL canvas. Everything in this file is the furniture layered over it:
+   header, welcome strip, chips, arrows, dot grids.
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Anton';
+  src: url('../../public/fonts/anton-400.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: block;
+}
+@font-face {
+  font-family: 'Bodoni Moda';
+  src: url('../../public/fonts/bodonimoda-400.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Bodoni Moda';
+  src: url('../../public/fonts/bodonimoda-500.woff2') format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('../../public/fonts/oswald-300.woff2') format('woff2');
+  font-weight: 300; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('../../public/fonts/oswald-400.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('../../public/fonts/oswald-500.woff2') format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('../../public/fonts/oswald-600.woff2') format('woff2');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('../../public/fonts/oswald-700.woff2') format('woff2');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+:root {
+  --ink:      #de1b1c;
+  --ink-hot:  #ff2a2b;
+  --paper:    #ededed;
+  --black:    #000;
+  --dim:      #8a8a8a;
+  --dimmer:   #4e4e4e;
+
+  --ui:  'Bodoni Moda', Georgia, 'Times New Roman', serif;
+  --sans:'Oswald', 'Arial Narrow', system-ui, sans-serif;
+  --disp:'Bodoni Moda', Georgia, 'Times New Roman', serif;
+
+  /* the header height also sets the hero's top breathing room */
+  --hdr-h: clamp(56px, 7.4vh, 82px);
+  --edge:  clamp(14px, 1.55vw, 26px);
+
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-in-out: cubic-bezier(.76, 0, .24, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: #000;
+  color: var(--paper);
+  font-family: var(--ui);
+  /* the document scrolls now that more scenes follow the hero; sideways
+     overflow is CLIPPED, not hidden - overflow-x:hidden promotes body to a
+     scroll container, which silently breaks every position:sticky pin in the
+     scenes below (the canvas scrolls away and leaves bare background) */
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* nothing may paint before the sequence is ready to start on true black */
+html.is-booting .furniture,
+html.is-booting .hdr { opacity: 0; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+.stage-wrap {
+  position: fixed; inset: 0;
+  overflow: hidden;
+  background: #000;
+  z-index: 1;
+}
+
+#stage {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  display: block;
+}
+
+.flow {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.flow > section { pointer-events: auto; }
+
+.hero-spacer {
+  height: 100svh;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.hdr {
+  position: absolute; top: 0; left: 0; right: 0;
+  height: var(--hdr-h);
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 1.6vw, 26px);
+  padding: 0 var(--edge);
+  z-index: 20;
+  pointer-events: none;
+}
+.hdr > * { pointer-events: auto; }
+
+.hdr__rule {
+  position: absolute; left: 0; right: 0; top: 0;
+  width: 100%; height: 100%;
+  color: #6d6d6d;
+  pointer-events: none;
+  overflow: visible;
+}
+.hdr__rule polyline {
+  stroke-dasharray: var(--len, 2000);
+  stroke-dashoffset: var(--len, 2000);
+}
+.is-header .hdr__rule polyline {
+  transition: stroke-dashoffset 1.15s var(--ease-out);
+  stroke-dashoffset: 0;
+}
+
+.hdr__mark {
+  text-decoration: none;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+.mark-word {
+  display: block;
+  font-family: var(--disp);
+  font-size: clamp(20px, 2.05vw, 34px);
+  letter-spacing: .012em;
+  /* the same distressed surface as the big wordmark, so the two agree.
+     NB the red must be a background-color: with background-clip:text the
+     text fill is transparent, so `color` alone paints nothing and the mark
+     comes out as bare grey texture. */
+  background-color: var(--ink);
+  background-image: url('../../public/tex/grunge.png');
+  background-size: 260px;
+  background-blend-mode: multiply;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: saturate(1.35) contrast(1.16) brightness(1.18);
+}
+
+.hdr__div {
+  width: 1px; height: 42%;
+  background: #3a3a3a;
+  flex: 0 0 auto;
+}
+
+.hdr__roles {
+  margin: 0;
+  display: grid;
+  gap: 1px;
+  font-size: clamp(7.5px, .61vw, 9.5px);
+  font-weight: 400;
+  letter-spacing: .34em;
+  text-transform: uppercase;
+  color: var(--dim);
+  line-height: 1.42;
+  flex: 0 0 auto;
+}
+
+.hdr__nav { margin-inline: auto; }
+.hdr__nav ul {
+  display: flex;
+  gap: clamp(16px, 2.4vw, 44px);
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.hdr__nav a {
+  position: relative;
+  display: block;
+  padding: 6px 0;
+  font-size: clamp(9px, .72vw, 11.5px);
+  font-weight: 500;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--dim);
+  transition: color .38s var(--ease-out);
+}
+.hdr__nav a::after {                       /* the red dot under the active item */
+  content: '';
+  position: absolute;
+  left: 50%; bottom: -3px;
+  width: 4px; height: 4px;
+  margin-left: -2px;
+  border-radius: 50%;
+  background: var(--ink);
+  transform: scale(0);
+  transition: transform .42s var(--ease-out);
+}
+.hdr__nav a:hover, .hdr__nav a:focus-visible { color: var(--paper); }
+.hdr__nav a.is-active { color: var(--paper); }
+.hdr__nav a.is-active::after,
+.hdr__nav a:hover::after { transform: scale(1); }
+
+.hdr__meta {
+  display: grid;
+  justify-items: end;
+  gap: 5px;
+  flex: 0 0 auto;
+}
+.hdr__metaLabel {
+  font-size: clamp(7.5px, .6vw, 9.5px);
+  font-weight: 400;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--dim);
+  white-space: nowrap;
+}
+.hdr__pips { display: flex; gap: 5px; }
+.hdr__pips i {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--ink);
+  opacity: .9;
+}
+
+.hdr__burger { display: none; }
+
+/* staggered arrival ------------------------------------------------------ */
+.hdr__mark, .hdr__div, .hdr__roles, .hdr__nav li, .hdr__meta {
+  opacity: 0;
+  transform: translateY(-9px);
+}
+.is-header .hdr__mark,
+.is-header .hdr__div,
+.is-header .hdr__roles,
+.is-header .hdr__nav li,
+.is-header .hdr__meta {
+  opacity: 1;
+  transform: none;
+  transition: opacity .7s var(--ease-out), transform .8s var(--ease-out);
+}
+.is-header .hdr__mark   { transition-delay: .18s; }
+.is-header .hdr__div    { transition-delay: .26s; }
+.is-header .hdr__roles  { transition-delay: .30s; }
+.is-header .hdr__nav li { transition-delay: calc(.36s + var(--i) * .055s); }
+.is-header .hdr__meta   { transition-delay: .62s; }
+
+/* ==========================================================================
+   Hero furniture
+   ========================================================================== */
+
+.furniture {
+  position: absolute; inset: 0;
+  z-index: 15;
+  pointer-events: none;
+}
+
+/* --- WELCOME TO MY WORLD: drops in from above ---------------------------
+   Sits ABOVE every other layer except the header, and carries its own soft
+   dark halo, so it stays legible whatever passes behind it — the wordmark,
+   the figure's head, or plain black.                                       */
+.welcome {
+  position: absolute;
+  top: var(--welcome-y, 17.5%);
+  left: 50%;
+  z-index: 4;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: .55em;
+  white-space: nowrap;
+  font-size: var(--welcome-size, 17px);
+  font-weight: 700;
+  letter-spacing: .19em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow:
+    0 0 .06em rgba(0, 0, 0, .95),
+    0 0 .55em rgba(0, 0, 0, .92),
+    0 0 1.4em rgba(0, 0, 0, .75);
+  transform: translate(-50%, calc(-140% - 12px));
+  opacity: 0;
+  filter: blur(6px);
+}
+.welcome__dots { letter-spacing: .12em; font-size: .96em; }
+.is-welcome .welcome {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(-50%, -50%);
+  /* fast, confident entrance that overshoots a touch, then settles */
+  transition:
+    transform .82s cubic-bezier(.14, .86, .22, 1.06),
+    opacity .34s ease-out,
+    filter .5s var(--ease-out);
+}
+
+/* --- inverted chips ----------------------------------------------------- */
+.chip {
+  position: absolute;
+  z-index: 2;
+  margin: 0;
+  padding: .30em .5em .24em;
+  background: var(--paper);
+  color: #060606;
+  font-size: var(--chip-size, 13px);
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+  opacity: 0;
+}
+.chip--artist {
+  left: var(--artist-x, 1.5%);
+  top: var(--artist-y, 68.8%);
+  transform: translateX(-118%);
+}
+.chip--legend {
+  left: var(--legend-x, 88.1%);
+  top: var(--legend-y, 26.8%);
+  transform: translateX(118%);
+}
+.is-artist .chip--artist,
+.is-legend .chip--legend {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform .78s var(--ease-out), opacity .3s linear;
+}
+
+/* --- edge arrows -------------------------------------------------------- */
+.arrows {
+  position: absolute;
+  top: var(--arrow-top, 34.5%);
+  height: var(--arrow-span, 28%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.arrows--l { left: var(--arrow-l, 1.8%); }
+.arrows--r { left: var(--arrow-r, 97.5%); }
+.arrows i {
+  display: block;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: var(--arrow-h, 7px) 0 var(--arrow-h, 7px) var(--arrow-w, 11px);
+  border-color: transparent transparent transparent var(--paper);
+  opacity: 0;
+}
+.arrows--l i { transform: translateX(-26px); }
+.arrows--r i { transform: translateX(26px); }
+.is-arrows .arrows i {
+  opacity: .92;
+  transform: none;
+  transition: transform .62s var(--ease-out), opacity .4s linear;
+  transition-delay: calc(var(--i) * .06s);
+}
+.is-arrows .arrows--r i { transition-delay: calc((4 - var(--i)) * .06s); }
+
+/* --- corner dot grids --------------------------------------------------- */
+.grid-dots {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: var(--dot-gap, 6px);
+}
+.grid-dots--br {
+  left: var(--dots-br-x, 98.4%); top: var(--dots-br-y, 95%);
+  transform: translate(-100%, -100%);
+}
+.grid-dots i {
+  display: block;
+  width: var(--dot-size, 9px);
+  height: var(--dot-size, 9px);
+  border-radius: 50%;
+  background: var(--paper);
+  opacity: 0;
+  transform: scale(.2);
+}
+.is-dots .grid-dots i {
+  opacity: .95;
+  transform: none;
+  transition: transform .5s var(--ease-out), opacity .34s linear;
+  transition-delay: calc(var(--i) * .022s);
+}
+
+/* ==========================================================================
+   Mobile menu — the burger opens a full-bleed sheet in the artwork's voice
+   ========================================================================== */
+
+.menu {
+  position: absolute; inset: 0;
+  z-index: 18;
+  display: grid;
+  place-content: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, .93);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .45s ease, visibility .45s;
+}
+.is-menu .menu { opacity: 1; visibility: visible; }
+.menu ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.menu a {
+  position: relative;
+  display: block;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--disp);
+  font-size: clamp(22px, 6.4vw, 34px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: .22em;
+  text-indent: .22em;                      /* optically centre despite trailing tracking */
+  text-transform: uppercase;
+  color: var(--paper);
+  opacity: 0;
+  transform: translateY(26px);
+  transition: color .3s ease, opacity .4s ease, transform .55s var(--ease-out);
+}
+.menu a::after {                           /* same red dot as the desktop nav */
+  content: '';
+  position: absolute;
+  left: 50%; bottom: 2px;
+  width: 5px; height: 5px;
+  margin-left: -2.5px;
+  border-radius: 50%;
+  background: var(--ink);
+  transform: scale(0);
+  transition: transform .42s var(--ease-out);
+}
+.menu a.is-active { color: var(--ink-hot); }
+.menu a.is-active::after, .menu a:hover::after, .menu a:focus-visible::after { transform: scale(1); }
+.menu a:hover, .menu a:focus-visible { color: var(--ink-hot); outline: none; }
+.is-menu .menu a {
+  opacity: 1;
+  transform: none;
+  transition-delay: calc(.06s + var(--i, 0) * .05s);
+}
+.menu__tag {
+  margin: 26px 0 0;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--dim);
+  opacity: 0;
+  transition: opacity .5s ease .3s;
+}
+.is-menu .menu__tag { opacity: 1; }
+
+/* ==========================================================================
+   Boot / loading — a cinematic title card while the hero assets arrive
+   ========================================================================== */
+
+.boot {
+  --boot-bar: clamp(28px, 7vh, 64px);
+  position: fixed; inset: 0;
+  z-index: 60;
+  overflow: hidden;
+  background: #000;
+  color: var(--paper);
+  transition: opacity .9s ease-out .35s, visibility .9s .35s;
+}
+/* film grain + a warm pool of light rising from below */
+.boot::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(60% 45% at 50% 100%, rgba(222, 27, 28, .16), transparent 70%),
+    radial-gradient(70% 70% at 50% 45%, rgba(255, 255, 255, .045), transparent 72%);
+  animation: bootBreathe 4.2s ease-in-out infinite alternate;
+}
+.boot::after {
+  content: '';
+  position: absolute; inset: -20%;
+  background: url('../../public/tex/grain.png') repeat;
+  background-size: 260px;
+  opacity: .14;
+  mix-blend-mode: screen;
+  animation: bootGrain .6s steps(4) infinite;
+  pointer-events: none;
+}
+@keyframes bootBreathe { from { opacity: .75; } to { opacity: 1; } }
+@keyframes bootGrain {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(-6%, 4%); }
+  50%  { transform: translate(4%, -7%); }
+  75%  { transform: translate(-3%, -2%); }
+  100% { transform: translate(5%, 6%); }
+}
+
+/* letterbox bars close in from the edges and open again on exit */
+.boot__bar-edge {
+  position: absolute; left: 0; right: 0;
+  height: var(--boot-bar);
+  background: #000;
+  z-index: 2;
+  transition: transform 1s var(--ease-in-out);
+}
+.boot__bar-edge::after {
+  content: '';
+  position: absolute; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .22) 20%, rgba(255, 255, 255, .22) 80%, transparent);
+}
+.boot__bar-edge--top { top: 0; }
+.boot__bar-edge--top::after { bottom: 0; }
+.boot__bar-edge--bottom { bottom: 0; }
+.boot__bar-edge--bottom::after { top: 0; }
+
+/* viewfinder corner ticks */
+.boot__frame { position: absolute; inset: calc(var(--boot-bar) + 12px) calc(var(--edge) - 10px); z-index: 1; pointer-events: none; }
+.boot__frame i {
+  position: absolute; width: 18px; height: 18px;
+  border: 1px solid rgba(255, 255, 255, .28);
+  opacity: 0;
+  animation: bootFade .8s ease-out .5s forwards;
+}
+.boot__frame i:nth-child(1) { top: 0; left: 0; border-width: 1px 0 0 1px; }
+.boot__frame i:nth-child(2) { top: 0; right: 0; border-width: 1px 1px 0 0; }
+.boot__frame i:nth-child(3) { bottom: 0; left: 0; border-width: 0 0 1px 1px; }
+.boot__frame i:nth-child(4) { bottom: 0; right: 0; border-width: 0 1px 1px 0; }
+
+.boot__meta {
+  position: absolute; z-index: 3;
+  margin: 0;
+  font-family: var(--ui);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  line-height: 1.9;
+  color: var(--paper);
+  opacity: 0;
+  animation: bootFade .8s ease-out .7s forwards;
+}
+.boot__meta span { display: block; color: var(--dim); letter-spacing: .22em; font-weight: 400; }
+.boot__meta--tl { top: calc(var(--boot-bar) + 42px); left: var(--edge); }
+.boot__meta--tr { top: calc(var(--boot-bar) + 42px); right: var(--edge); text-align: right; }
+.boot__meta--bl { bottom: calc(var(--boot-bar) + 44px); left: var(--edge); }
+
+.boot__center {
+  position: absolute; inset: 0;
+  display: grid; place-content: center; justify-items: center;
+  gap: clamp(14px, 2.4vh, 26px);
+  padding: 0 var(--edge);
+  text-align: center;
+  z-index: 3;
+}
+.boot__eyebrow {
+  margin: 0;
+  font-family: var(--ui);
+  font-size: 10px;
+  letter-spacing: .38em;
+  text-transform: uppercase;
+  color: var(--dim);
+  opacity: 0;
+  animation: bootFade .9s ease-out .35s forwards;
+}
+.boot__word {
+  display: flex;
+  margin: 0;
+  font-family: var(--disp);
+  font-weight: 400;
+  font-size: clamp(56px, 15.5vw, 190px);
+  line-height: .9;
+  letter-spacing: .14em;
+  text-indent: .14em;
+  color: var(--paper);
+  text-shadow: 0 0 40px rgba(255, 255, 255, .08);
+}
+.boot__word span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(.35em);
+  filter: blur(14px);
+  animation: bootLetter 1.3s var(--ease-out) forwards;
+  animation-delay: calc(.25s + var(--i) * .09s);
+}
+@keyframes bootLetter {
+  to { opacity: 1; transform: none; filter: blur(0); }
+}
+.boot__line {
+  position: relative;
+  margin: 0;
+  min-height: 1.6em;
+  font-family: var(--ui);
+  font-size: 11px;
+  letter-spacing: .34em;
+  text-transform: uppercase;
+  color: var(--dim);
+  opacity: 0;
+  animation: bootFade .8s ease-out 1s forwards;
+}
+.boot__line::before, .boot__line::after {
+  content: '';
+  position: absolute; top: 50%;
+  width: clamp(22px, 5vw, 56px); height: 1px;
+  background: var(--ink);
+}
+.boot__line::before { right: calc(100% + 16px); }
+.boot__line::after { left: calc(100% + 16px); }
+.boot__line span { display: inline-block; transition: opacity .3s ease, transform .3s ease; }
+.boot__line span.is-swapping { opacity: 0; transform: translateY(6px); }
+
+.boot__count {
+  position: absolute; z-index: 3;
+  right: var(--edge); bottom: calc(var(--boot-bar) + 40px);
+  display: flex; align-items: baseline; gap: 4px;
+  font-family: var(--disp);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--paper);
+  opacity: 0;
+  animation: bootFade .8s ease-out .6s forwards;
+}
+.boot__count b { font-weight: 400; font-size: clamp(44px, 8vw, 96px); letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.boot__count small { font-size: 12px; letter-spacing: .2em; color: var(--dim); }
+
+.boot__bar {
+  position: absolute; z-index: 3;
+  left: 0; right: 0; bottom: var(--boot-bar);
+  height: 1px;
+  background: rgba(255, 255, 255, .12);
+  overflow: hidden;
+}
+.boot__bar i {
+  display: block; height: 100%; width: 0%;
+  background: linear-gradient(90deg, var(--ink), var(--ink-hot));
+  box-shadow: 0 0 14px var(--ink-hot);
+  transition: width .25s ease-out;
+}
+@keyframes bootFade { to { opacity: 1; } }
+
+/* exit: the letters lift and soften, the bars open, then the card clears */
+.boot.is-done { opacity: 0; visibility: hidden; pointer-events: none; }
+.boot.is-done .boot__bar-edge--top { transform: translateY(-100%); }
+.boot.is-done .boot__bar-edge--bottom { transform: translateY(100%); }
+.boot.is-done .boot__word span { animation: bootLetterOut .9s var(--ease-in-out) forwards; animation-delay: calc(var(--i) * .04s); }
+@keyframes bootLetterOut { to { opacity: 0; transform: translateY(-.3em) scale(1.06); filter: blur(10px); } }
+.boot.is-done :is(.boot__meta, .boot__count, .boot__line, .boot__eyebrow, .boot__frame i, .boot__bar) { animation: none; opacity: 0; transition: opacity .4s ease; }
+
+@media (max-width: 700px) {
+  .boot__meta--tr, .boot__frame { display: none; }
+  .boot__meta--bl { bottom: calc(var(--boot-bar) + 40px); }
+  .boot__count { bottom: calc(var(--boot-bar) + 34px); }
+  .boot__count b { font-size: 40px; }
+  .boot__word { font-size: clamp(40px, 10.5vw, 64px); letter-spacing: .1em; text-indent: .1em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .boot::after, .boot::before { animation: none; }
+  .boot__word span, .boot__meta, .boot__eyebrow, .boot__line, .boot__count, .boot__frame i { animation: none; opacity: 1; transform: none; filter: none; }
+  .boot.is-done .boot__word span { animation: none; }
+  .boot { transition: opacity .3s ease-out, visibility .3s; }
+}
+
+.boot__enter {
+  position: absolute;
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, .28);
+  background: transparent;
+  color: var(--paper);
+  font-family: var(--ui);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  padding: 14px 30px 12px;
+  cursor: pointer;
+  transition: background .35s, border-color .35s, letter-spacing .35s;
+}
+.boot__enter:hover { background: var(--ink); border-color: var(--ink); letter-spacing: .4em; }
+
+.fallback {
+  position: absolute; inset: 0;
+  display: grid; place-content: center; text-align: center; gap: 12px;
+}
+.fallback p {
+  font-family: var(--disp); font-size: 16vw; color: var(--ink); margin: 0;
+}
+.fallback small { color: var(--dim); letter-spacing: .2em; text-transform: uppercase; }
+
+/* ==========================================================================
+   Small screens — the composition is landscape by nature, so on a phone the
+   furniture thins out rather than piling up on top of the wordmark.
+   ========================================================================== */
+
+@media (max-width: 760px) {
+  .hdr { gap: 10px; }
+  .hdr__div, .hdr__roles, .hdr__meta { display: none; }
+  .hdr__nav { display: none; }
+  .hdr__burger {
+    display: grid;
+    gap: 5px;
+    margin-left: auto;
+    appearance: none; border: 0; background: none; padding: 6px 0;
+    cursor: pointer;
+  }
+  .hdr__burger span {
+    display: block; width: 26px; height: 1.5px; background: var(--paper);
+    transition: transform .4s var(--ease-out);
+  }
+  .hdr__burger[aria-expanded="true"] span:first-child { transform: translateY(3.25px) rotate(45deg); }
+  .hdr__burger[aria-expanded="true"] span:last-child  { transform: translateY(-3.25px) rotate(-45deg); }
+
+  .arrows { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome, .chip, .arrows i, .grid-dots i,
+  .hdr__mark, .hdr__div, .hdr__roles, .hdr__nav li, .hdr__meta {
+    transition-duration: .01ms !important;
+    transition-delay: 0ms !important;
+  }
+}
+
+.hero-sound {
+  position: fixed;
+  left: clamp(20px, 3vw, 48px);
+  bottom: 24px;
+  z-index: 12;
+  padding: 10px 16px;
+  border: 1px solid rgba(255,255,255,.45);
+  border-radius: 3px;
+  background: rgba(10,5,5,.75);
+  color: #eee;
+  font: inherit;
+  font-size: 12px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.hero-sound[hidden] { display: none; }
+.hero-sound:hover, .hero-sound:focus-visible { border-color: #ef2929; outline: 2px solid #ef2929; outline-offset: 3px; }
+
+/* Red studio hero composition. */
+:root { --hdr-h: clamp(64px, 8.25svh, 90px); --edge: clamp(20px, 3.15vw, 54px); }
+.hdr__roles { font-size: clamp(8px, .72vw, 12px); }
+.hdr__nav ul { gap: clamp(14px, 2.7vw, 44px); }
+.hdr__nav a { font-size: clamp(9px, .88vw, 14px); font-weight: 400; }
+.hdr__nav a::after { width: 100%; height: 2px; left: 0; bottom: calc(14px - var(--hdr-h) / 2); margin: 0; border-radius: 0; background: #ff1428; box-shadow: 0 -2px 12px 3px #ff142880; }
+.hdr__metaLabel { font-size: clamp(8px, .8vw, 13px); }
+.hdr__pips { gap: 9px; }
+.hdr__pips i { width: 9px; height: 9px; border: 1px solid #ff1428; background: transparent; }
+.hdr__pips i:first-child { background: #ff1428; }
+.welcome { font-weight: 300; letter-spacing: .35em; gap: .9em; }
+.welcome__text em { color: #ff1428; font-style: normal; }
+.welcome__dots { font-size: 1em; letter-spacing: .12em; }
+.chip { letter-spacing: .16em; }
+.chip--artist { box-shadow: -4px 0 0 #ff1428, -6px 0 20px #ff142888; }
+.grid-dots i:first-child { background: #ff1428; }
+.hero-sound { position: absolute; left: 3.3%; bottom: 7.6%; border-radius: 0; padding: 12px 26px; font-weight: 300; font-size: clamp(11px, 1vw, 16px); letter-spacing: .3em; }
+@media (min-width: 761px) and (max-width: 1100px) {
+  .hdr__roles, .hdr__div { display: none; }
+  .hdr__nav ul { gap: 17px; }
+}
+@media (max-width: 760px) {
+  .welcome { letter-spacing: .18em; gap: .4em; }
+  .hero-sound { bottom: 5%; padding: 10px 16px; }
+}

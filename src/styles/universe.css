@@ -1,0 +1,118 @@
+/* ==========================================================================
+   Scene two — the creative universe.
+   This is the supplied artwork displayed AS the section, not a recreation of it:
+   the cards, the orange portal, the embers and every corner label are
+   part of the image. The page's job is to present it cinematically: arrive
+   from black, hold the frame, and stay out of its way.
+   ========================================================================== */
+
+.flow {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.flow > section { pointer-events: auto; }
+
+.hero-spacer {
+  height: 100svh;
+  pointer-events: none;
+}
+
+.universe {
+  position: relative;
+  height: 100svh;
+  background: #000;
+  overflow: hidden;
+  box-shadow: 0 -1px 0 0 #000;
+}
+
+#uniImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 50% 50%;
+  opacity: 0;
+  transform: scale(1.045);
+  transition: opacity 1.9s var(--ease-out), transform 3.2s var(--ease-out);
+}
+.universe.is-on #uniImage {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.universe__title {
+  position: absolute;
+  top: clamp(22px, 4.5vh, 48px);
+  left: 50%;
+  transform: translate(-50%, 14px);
+  z-index: 2;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.3s var(--ease-out) 0.75s,
+              transform 1.6s var(--ease-out) 0.75s;
+}
+.universe.is-on .universe__title { opacity: 1; transform: translate(-50%, 0); }
+
+.universe__over {
+  margin: 0 0 0.9em;
+  font-family: var(--ui);
+  font-size: clamp(7.5px, 0.62vw, 9.5px);
+  font-weight: 500;
+  letter-spacing: 0.5em;
+  text-indent: 0.5em;
+  text-transform: uppercase;
+  color: #b98a6a;
+}
+.universe__name {
+  margin: 0;
+  font-family: 'Bodoni Moda', 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: clamp(24px, 3vw, 48px);
+  line-height: 1.22;
+  letter-spacing: 0.26em;
+  text-indent: 0.26em;
+  text-transform: uppercase;
+  color: #fff4e8;
+  white-space: nowrap;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95), 0 0 1.25em rgba(255, 116, 35, 0.45);
+}
+.universe__sub {
+  margin: 1.1em 0 0;
+  font-family: var(--ui);
+  font-size: clamp(7.5px, 0.6vw, 9.5px);
+  font-weight: 400;
+  letter-spacing: 0.42em;
+  text-indent: 0.42em;
+  text-transform: uppercase;
+  color: rgba(222, 200, 180, 0.55);
+}
+
+@media (max-width: 760px) {
+  .universe__name { letter-spacing: 0.18em; text-indent: 0.18em; }
+}
+
+.universe__veil {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.45s ease;
+}
+
+.universe.is-fallback::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #000 url('../../public/media/creative-developer.png') center / cover no-repeat;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #uniImage, .universe__title { transition-duration: 0.01ms; transition-delay: 0s; transform: none; }
+  .universe.is-on .universe__title { transform: translate(-50%, 0); }
+}

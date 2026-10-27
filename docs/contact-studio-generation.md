@@ -1,0 +1,8 @@
+# Contact studio extension
+
+Generated with the built-in image-generation tool. Asset: `public/media/contact-studio-wide.png`.
+The webpage overlays the original `public/media/contact.png` over the generated portrait area. The original file was not modified. CSS feathers only the far-right studio background; the face, hair and body remain opaque and unfiltered.
+
+## Generation prompt
+
+Use case: compositing. Create a seamless landscape photographic extension of the supplied portrait for a website contact scene. Output 2240x1200 landscape. Very precise placement: supplied source is 941x1672. Place its original pixels at native scale at x=0, y=-100, so the left 941px of output is source rows 100 through 1299. Keep that left area unchanged, absolutely preserve man, face, hair, sunglasses, skin, clothing, body and pointing pose; no effects. Extend ONLY the studio to the RIGHT, from x=941 through 2239, matching the original image edge exactly: warm dim creative studio, dark charcoal walls, subtle wooden shelving horizontal lines, softly out of focus, very dark naturally lit negative space across right half for later HTML typography. Continue desk and amber lighting at bottom naturally. No people in extension, no duplicate body or arms. No letters, no typography, no UI, no logos added. Single continuous photograph, no separate panel, no vertical seam or border, no flat background. Original will also be layered verbatim over left area in website to ensure source is untouched. Right extension should be subdued and nearly black but retain faint photographic room detail, not a uniform gradient.

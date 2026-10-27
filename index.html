@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en" class="is-booting">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>STEPHEN — Artist · Creative · Storyteller</title>
+<meta name="description" content="Welcome to my world. Portfolio of Stephen — artist, creative, storyteller.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/svg+xml" href="public/favicon.svg">
+
+<link rel="preload" href="public/fonts/anton-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="public/fonts/oswald-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="public/fonts/oswald-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="src/styles/app.css">
+<link rel="stylesheet" href="src/styles/chrono.css">
+<link rel="stylesheet" href="src/styles/skills.css">
+<link rel="stylesheet" href="src/styles/experience.css">
+<link rel="stylesheet" href="src/styles/journey.css">
+<link rel="stylesheet" href="src/styles/certifications.css">
+<link rel="stylesheet" href="src/styles/contact.css">
+<link rel="stylesheet" href="src/styles/closing-motion.css">
+<link rel="stylesheet" href="src/styles/section-depth.css">
+</head>
+<body id="home">
+
+<!-- the real heading, for search engines and screen readers; the visible
+     wordmark is drawn on the canvas so video can be clipped inside its letters -->
+<h1 class="sr-only">STEPHEN — Artist, Creative, Storyteller. Welcome to my world.</h1>
+
+<div class="stage-wrap">
+  <canvas id="stage" aria-hidden="true"></canvas>
+
+  <!-- ------------------------------------------------------------------ -->
+  <header class="hdr" id="hdr">
+    <svg class="hdr__rule" id="hdrRule" aria-hidden="true" preserveAspectRatio="none">
+      <polyline id="hdrRulePath" fill="none" stroke="currentColor" stroke-width="1.25"
+                vector-effect="non-scaling-stroke"/>
+    </svg>
+
+    <p class="hdr__roles">
+      <span>Developer</span><span>Designer</span><span>Engineer</span>
+    </p>
+
+    <nav class="hdr__nav" aria-label="Primary">
+      <ul>
+        <li><a href="#home" class="is-active" aria-current="location" data-nav>Home</a></li>
+        <li><a href="#chrono" data-nav>Journey</a></li>
+        <li><a href="#skills" data-nav>Skills</a></li>
+        <li><a href="#experience" data-nav>Experience</a></li>
+        <li><a href="#projects" data-nav>Projects</a></li>
+        <li><a href="#certifications" data-nav>Certifications</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hdr__meta">
+      <span class="hdr__pips" aria-hidden="true"><i></i><i></i><i></i></span>
+    </div>
+
+    <button class="hdr__burger" id="burger" aria-expanded="false" aria-controls="menu">
+      <span aria-hidden="true"></span><span aria-hidden="true"></span>
+      <span class="sr-only">Menu</span>
+    </button>
+  </header>
+
+  <!-- ------------------------------------------------------------------ -->
+  <div class="furniture" aria-hidden="true">
+    <p class="welcome" id="welcome">
+      <b class="welcome__dots">•••</b>
+      <span class="welcome__text">Welcome to <em>my</em> world</span>
+      <b class="welcome__dots">•••</b>
+    </p>
+
+    <div class="arrows arrows--l" id="arrowsL"></div>
+    <div class="arrows arrows--r" id="arrowsR"></div>
+    <!-- only the bottom-right grid remains: the top-left one sat under the
+         navigation and fought with it -->
+    <div class="grid-dots grid-dots--br" id="dotsBR"></div>
+  </div>
+
+  <!-- ------------------------------------------------------------------ -->
+  <button class="hero-sound" id="heroSound" type="button" aria-label="Mute video sound" aria-pressed="true" hidden>Sound on</button>
+
+  <nav class="menu" id="menu" aria-label="Primary, expanded" hidden>
+    <ul>
+        <li><a href="#home" class="is-active" aria-current="location" data-nav>Home</a></li>
+        <li><a href="#chrono" data-nav>Journey</a></li>
+        <li><a href="#skills" data-nav>Skills</a></li>
+        <li><a href="#experience" data-nav>Experience</a></li>
+        <li><a href="#projects" data-nav>Projects</a></li>
+        <li><a href="#certifications" data-nav>Certifications</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+      </ul>
+    <p class="menu__tag">••• Welcome to my world •••</p>
+  </nav>
+
+  <!-- ------------------------------------------------------------------ -->
+  <div class="boot" id="boot" role="status" aria-live="polite" aria-label="Loading Stephen's portfolio">
+    <i class="boot__bar-edge boot__bar-edge--top" aria-hidden="true"></i>
+    <i class="boot__bar-edge boot__bar-edge--bottom" aria-hidden="true"></i>
+    <div class="boot__frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+    <p class="boot__meta boot__meta--tl" aria-hidden="true">Stephen<span>Portfolio · 2026</span></p>
+    <p class="boot__meta boot__meta--tr" aria-hidden="true">Reel 01<span>Cinematic cut</span></p>
+
+    <div class="boot__center">
+      <p class="boot__eyebrow" aria-hidden="true">••• A film by •••</p>
+      <p class="boot__word" aria-hidden="true">
+        <span style="--i:0">S</span><span style="--i:1">T</span><span style="--i:2">E</span><span style="--i:3">P</span><span style="--i:4">H</span><span style="--i:5">E</span><span style="--i:6">N</span>
+      </p>
+      <p class="boot__line"><span id="bootLine">Setting the stage</span></p>
+    </div>
+
+    <div class="boot__count" aria-hidden="true"><b id="bootCount">00</b><small>%</small></div>
+    <p class="boot__meta boot__meta--bl" aria-hidden="true">Loading<span>Welcome to my world</span></p>
+    <div class="boot__bar" aria-hidden="true"><i id="bootFill"></i></div>
+  </div>
+
+  <noscript>
+    <div class="fallback">
+      <p>STEPHEN</p>
+      <small>This opening is an animated experience. Please enable JavaScript.</small>
+    </div>
+  </noscript>
+</div>
+
+<main class="flow">
+  <!-- the hero above is position:fixed, so this reserves its scroll height -->
+  <div class="hero-spacer" aria-hidden="true"></div>
+
+  <!-- ==================================================================== -->
+  <section class="chrono" id="chrono" aria-labelledby="chronoTitle">
+    <div class="chrono__pin">
+      <canvas id="chronoStage" aria-hidden="true"></canvas>
+
+      <h2 class="chrono__title" id="chronoTitle">
+        <span>A</span><span>Journey</span><span>Through</span><span>Time</span>
+      </h2>
+      <p class="chrono__rail" aria-hidden="true">
+        <i></i>
+        <span>Ideas</span><span>Experiences</span><span>People</span>
+        <span>Projects</span><span>Me</span>
+        <i></i>
+      </p>
+
+      <p class="chrono__hint" aria-hidden="true">
+        Move<br>to travel<br>through time<i></i>
+      </p>
+      <p class="chrono__note chrono__note--bl" aria-hidden="true">
+        Same<br>curiosity<br>a brighter<br>tomorrow
+      </p>
+      <p class="chrono__note chrono__note--br" aria-hidden="true">
+        Still<br>designing<br>what's<br>next<i></i>
+      </p>
+
+      <div class="chrono__deck" id="chronoDeck"></div>
+
+      <!-- the figure's own layer, stacked over the deck: he stands in front
+           of the timeline, looking at his journey -->
+      <canvas id="chronoFront" aria-hidden="true"></canvas>
+    </div>
+  </section>
+
+  <!-- ==================================================================== -->
+  <section class="skills-scene" id="skills" aria-labelledby="skillsTitle"></section>
+
+  <!-- ==================================================================== -->
+  <section class="journey" id="experience" aria-labelledby="journeyTitle">
+    <img class="journey__scene" src="assets/journey/experience-scene.png" width="1586" height="992" alt="Stephen seated on a black marble bench overlooking the city at sunset" loading="lazy">
+    <div class="journey__intro">
+      <h2 id="journeyTitle">Experience<br><span>builds<br>perspective</span></h2>
+      <span class="journey__rule"></span>
+      <p class="journey__description">Every project, collaboration,<br>and challenge has shaped the<br>person I am today.<br>Grateful for the journey,<br>excited for what’s next.</p>
+      <span class="journey__rule"></span>
+      <div class="journey__signoff">
+        <p class="journey__signature">Stephen</p>
+        <p class="journey__micro">Still learning<br>Still building<br>Still evolving</p>
+      </div>
+    </div>
+    <p class="journey__wall" aria-hidden="true">Same<br>curiosity<br>a brighter<br>tomorrow</p>
+    <p class="journey__bench" aria-hidden="true">Experience<br>shapes<br>better<br>ideas</p>
+    <p class="journey__corner journey__micro">Ideas<br>into<br>impact</p>
+    <p class="journey__topics journey__micro">People<br>Projects<br>Learning<br>Growth</p>
+    <div class="journey__history">
+      <blockquote>Not just experience<br>but lessons for a better me.</blockquote>
+      <ol class="journey__timeline">
+        <li class="journey__milestone">
+          <div class="journey__date">2026</div><span class="journey__node" aria-hidden="true"></span>
+          <article class="journey__card">
+            <svg class="journey__icon" viewBox="0 0 27 27" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M14 5c4-3 9-3 9-3s0 5-3 9l-7 7-7-7 8-6Z"/><circle cx="17" cy="8" r="2"/><path d="m7 10-4 1-2 5 6-1m7 1-1 6 5-2 1-5M7 18l-4 4"/></svg>
+            <div class="journey__copy"><h3>AI Learning Platform</h3><p class="journey__company">Black Light Technologies</p><p>AI-powered academic and internship management platform with course enrollment, collaboration, and automated Google Calendar / Meet scheduling.</p></div>
+            <p class="journey__card-note">AI / FULL-STACK / PLATFORM</p>
+          </article>
+        </li>
+        <li class="journey__milestone">
+          <div class="journey__date">2025</div><span class="journey__node" aria-hidden="true"></span>
+          <article class="journey__card">
+            <svg class="journey__icon" viewBox="0 0 27 27" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="4"/><circle cx="19" cy="9" r="3"/><path d="M1 23v-4a8 8 0 0 1 16 0v4Zm17-8a6 6 0 0 1 7 6v2h-5"/></svg>
+            <div class="journey__copy"><h3>AI Question Paper Generator</h3><p class="journey__company">Vinayaga Public School</p><p>Automated question-bank processing, OCR extraction, AI question generation, and editable Word / PDF paper creation.</p></div>
+            <p class="journey__card-note">OCR / LLM / AUTOMATION</p>
+          </article>
+        </li>
+        <li class="journey__milestone">
+          <div class="journey__date">2025</div><span class="journey__node" aria-hidden="true"></span>
+          <article class="journey__card">
+            <svg class="journey__icon" viewBox="0 0 27 27" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="m8 5-7 7 7 7m10-14 7 7-7 7m-3-17-5 24"/></svg>
+            <div class="journey__copy"><h3>AI Object Detection System</h3><p class="journey__company">Yaar Solutions</p><p>Full-stack real-time image, video, and webcam detection platform with persistent tracking, analytics, secure uploads, and 250+ tests.</p></div>
+            <p class="journey__card-note">COMPUTER VISION / AI SYSTEMS</p>
+          </article>
+        </li>
+        <li class="journey__milestone">
+          <div class="journey__date">2024</div><span class="journey__node" aria-hidden="true"></span>
+          <article class="journey__card">
+            <svg class="journey__icon" viewBox="0 0 27 27" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="m1 8 12-5 12 5-12 5L1 8Zm4 3v8q8 6 16 0v-8m4-3v12"/></svg>
+            <div class="journey__copy"><h3>PPE Safety Monitoring</h3><p class="journey__company">Ramco Mills</p><p>Real-time CCTV safety monitoring with person tracking, PPE compliance, incident detection, live alerts, and evidence capture.</p></div>
+            <p class="journey__card-note">VISION / SAFETY AI / REAL-TIME</p>
+          </article>
+        </li>
+      </ol>
+      <div class="journey__stats" aria-label="Journey in numbers">
+        <div><strong>4+</strong><span>Years journey</span></div><div><strong>10+</strong><span>Projects</span></div><div><strong>5+</strong><span>Technologies</span></div><div><strong>∞</strong><span>Learnings</span></div>
+      </div>
+    </div>
+    <a class="journey__next" href="#projects"><span aria-hidden="true">→</span><span>Next<br>Projects</span></a>
+  </section>
+
+  <section class="experience" id="projects" aria-labelledby="experienceTitle">
+    <header class="experience__heading">
+      <h2 id="experienceTitle">Projects</h2>
+      <span></span>
+    </header>
+    <p class="experience__note experience__note--left" aria-hidden="true">Ideas<br>Interfaces<br>Experiences<br><strong>Real impact</strong><i></i></p>
+    <p class="experience__note experience__note--right" aria-hidden="true">Scroll<br>Explore<br>Interact<i></i></p>
+    <p class="experience__mobile-hint" id="experienceHint">Swipe to explore the room · Select a screen</p>
+    <div class="experience__viewport" tabindex="0" role="region" aria-label="Project screens" aria-describedby="experienceHint">
+      <div class="experience__world">
+        <img class="experience__art" src="assets/experience/room.jpg" width="1716" height="917"
+          alt="A cinematic room with glowing floor rings, surrounded by project screens."
+          loading="lazy" decoding="async">
+        <div class="experience__screens" id="experienceScreens"></div>
+      </div>
+    </div>
+    <p class="experience__note experience__note--bottom-left" aria-hidden="true">Real<br>Projects<br>Real<br>Stories</p>
+    <p class="experience__note experience__note--bottom-right" aria-hidden="true">Designing<br>A brighter<br>Tomorrow<i></i></p>
+    <dialog class="experience__detail" id="experienceDetail" aria-labelledby="experienceDetailTitle">
+      <form method="dialog"><button class="experience__close" aria-label="Close project details">Close <span aria-hidden="true">×</span></button></form>
+      <p class="experience__eyebrow" id="experienceDetailCategory"></p>
+      <h3 id="experienceDetailTitle"></h3>
+      <div id="experienceDetailCopy"></div>
+      <span class="experience__detail-line" aria-hidden="true"></span>
+    </dialog>
+  </section>
+
+  <section class="cert-room" id="certifications" aria-labelledby="certRoomTitle">
+    <img class="cert-room__backdrop" src="assets/certifications/room.webp" width="1584" height="993" alt="Stephen in a black suit looking toward a wall of certificates in a warmly lit study at sunset." loading="lazy" decoding="async">
+    <div class="cert-room__intro">
+      <h2 id="certRoomTitle">Learning<br>Creating<br>Achieving<br><em>More.</em></h2>
+      <p class="cert-room__statement">Certificates are milestones.<br>The real achievement is<br>the person I am becoming.</p>
+      <p class="cert-room__ritual">Learn<br>Practice<br>Build<br>Achieve<br>Repeat</p>
+    </div>
+    <p class="cert-room__script cert-room__script--top">Milestones on the way<br><span>to a bigger me.</span></p>
+    <div class="cert-room__wall">
+      <header class="cert-room__wall-heading"><h3>Certifications</h3><span id="certRoomCount" aria-live="polite">01 — 06 / 12</span></header>
+      <div class="cert-room__grid" id="certRoomGrid">
+          <button class="cert-room__frame" type="button" data-title="Full Stack Development" data-issuer="Error Makes Clever" aria-label="View Full Stack Development certificate">
+            <img src="public/certificates/fs.jpg" alt="Full Stack Development certificate from Error Makes Clever" loading="lazy" decoding="async">
+            <span>Full Stack Development <b aria-hidden="true">↗</b></span>
+          </button>
+          <button class="cert-room__frame" type="button" data-title="Software Engineering" data-issuer="Accenture · Forage" aria-label="View Software Engineering certificate">
+            <img src="public/certificates/acc.jpg" alt="Software Engineering certificate from Accenture · Forage" loading="lazy" decoding="async">
+            <span>Software Engineering <b aria-hidden="true">↗</b></span>
+          </button>
+          <button class="cert-room__frame" type="button" data-title="Solutions Architecture" data-issuer="AWS · Forage" aria-label="View Solutions Architecture certificate">
+            <img src="public/certificates/aws.jpg" alt="Solutions Architecture certificate from AWS · Forage" loading="lazy" decoding="async">
+            <span>Solutions Architecture <b aria-hidden="true">↗</b></span>
+          </button>
+          <button class="cert-room__frame" type="button" data-title="Python" data-issuer="GUVI" aria-label="View Python certificate">
+            <img src="public/certificates/py.PNG" alt="Python certificate from GUVI" loading="lazy" decoding="async">
+            <span>Python <b aria-hidden="true">↗</b></span>
+          </button>
+          <button class="cert-room__frame" type="button" data-title="Prompt Engineering" data-issuer="Error Makes Clever" aria-label="View Prompt Engineering certificate">
+            <img src="public/certificates/pe.jpg" alt="Prompt Engineering certificate from Error Makes Clever" loading="lazy" decoding="async">
+            <span>Prompt Engineering <b aria-hidden="true">↗</b></span>
+          </button>
+          <button class="cert-room__frame" type="button" data-title="Introduction to Data Science" data-issuer="Cisco Networking Academy" aria-label="View Introduction to Data Science certificate">
+            <img src="public/certificates/dsc.jpg" alt="Introduction to Data Science certificate from Cisco Networking Academy" loading="lazy" decoding="async">
+            <span>Introduction to Data Science <b aria-hidden="true">↗</b></span>
+          </button>
+          <button class="cert-room__frame" type="button" data-title="Quora System Design" data-issuer="Scaler Topics" aria-label="View Quora System Design certificate" hidden>
+            <img src="public/certificates/cer.png" alt="Quora System Design certificate from Scaler Topics" loading="lazy" decoding="async">
+            <span>Quora System Design <b aria-hidden="true">↗</b></span>
+          </button>
+          <button class="cert-room__frame" type="button" data-title="Data Analytics Essentials" data-issuer="Cisco Networking Academy" aria-label="View Data Analytics Essentials certificate" hidden>
+            <img src="public/certificates/da.jpg" alt="Data Analytics Essentials certificate from Cisco Networking Academy" loading="lazy" decoding="async">
+            <span>Data Analytics Essentials <b aria-hidden="true">↗</b></span>
+          </button>
+          <button class="cert-room__frame" type="button" data-title="AWS S3 for Beginners" data-issuer="Simplilearn SkillUp" aria-label="View AWS S3 for Beginners certificate" hidden>
+            <img src="public/certificates/awsp.jpg" alt="AWS S3 for Beginners certificate from Simplilearn SkillUp" loading="lazy" decoding="async">
+            <span>AWS S3 for Beginners <b aria-hidden="true">↗</b></span>
+          </button>
+          <button class="cert-room__frame" type="button" data-title="Machine Learning with Python" data-issuer="Infosys Springboard" aria-label="View Machine Learning with Python certificate" hidden>
+            <img src="public/certificates/ml.jpg" alt="Machine Learning with Python certificate from Infosys Springboard" loading="lazy" decoding="async">
+            <span>Machine Learning with Python <b aria-hidden="true">↗</b></span>
+          </button>
+          <button class="cert-room__frame" type="button" data-title="Python Data Structures" data-issuer="Great Learning" aria-label="View Python Data Structures certificate" hidden>
+            <img src="public/certificates/pds.JPG" alt="Python Data Structures certificate from Great Learning" loading="lazy" decoding="async">
+            <span>Python Data Structures <b aria-hidden="true">↗</b></span>
+          </button>
+          <button class="cert-room__frame" type="button" data-title="Python Programming Internship" data-issuer="InternPE" aria-label="View Python Programming Internship certificate" hidden>
+            <img src="public/certificates/img.jpg" alt="Python Programming Internship certificate from InternPE" loading="lazy" decoding="async">
+            <span>Python Programming Internship <b aria-hidden="true">↗</b></span>
+          </button>
+      </div>
+      <div class="cert-room__browse"><span>Select a frame to view</span><div><button id="certRoomPrev" type="button" aria-label="Previous six certificates" disabled>←</button><button id="certRoomNext" type="button" aria-label="Next six certificates">→</button></div></div>
+      <h3 class="cert-room__milestone-title">The skills behind the story</h3>
+      <div class="cert-room__milestones">
+        <article><span aria-hidden="true">⌘</span><h4>Build &amp; create</h4><p>Full stack development<br>Software engineering</p></article>
+        <article><span aria-hidden="true">☁</span><h4>Think in systems</h4><p>Cloud architecture<br>System design</p></article>
+        <article><span aria-hidden="true">✧</span><h4>Explore the data</h4><p>Python · Data science<br>Machine learning</p></article>
+        <article><span aria-hidden="true">✺</span><h4>Stay curious</h4><p>Prompt engineering<br>Learning by doing</p></article>
+      </div>
+      <p class="cert-room__script cert-room__script--bottom">Not the end.<br><span>Just the beginning…</span></p>
+    </div>
+    <p class="cert-room__footer">Same curiosity. A brighter tomorrow.<i></i></p>
+    <dialog class="cert-room__dialog" id="certRoomDialog" aria-labelledby="certRoomDialogTitle">
+      <div class="cert-room__dialog-heading"><div><p id="certRoomIssuer"></p><h3 id="certRoomDialogTitle"></h3></div><form method="dialog"><button aria-label="Close certificate">Close ×</button></form></div>
+      <img id="certRoomFull" alt="">
+      <a id="certRoomOriginal" target="_blank" rel="noopener">Open original certificate ↗</a>
+    </dialog>
+  </section>
+
+</main>
+
+<section class="contact" id="contact" aria-labelledby="contactTitle">
+  <div class="contact__portrait">
+    <img src="public/media/contact.png" width="941" height="1672" alt="Stephen in a black suit pointing to his Bigger Ideas, Brighter Tomorrow inspiration board in a warmly lit studio" loading="lazy" decoding="async">
+  </div>
+  <div class="contact__content">
+    <div class="contact__top" aria-hidden="true"><span></span><b>•••</b></div>
+    <h2 id="contactTitle">Let’s<br><span>connect.</span></h2>
+    <p class="contact__script" aria-hidden="true">Same<br>Curiosity<br>A Brighter<br>Tomorrow</p>
+    <p class="contact__intro">Good ideas start with<br>a simple conversation.</p>
+    <div class="contact__cards" aria-label="Contact channels">
+        <a class="contact__card" href="mailto:connect.stephen01@gmail.com">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="26" height="20"/><path d="m3 5 13 11L29 5M3 25l9-10m17 10-9-10"/></svg>
+          <strong>Email</strong><span>connect.stephen01<wbr>@gmail.com</span><i aria-hidden="true">↗</i>
+        </a>
+        <a class="contact__card" href="https://www.linkedin.com/in/stephen-profile/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="3" width="24" height="26" rx="2" fill="currentColor" stroke="none"/><path d="M10 13v10m6 0V13m0 4c0-5 7-5 7 0v6" stroke="#16130f" stroke-width="3"/><circle cx="10" cy="9" r="1.5" fill="#16130f" stroke="none"/></svg>
+          <strong>LinkedIn</strong><span>Let’s connect</span><i aria-hidden="true">↗</i>
+        </a>
+        <a class="contact__card" href="https://github.com/StephensHub03" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path fill="currentColor" stroke="none" d="M16 2a14 14 0 0 0-4.4 27.3c.7.1 1-.3 1-.7v-2.7c-4 .9-4.9-1.7-4.9-1.7-.6-1.6-1.6-2-1.6-2-1.3-.9.1-.9.1-.9 1.4.1 2.1 1.4 2.1 1.4 1.2 2.1 3.2 1.5 4 .9.1-.9.5-1.5.9-1.8-3.2-.4-6.5-1.6-6.5-7a5.5 5.5 0 0 1 1.5-3.9c-.2-.4-.7-1.9.2-3.9 0 0 1.2-.4 4.1 1.5a14 14 0 0 1 7.5 0C23 6.6 24.2 7 24.2 7c.8 2 .3 3.5.1 3.9a5.5 5.5 0 0 1 1.5 3.9c0 5.4-3.3 6.6-6.5 7 .5.4 1 1.3 1 2.6v4.2c0 .4.2.8 1 .7A14 14 0 0 0 16 2Z"/></svg>
+          <strong>GitHub</strong><span>Explore my work</span><i aria-hidden="true">↗</i>
+        </a>
+        
+    </div>
+    <div class="contact__rail"><span></span><p>Ideas <i>/</i> Collaborations <i>/</i> Opportunities</p><span></span><a href="#" class="contact__circle" aria-label="Back to top"><small>Write · Connect · Build · Grow</small>↗</a></div>
+    <div class="contact__closing"><blockquote><b aria-hidden="true">“</b><p>Let’s create<br>something meaningful.</p><b aria-hidden="true">”</b></blockquote><p class="contact__motto">Same curiosity.<br>A brighter<br>tomorrow.</p></div>
+  </div>
+  <p class="contact__location">Chennai, India <span></span></p>
+</section>
+
+<script type="module" src="src/main.js"></script>
+<script type="module" src="src/experience.js"></script>
+<script type="module" src="src/journey.js"></script>
+<script type="module" src="src/certifications.js"></script>
+<script type="module" src="src/closing-motion.js"></script>
+<script type="module" src="src/section-depth.js"></script>
+<script type="module" src="src/skills.bundle.js"></script>
+</body>
+</html>

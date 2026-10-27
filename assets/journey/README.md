@@ -1,0 +1,10 @@
+# Experience artwork
+
+Generated with the built-in image_gen tool from `public/media/me2.png` and the supplied layout reference. The original photo is unchanged. The seated pose is AI reconstructed; exact identity preservation is not guaranteed. No CSS image filters are applied to this section.
+
+Scene prompt:
+Use case: identity-preserve. Create a photorealistic website background matching the attached Experience layout reference (first conversation image), using the man from me2.png (second image) as the subject. Wide 16:10 composition. No text, no UI, no cards, no lettering. Exact scene arrangement of reference: luxurious dark black marble high-rise lobby, sunset amber city through tall windows on left, reflective black marble floor, black stone bench in lower left-center. Man sits on bench at x32% of full width, head at y22%, feet at bottom, occupies x18%-46%. Pose like reference: seated legs apart, left hand holding black portfolio vertically, other hand resting on thigh. Keep his original face, hair silhouette, sunglasses, beard, skin texture, physique, black suit white open shirt chain watch rings unchanged; no beauty retouch, face filter, stylization, color effects or artificial skin smoothing. Preserve identity as faithfully as possible. Right half is dark marble background with subdued reflections and plenty of negative space for HTML timeline. Leftmost 23% space for headline. Match reference architecture, camera, bench, warm sunset background; natural neutral light on his face. Do not add words, icons or interface. Output landscape high resolution asset.
+
+Thumbnail prompt: A photographic contact sheet of four equal quadrants with no gaps, borders or text: a suited man overlooking a sunset city; colleagues in a glass office at dusk; a programming monitor on a dark desk; books, a brass lamp and a coding workstation. Photorealistic black and amber palette. Used as CSS background quadrants without image filtering.
+
+The timeline wording, dates and statistics follow the supplied reference and can be edited in `index.html`.

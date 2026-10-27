@@ -1,0 +1,15 @@
+{
+  "name": "cinematic-portfolio",
+  "private": true,
+  "scripts": {
+    "build:skills": "esbuild src/skills.jsx --bundle --minify --format=esm --define:process.env.NODE_ENV=\"'production'\" --outfile=src/skills.bundle.js",
+    "dev": "python3 tools/serve.py 5173"
+  },
+  "dependencies": {
+    "lucide-react": "1.45.0",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "simple-icons": "16.31.0"
+  },
+  "devDependencies": { "esbuild": "0.28.2" }
+}

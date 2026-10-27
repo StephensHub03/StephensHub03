@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'Contact Bodoni';
+  src: url('../../public/fonts/bodonimoda-500.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+.contact {
+  --contact-gold: #deb071;
+  position: relative;
+  isolation: isolate;
+  z-index: 2;
+  min-height: 0;
+  aspect-ratio: 1.87;
+  background: linear-gradient(90deg, transparent 42%, rgb(0 0 0 / .57) 58%, rgb(0 0 0 / .25)), url('../../public/media/contact-studio-wide.png') left top / 110% auto no-repeat;
+  color: #f4f0e8;
+  font-family: var(--ui, 'Contact Bodoni', Georgia, serif);
+  overflow: hidden;
+}
+/* Only the studio extension is generated. The visible portrait remains the
+   original file, scaled proportionally with no filters or color overlays. */
+.contact__portrait { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.contact__portrait img {
+  display: block;
+  width: 42.3%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: -6.42vw;
+  /* Feather only the far-right studio wall. The head ends before 86%;
+     the opaque middle band protects every original pixel of the suit. */
+  mask-image: linear-gradient(90deg, #000 86%, transparent),
+    linear-gradient(180deg, transparent 32%, #000 34%, #000 76%, transparent 80%);
+}
+.contact__content { position: relative; margin-left: 55%; padding: 7.1vw 3.6vw 2vw 1vw; min-width: 0; background: none; }
+.contact__top { position: absolute; top: 12px; left: 24%; right: 8%; display: flex; justify-content: space-between; color: var(--contact-gold); }
+.contact__top span { width: 70px; height: 1px; background: #956b36; position: relative; }
+.contact__top span::after { content: ''; position: absolute; left: 48%; top: -2px; width: 5px; height: 5px; border-radius: 50%; background: var(--contact-gold); }
+.contact__top b { letter-spacing: 6px; line-height: 0; font-size: 23px; }
+.contact__chapter { margin: 0 0 12px; font-size: 11px; letter-spacing: .28em; text-transform: uppercase; color: #be945c; }
+.contact h2 { position: relative; z-index: 1; margin: 0; font-family: 'Contact Bodoni', Georgia, serif; font-weight: 500; font-size: clamp(44px, 5.2vw, 94px); line-height: 1.04; letter-spacing: .035em; font-kerning: none; text-transform: uppercase; font-synthesis: none; }
+.contact h2 span { color: var(--contact-gold); }
+.contact__script { position: absolute; right: 6%; top: 100px; margin: 0; color: #b28649; font: italic 22px/1.1 'Brush Script MT', cursive; transform: rotate(-16deg); text-align: center; }
+.contact__intro { margin: 24px 0 30px; color: #c0bdb8; font-size: clamp(15px, 1.3vw, 21px); line-height: 1.4; letter-spacing: .06em; }
+.contact__cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.contact__card { position: relative; display: flex; flex-direction: column; align-items: flex-start; min-width: 0; min-height: 9.8vw; padding: 21px 16px 29px; border: 1px solid #665031; border-radius: 4px; background: #15120d70; color: #f0efeb; text-align: left; font-family: inherit; text-decoration: none; }
+.contact__card svg { width: 28px; height: 28px; margin-bottom: 13px; }
+.contact__card strong { color: var(--contact-gold); font-family: 'Contact Bodoni', Georgia, serif; font-size: clamp(20px, 1.65vw, 28px); font-weight: 500; line-height: 1.25; letter-spacing: -.015em; font-synthesis: none; }
+.contact__card > span { margin-top: 10px; color: #c8c0b3; font-family: inherit; font-size: clamp(11px, .8vw, 14px); line-height: 1.55; overflow-wrap: anywhere; }
+.contact__card i { position: absolute; bottom: 10px; right: 13px; color: var(--contact-gold); font-size: 18px; font-style: normal; }
+a.contact__card:hover, a.contact__card:focus-visible { border-color: var(--contact-gold); background: #302315; }
+.contact__rail { display: flex; align-items: center; gap: 18px; margin: 3.55vw 0; }
+.contact__rail > span { flex: 1; height: 1px; background: #81796c; }
+.contact__rail p { display: flex; gap: 15px; font-size: 7px; font-weight: 600; text-transform: uppercase; letter-spacing: .14em; color: #bbb5ab; }
+.contact__rail i { font-style: normal; }
+.contact__circle { position: relative; display: grid; place-items: center; flex: 0 0 55px; height: 55px; margin-left: 15px; border: 1px solid #7e6038; border-radius: 50%; color: #cec7bb; text-decoration: none; font-size: 26px; }
+.contact__circle small { position: absolute; top: -18px; width: 90px; text-align: center; font-size: 6px; line-height: 1.5; text-transform: uppercase; letter-spacing: .15em; }
+.contact__circle:focus-visible { outline: 2px solid var(--contact-gold); outline-offset: 6px; }
+.contact__closing { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; }
+.contact__closing blockquote { display: flex; align-items: center; gap: 13px; margin: 0; }
+.contact__closing blockquote p { margin: 0; color: #c0b9ac; font: italic 16px/1.4 var(--ui, Georgia, serif); }
+.contact__closing blockquote b { color: var(--contact-gold); font: 48px Georgia, serif; }
+.contact__closing blockquote b:first-child { align-self: flex-start; }
+.contact__motto { padding-left: 16px; border-left: 1px solid #8c8374; color: #bab5aa; font-size: 8px; line-height: 1.5; text-transform: uppercase; letter-spacing: .15em; }
+.contact__location { position: absolute; bottom: 18px; left: 2.7%; display: flex; align-items: center; gap: 20px; font-size: 8px; text-transform: uppercase; letter-spacing: .13em; color: #eee7d8; }
+.contact__location span { width: 50px; height: 1px; background: currentColor; }
+
+@media (max-width: 1200px) and (min-width: 761px) {
+  .contact__content { margin-left: 50%; }
+  .contact__script { top: 43px; font-size: 17px; }
+  .contact__card { padding-left: 10px; padding-right: 8px; }
+  .contact__cards { gap: 8px; }
+  .contact__rail { gap: 8px; }
+  .contact__rail p { gap: 8px; }
+}
+@media (max-width: 760px) {
+  .contact { display: block; aspect-ratio: auto; background-size: auto 100%; background-position: right top; }
+  .contact__portrait { position: relative; height: auto; }
+  .contact__portrait img { position: static; width: 100%; height: auto; mask-image: none; }
+  .contact__content { margin-left: 0; padding: 64px 24px 35px; }
+  .contact__card { min-height: 138px; }
+  .contact h2 { font-size: clamp(40px, 11.5vw, 86px); }
+  .contact__script { top: 60px; right: 24px; font-size: 18px; }
+  .contact__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .contact__card:first-child { grid-column: 1 / -1; }
+  .contact__rail { gap: 10px; margin: 45px 0; }
+  .contact__rail p { gap: 8px; font-size: 6px; }
+  .contact__circle { flex-basis: 42px; height: 42px; margin-left: 5px; }
+  .contact__closing blockquote { gap: 6px; }
+  .contact__closing blockquote p { font-size: 14px; }
+  .contact__location { position: static; margin: 0; padding: 0 24px 24px; }
+}
