@@ -72,7 +72,7 @@ I focus on production-ready engineering: real-time object detection systems, spe
   <td width="32%" valign="middle" align="center">
     <a href="https://stephen-s-portfolio-psi.vercel.app/" target="_blank" rel="noopener noreferrer">
       <img
-        src="public/IMG_8078.PNG"
+        src="public/IMG_8078.jpg"
         width="230"
         style="border-radius: 14px; border: 1.5px solid #40202B;"
         alt="Jeya Stephen — Professional Portrait"
