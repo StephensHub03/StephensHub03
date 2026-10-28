@@ -94,8 +94,8 @@
   <g transform="translate(54, 350)">
     <rect width="280" height="166" rx="10" fill="url(#sot-tile-bg)" stroke="#40202B" stroke-width="1"/>
     <text x="20" y="26" font-family="'SF Mono', Monaco, monospace" font-size="9.5" letter-spacing="2" fill="#C5A46D" font-weight="600">04  BACKEND &amp; APIS</text>
-    <text x="20" y="64" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700" fill="#F2EAE0">Node.js · Express</text>
-    <text x="20" y="100" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="600" fill="#F2EAE0">FastAPI · Flask</text>
+    <text x="20" y="64" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-weight="700" fill="#F2EAE0">Node.js · Express</text>
+    <text x="20" y="100" font-family="Georgia, 'Times New Roman', serif" font-size="19" font-weight="600" fill="#F2EAE0">FastAPI · Flask</text>
     <text x="20" y="132" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#A79A98">REST APIs · WebSockets</text>
     <text x="20" y="150" font-family="'SF Mono', Monaco, monospace" font-size="9.5" letter-spacing="1" fill="#C5A46D" opacity="0.85">JWT AUTH · RBAC ARCHITECTURE</text>
   </g>
@@ -104,8 +104,8 @@
   <g transform="translate(360, 350)">
     <rect width="280" height="166" rx="10" fill="url(#sot-tile-bg)" stroke="#40202B" stroke-width="1"/>
     <text x="20" y="26" font-family="'SF Mono', Monaco, monospace" font-size="9.5" letter-spacing="2" fill="#C5A46D" font-weight="600">05  DATA &amp; INFRASTRUCTURE</text>
-    <text x="20" y="64" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="700" fill="#F2EAE0">MongoDB · PostgreSQL</text>
-    <text x="20" y="100" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="600" fill="#F2EAE0">Docker · AWS</text>
+    <text x="20" y="64" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#F2EAE0">MongoDB · PostgreSQL</text>
+    <text x="20" y="100" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="600" fill="#F2EAE0">Docker · AWS</text>
     <text x="20" y="132" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#A79A98">Firebase · Pinecone Vector DB</text>
     <text x="20" y="150" font-family="'SF Mono', Monaco, monospace" font-size="9.5" letter-spacing="1" fill="#C5A46D" opacity="0.85">EMBEDDINGS · QUERY OPTIMIZATION</text>
   </g>
@@ -114,8 +114,8 @@
   <g transform="translate(666, 350)">
     <rect width="280" height="166" rx="10" fill="url(#sot-tile-bg)" stroke="#40202B" stroke-width="1"/>
     <text x="20" y="26" font-family="'SF Mono', Monaco, monospace" font-size="9.5" letter-spacing="2" fill="#C5A46D" font-weight="600">06  TOOLS &amp; FUNDAMENTALS</text>
-    <text x="20" y="64" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="700" fill="#F2EAE0">Git · GitHub · Postman</text>
-    <text x="20" y="100" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="600" fill="#F2EAE0">DSA · OS · DBMS · OOP</text>
+    <text x="20" y="64" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#F2EAE0">Git · GitHub · Postman</text>
+    <text x="20" y="100" font-family="Georgia, 'Times New Roman', serif" font-size="16.5" font-weight="600" fill="#F2EAE0">DSA · OS · DBMS · OOP</text>
     <text x="20" y="132" font-family="'SF Mono', Monaco, monospace" font-size="11.5" fill="#A79A98">Computer Networks · Linux</text>
     <text x="20" y="150" font-family="'SF Mono', Monaco, monospace" font-size="9.5" letter-spacing="1" fill="#C5A46D" opacity="0.85">SYSTEM DESIGN · PIPELINE TESTING</text>
   </g>
