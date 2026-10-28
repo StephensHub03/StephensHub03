@@ -221,9 +221,43 @@
 <!-- ═══ SECTION 07: CONNECT ═══ -->
 <div align="center">
   <img
-    src="assets/section-07-connect.svg"
+    src="assets/section-07-connect-header.svg"
     width="100%"
     alt="Connect — Let's build something worth explaining."
+  />
+</div>
+
+<p align="center">
+  <a href="mailto:connect.stephen01@gmail.com">
+    <img
+      src="assets/connect-card-email.svg"
+      width="31.8%"
+      alt="Direct Dispatch: connect.stephen01@gmail.com"
+    />
+  </a>
+  &nbsp;
+  <a href="https://www.linkedin.com/in/stephen-profile/" target="_blank" rel="noopener noreferrer">
+    <img
+      src="assets/connect-card-linkedin.svg"
+      width="31.8%"
+      alt="Professional Network: linkedin.com/in/stephen-profile"
+    />
+  </a>
+  &nbsp;
+  <a href="https://stephen-s-portfolio-psi.vercel.app/" target="_blank" rel="noopener noreferrer">
+    <img
+      src="assets/connect-card-portfolio.svg"
+      width="31.8%"
+      alt="Interactive Showcase: stephen-s-portfolio-psi.vercel.app"
+    />
+  </a>
+</p>
+
+<div align="center">
+  <img
+    src="assets/section-07-connect-status.svg"
+    width="100%"
+    alt="Current Status: Open to high-impact roles &amp; engineering collaborations"
   />
 </div>
 

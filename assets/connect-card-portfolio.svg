@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 305 135" width="305" height="135" role="img" aria-label="Interactive Showcase — Live Portfolio">
+  <title>Interactive Showcase — Live Portfolio</title>
+  <defs>
+    <linearGradient id="pf-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#1e0c18" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#12070e" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <filter id="gold-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .card-wrap { transition: all 0.25s ease; }
+    .card-bg { transition: fill 0.25s ease, stroke 0.25s ease; }
+    .action-text { transition: fill 0.25s ease; }
+    .arrow-icon { transition: transform 0.25s ease; }
+    svg:hover .card-bg { fill: #2b1122; stroke: #C5A46D; stroke-width: 1.5; }
+    svg:hover .action-text { fill: #FFFFFF; }
+    svg:hover .arrow-icon { transform: translate(3px, -3px); }
+  </style>
+
+  <g class="card-wrap">
+    <!-- Card Base -->
+    <rect class="card-bg" x="2" y="2" width="301" height="131" rx="10" fill="url(#pf-bg)" stroke="#40202B" stroke-width="1.2"/>
+
+    <!-- Top-left corner bracket -->
+    <path d="M16,2 L2,2 L2,16" fill="none" stroke="#C5A46D" stroke-width="1.5" opacity="0.8"/>
+
+    <!-- Gold Diamond Icon -->
+    <polygon points="20,27 25,22 30,27 25,32" fill="#C5A46D" filter="url(#gold-glow)"/>
+
+    <!-- Channel Tag -->
+    <text x="38" y="30" font-family="'SF Mono', Monaco, monospace" font-size="10" letter-spacing="1.5" fill="#C5A46D" font-weight="600">INTERACTIVE SHOWCASE</text>
+
+    <!-- Main Title -->
+    <text x="20" y="62" font-family="Georgia, 'Times New Roman', serif" font-size="19" font-weight="700" fill="#F2EAE0">Live Portfolio</text>
+
+    <!-- Subtitle / Address -->
+    <text x="20" y="85" font-family="'SF Mono', Monaco, monospace" font-size="11" fill="#A79A98">stephen-s-portfolio-psi.vercel.app</text>
+
+    <!-- Divider Line -->
+    <line x1="20" y1="99" x2="285" y2="99" stroke="#40202B" stroke-width="0.8"/>
+
+    <!-- Action Link Indicator -->
+    <text class="action-text" x="20" y="117" font-family="'SF Mono', Monaco, monospace" font-size="9" font-weight="600" fill="#C5A46D" letter-spacing="1">EXPLORE DEPLOYMENTS <tspan class="arrow-icon">↗</tspan></text>
+  </g>
+</svg>

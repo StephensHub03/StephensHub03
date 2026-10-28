@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 44" width="1000" height="44" role="img" aria-label="Current Status: Open to high-impact roles &amp; engineering collaborations">
+  <title>Current Status: Open to high-impact roles &amp; engineering collaborations</title>
+  <defs>
+    <filter id="gold-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Status Bar Container -->
+  <rect x="30" y="2" width="940" height="40" rx="8" fill="#12070e" stroke="#40202B" stroke-width="1"/>
+
+  <!-- Pulsing Amber/Gold LED -->
+  <circle cx="52" cy="22" r="4" fill="#C5A46D" filter="url(#gold-glow)">
+    <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Status Text -->
+  <text x="68" y="26" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="600" letter-spacing="1.5" fill="#F2EAE0">CURRENT STATUS: <tspan fill="#C5A46D">OPEN TO HIGH-IMPACT ROLES &amp; ENGINEERING COLLABORATIONS</tspan></text>
+
+  <!-- Geolocation Tag -->
+  <text x="948" y="26" font-family="'SF Mono', Monaco, monospace" font-size="9.5" letter-spacing="1" fill="#A79A98" text-anchor="end">CHENNAI, INDIA</text>
+</svg>
