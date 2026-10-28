@@ -94,97 +94,39 @@
 
 <br/>
 
-<!-- ═══ SECTION 04: SELECTED PROJECTS ═══ -->
+<!-- ═══ SECTION 03: SELECTED PROJECTS ═══ -->
 <div align="center">
-  <img
-    src="assets/header-projects.svg"
-    width="100%"
-    alt="Selected Projects — Crafted with intelligence."
-  />
+  <a href="https://stephen-s-portfolio-psi.vercel.app/#projects" target="_blank" rel="noopener noreferrer">
+    <img
+      src="assets/section-03-projects.svg"
+      width="100%"
+      alt="Selected Projects — Crafted with intelligence."
+    />
+  </a>
 </div>
 
 <br/>
 
-<table border="0" width="100%">
-<tr>
-<td width="50%" valign="top">
+<details>
+<summary><b style="color: #C5A46D;">Explore Project Architectural Specs &amp; Stacks (Expand Table)</b></summary>
+<br/>
 
-### 🛡️ SentinelVision AI
-> **Real-Time Computer Vision &amp; Site Safety**
+| Project | Specialization | Architecture &amp; Stack | Core Impact |
+|---|---|---|---|
+| **🛡️ SentinelVision AI** | Computer Vision &amp; Safety | `Python` `YOLOv8` `OpenCV` `FastAPI` `React` | Sub-second PPE compliance detection and automated site logs |
+| **⚡ Postly** | Autonomous Social Agent | `Next.js` `Node.js` `OpenAI API` `MongoDB` `Tailwind` | Multi-channel AI drafting, tone alignment, and scheduling |
+| **🎯 HireSense AI** | Talent Intelligence &amp; NLP | `Python` `FastAPI` `spaCy` `React` `MongoDB` | Dense vector resume matching and competency ranking engine |
+| **🩺 VoxCare** | Conversational Voice AI | `Python` `Speech-to-Text` `LLM` `FastAPI` `React` | Voice-first clinical intake and automated triage guidance |
+| **📊 TweetSense** | Large-Scale Stream NLP | `Python` `Scikit-learn` `NLTK` `Flask` `Pandas` | Containerized REST sentiment classification for social streams |
+| **🎓 InternX** | Enterprise Management | `React` `Node.js` `Express` `MongoDB` `REST APIs` | Multi-tenant internship portal with RBAC and calendar sync |
 
-Autonomous safety surveillance system detecting personal protective equipment (PPE), hardhats, and safety vests in high-risk environments. Generates sub-second incident alerts and visual evidence logs.
+<p align="center">
+  <a href="https://stephen-s-portfolio-psi.vercel.app/#projects" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/LIVE%20DEMOS-Explore%20in%20Interactive%20Portfolio%20↗-481326?style=for-the-badge&labelColor=050609&color=481326&logo=vercel&logoColor=C5A46D" alt="Live Demos"/>
+  </a>
+</p>
 
-- **Stack:** `Python` `YOLOv8` `OpenCV` `FastAPI` `React`
-- **Focus:** Real-time object detection, automated compliance, edge inference
-- **Showcase:** [View in Portfolio ↗](https://stephen-s-portfolio-psi.vercel.app/#projects)
-
-</td>
-<td width="50%" valign="top">
-
-### ⚡ Postly
-> **Autonomous AI Social Media Automation**
-
-Intelligent content pipeline leveraging LLMs to draft, schedule, and publish cross-platform content with tone alignment, engagement analytics, and automated workflow triggers.
-
-- **Stack:** `Next.js` `Node.js` `OpenAI API` `MongoDB` `Tailwind`
-- **Focus:** LLM agent workflows, multi-channel scheduling, SaaS architecture
-- **Showcase:** [View in Portfolio ↗](https://stephen-s-portfolio-psi.vercel.app/#projects)
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🎯 HireSense AI
-> **Intelligent Resume Screening &amp; Candidate Ranking**
-
-Semantic parser and candidate ranking engine evaluating structured resumes against competency matrices using dense vector embeddings and NLP relevance scoring models.
-
-- **Stack:** `Python` `FastAPI` `spaCy` `React` `MongoDB`
-- **Focus:** Information extraction, semantic scoring, talent analytics
-- **Showcase:** [View in Portfolio ↗](https://stephen-s-portfolio-psi.vercel.app/#projects)
-
-</td>
-<td width="50%" valign="top">
-
-### 🩺 VoxCare
-> **Voice-First Intelligent Healthcare Assistant**
-
-Interactive clinical assistant allowing patients to communicate symptoms through conversational speech, retrieving structured guidance and clinical records with low latency.
-
-- **Stack:** `Python` `Speech-to-Text` `LLM` `FastAPI` `React`
-- **Focus:** Natural speech processing, real-time voice synthesis, conversational AI
-- **Showcase:** [View in Portfolio ↗](https://stephen-s-portfolio-psi.vercel.app/#projects)
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 📊 TweetSense
-> **Large-Scale Sentiment Analysis Pipeline**
-
-Social stream sentiment classification engine deployed as a containerized REST API, processing high-volume text streams into actionable categorical signals.
-
-- **Stack:** `Python` `Scikit-learn` `NLTK` `Flask` `Pandas`
-- **Focus:** Text classification, model serialization, API latency optimization
-- **Showcase:** [View in Portfolio ↗](https://stephen-s-portfolio-psi.vercel.app/#projects)
-
-</td>
-<td width="50%" valign="top">
-
-### 🎓 InternX
-> **Academic &amp; Internship Management Platform**
-
-Comprehensive internship and learning coordination portal with automated session scheduling, assignment delivery, progress dashboards, and mentor-student collaboration channels.
-
-- **Stack:** `React` `Node.js` `Express` `MongoDB` `REST APIs`
-- **Focus:** Role-based access control (RBAC), calendar integration, workflow tracking
-- **Showcase:** [View in Portfolio ↗](https://stephen-s-portfolio-psi.vercel.app/#projects)
-
-</td>
-</tr>
-</table>
+</details>
 
 <br/>
 
@@ -335,54 +277,37 @@ Comprehensive internship and learning coordination portal with automated session
 
 <br/>
 
-<table border="0" width="100%" cellspacing="0" cellpadding="0">
-  <tr>
-    <td width="35%" valign="middle" align="center">
-      <a href="https://stephen-s-portfolio-psi.vercel.app/" target="_blank" rel="noopener noreferrer">
-        <img
-          src="public/me2-nobg.png"
-          width="210"
-          alt="Jeya Stephen — Portrait"
-        />
-      </a>
-      <br/>
-      <sub><code style="color: #C5A46D;">JEYA STEPHEN · CHENNAI, INDIA</code></sub>
-    </td>
-    <td width="65%" valign="middle">
+<div align="center">
 
 ### Let's Collaborate
 
 I am continuously exploring collaborations in **AI/ML systems, computer vision engineering, and full-stack software development**. Whether you have an ambitious platform to build, a research prototype to productionize, or an engineering role to discuss, feel free to reach out.
 
-<p>
+<br/>
+
+<p align="center">
   <a href="mailto:connect.stephen01@gmail.com">
     <img src="https://img.shields.io/badge/EMAIL-connect.stephen01%40gmail.com-481326?style=for-the-badge&labelColor=050609&color=481326&logo=gmail&logoColor=C5A46D" alt="Email Direct"/>
   </a>
-</p>
-<p>
+  &nbsp;
   <a href="https://www.linkedin.com/in/stephen-profile/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/LINKEDIN-stephen--profile-481326?style=for-the-badge&labelColor=050609&color=481326&logo=linkedin&logoColor=C5A46D" alt="LinkedIn Profile"/>
   </a>
-</p>
-<p>
+  &nbsp;
   <a href="https://github.com/StephensHub03" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/GITHUB-StephensHub03-481326?style=for-the-badge&labelColor=050609&color=481326&logo=github&logoColor=C5A46D" alt="GitHub StephensHub03"/>
   </a>
-</p>
-<p>
+  &nbsp;
   <a href="https://stephen-s-portfolio-psi.vercel.app/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/PORTFOLIO-stephen--s--portfolio--psi.vercel.app-481326?style=for-the-badge&labelColor=050609&color=481326&logo=vercel&logoColor=C5A46D" alt="Interactive Portfolio"/>
   </a>
-</p>
-<p>
+  &nbsp;
   <a href="public/github.mp4">
     <img src="https://img.shields.io/badge/VIDEO%20REEL-1080p%20HD%20MP4-481326?style=for-the-badge&labelColor=050609&color=481326&logo=quicktime&logoColor=C5A46D" alt="Video Reel"/>
   </a>
 </p>
 
-  </td>
-</tr>
-</table>
+</div>
 
 <br/>
 

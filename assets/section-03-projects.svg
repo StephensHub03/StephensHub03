@@ -1,0 +1,304 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 756" width="1000" height="756" role="img" aria-label="Projects — Crafted with intelligence">
+  <title>Projects — Crafted with intelligence</title>
+  <defs>
+    <!-- Card Gradient -->
+    <linearGradient id="proj-card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#160910"/>
+      <stop offset="50%"  stop-color="#1c0c16"/>
+      <stop offset="100%" stop-color="#280f20" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="proj-gold-node" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#C5A46D" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#C5A46D" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#C5A46D" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="proj-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ═══ SECTION HEADER ═══ -->
+  <text x="32" y="32" font-family="'SF Mono', Monaco, monospace" font-size="11" letter-spacing="3" fill="#C5A46D" font-weight="600">03  PROJECTS</text>
+  <text x="968" y="32" font-family="'SF Mono', Monaco, monospace" font-size="11" letter-spacing="3" fill="#A79A98" text-anchor="end">AI · COMPUTER VISION · FULL-STACK</text>
+
+  <!-- Large Editorial Headline -->
+  <text x="30" y="80" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" fill="#F2EAE0">Crafted with <tspan font-style="italic" fill="#C5A46D">intelligence.</tspan></text>
+
+  <!-- Thin Horizontal Rule with Center Node -->
+  <line x1="30" y1="104" x2="970" y2="104" stroke="#40202B" stroke-width="1"/>
+  <rect x="420" y="103" width="160" height="2" fill="url(#proj-gold-node)"/>
+  <circle cx="500" cy="104" r="3.5" fill="#C5A46D" filter="url(#proj-glow)"/>
+
+  <!-- ═══ 6 PROJECT CARDS (2x3 GRID) ═══ -->
+  
+    <!-- Project Card: SentinelVision AI -->
+    <g>
+      <rect x="30" y="126" width="455" height="194" rx="12" fill="url(#proj-card-bg)" stroke="#40202B" stroke-width="1.2"/>
+      <circle cx="44" cy="140" r="2" fill="#C5A46D" opacity="0.6"/>
+      <circle cx="471" cy="140" r="2" fill="#C5A46D" opacity="0.6"/>
+      
+      <!-- Category Badge -->
+      <rect x="375" y="140" width="96" height="20" rx="10" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="423" y="153" font-family="'SF Mono', Monaco, monospace" font-size="8.5" letter-spacing="1.5" fill="#C5A46D" font-weight="600" text-anchor="middle">01 · VISION</text>
+      
+      <!-- Title -->
+      <text x="48" y="158" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#F2EAE0">SentinelVision AI</text>
+      
+      <!-- Tagline -->
+      <text x="48" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-style="italic" fill="#C5A46D">Real-Time Computer Vision & Site Safety</text>
+      
+      <!-- Divider -->
+      <line x1="48" y1="192" x2="467" y2="192" stroke="#40202B" stroke-width="0.8" stroke-dasharray="3,3"/>
+      
+      <!-- Description -->
+      <text font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#A79A98">
+        <tspan x="48" y="212">Autonomous surveillance system detecting PPE, hardhats, and</tspan>
+        <tspan x="48" y="230">safety vests in high-risk zones with sub-second incident alerts.</tspan>
+      </text>
+      
+      <!-- Tags -->
+      
+      <rect x="48" y="256" width="53.0" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="74.5" y="269" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">Python</text>
+      <rect x="107.0" y="256" width="53.0" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="133.5" y="269" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">YOLOv8</text>
+      <rect x="166.0" y="256" width="53.0" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="192.5" y="269" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">OpenCV</text>
+      <rect x="225.0" y="256" width="59.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="254.75" y="269" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">FastAPI</text>
+      <rect x="290.5" y="256" width="46.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="313.75" y="269" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">React</text>
+      
+      <!-- Footer Link Row -->
+      <line x1="48" y1="286" x2="467" y2="286" stroke="#40202B" stroke-width="0.5"/>
+      <text x="48" y="304" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#A79A98">Focus: <tspan fill="#F2EAE0">Real-time detection · Edge inference</tspan></text>
+      <text x="467" y="304" font-family="'SF Mono', Monaco, monospace" font-size="9.5" font-weight="600" fill="#C5A46D" text-anchor="end">Showcase ↗</text>
+    </g>
+
+    <!-- Project Card: Postly -->
+    <g>
+      <rect x="515" y="126" width="455" height="194" rx="12" fill="url(#proj-card-bg)" stroke="#40202B" stroke-width="1.2"/>
+      <circle cx="529" cy="140" r="2" fill="#C5A46D" opacity="0.6"/>
+      <circle cx="956" cy="140" r="2" fill="#C5A46D" opacity="0.6"/>
+      
+      <!-- Category Badge -->
+      <rect x="860" y="140" width="96" height="20" rx="10" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="908" y="153" font-family="'SF Mono', Monaco, monospace" font-size="8.5" letter-spacing="1.5" fill="#C5A46D" font-weight="600" text-anchor="middle">02 · AGENT</text>
+      
+      <!-- Title -->
+      <text x="533" y="158" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#F2EAE0">Postly</text>
+      
+      <!-- Tagline -->
+      <text x="533" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-style="italic" fill="#C5A46D">Autonomous AI Social Media Automation</text>
+      
+      <!-- Divider -->
+      <line x1="533" y1="192" x2="952" y2="192" stroke="#40202B" stroke-width="0.8" stroke-dasharray="3,3"/>
+      
+      <!-- Description -->
+      <text font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#A79A98">
+        <tspan x="533" y="212">Intelligent pipeline leveraging LLMs to draft, schedule, and publish</tspan>
+        <tspan x="533" y="230">cross-platform content with tone alignment and analytics.</tspan>
+      </text>
+      
+      <!-- Tags -->
+      
+      <rect x="533" y="256" width="59.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="562.75" y="269" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">Next.js</text>
+      <rect x="598.5" y="256" width="59.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="628.25" y="269" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">Node.js</text>
+      <rect x="664.0" y="256" width="53.0" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="690.5" y="269" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">OpenAI</text>
+      <rect x="723.0" y="256" width="59.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="752.75" y="269" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">MongoDB</text>
+      <rect x="788.5" y="256" width="66.0" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="821.5" y="269" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">Tailwind</text>
+      
+      <!-- Footer Link Row -->
+      <line x1="533" y1="286" x2="952" y2="286" stroke="#40202B" stroke-width="0.5"/>
+      <text x="533" y="304" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#A79A98">Focus: <tspan fill="#F2EAE0">LLM workflows · SaaS architecture</tspan></text>
+      <text x="952" y="304" font-family="'SF Mono', Monaco, monospace" font-size="9.5" font-weight="600" fill="#C5A46D" text-anchor="end">Showcase ↗</text>
+    </g>
+
+    <!-- Project Card: HireSense AI -->
+    <g>
+      <rect x="30" y="332" width="455" height="194" rx="12" fill="url(#proj-card-bg)" stroke="#40202B" stroke-width="1.2"/>
+      <circle cx="44" cy="346" r="2" fill="#C5A46D" opacity="0.6"/>
+      <circle cx="471" cy="346" r="2" fill="#C5A46D" opacity="0.6"/>
+      
+      <!-- Category Badge -->
+      <rect x="375" y="346" width="96" height="20" rx="10" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="423" y="359" font-family="'SF Mono', Monaco, monospace" font-size="8.5" letter-spacing="1.5" fill="#C5A46D" font-weight="600" text-anchor="middle">03 · TALENT AI</text>
+      
+      <!-- Title -->
+      <text x="48" y="364" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#F2EAE0">HireSense AI</text>
+      
+      <!-- Tagline -->
+      <text x="48" y="386" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-style="italic" fill="#C5A46D">Resume Screening & Candidate Ranking</text>
+      
+      <!-- Divider -->
+      <line x1="48" y1="398" x2="467" y2="398" stroke="#40202B" stroke-width="0.8" stroke-dasharray="3,3"/>
+      
+      <!-- Description -->
+      <text font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#A79A98">
+        <tspan x="48" y="418">Semantic parser and ranking engine evaluating structured resumes</tspan>
+        <tspan x="48" y="436">against competency matrices using dense vector embeddings.</tspan>
+      </text>
+      
+      <!-- Tags -->
+      
+      <rect x="48" y="462" width="53.0" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="74.5" y="475" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">Python</text>
+      <rect x="107.0" y="462" width="59.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="136.75" y="475" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">FastAPI</text>
+      <rect x="172.5" y="462" width="46.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="195.75" y="475" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">spaCy</text>
+      <rect x="225.0" y="462" width="46.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="248.25" y="475" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">React</text>
+      <rect x="277.5" y="462" width="59.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="307.25" y="475" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">MongoDB</text>
+      
+      <!-- Footer Link Row -->
+      <line x1="48" y1="492" x2="467" y2="492" stroke="#40202B" stroke-width="0.5"/>
+      <text x="48" y="510" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#A79A98">Focus: <tspan fill="#F2EAE0">Information extraction · Semantic scoring</tspan></text>
+      <text x="467" y="510" font-family="'SF Mono', Monaco, monospace" font-size="9.5" font-weight="600" fill="#C5A46D" text-anchor="end">Showcase ↗</text>
+    </g>
+
+    <!-- Project Card: VoxCare -->
+    <g>
+      <rect x="515" y="332" width="455" height="194" rx="12" fill="url(#proj-card-bg)" stroke="#40202B" stroke-width="1.2"/>
+      <circle cx="529" cy="346" r="2" fill="#C5A46D" opacity="0.6"/>
+      <circle cx="956" cy="346" r="2" fill="#C5A46D" opacity="0.6"/>
+      
+      <!-- Category Badge -->
+      <rect x="860" y="346" width="96" height="20" rx="10" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="908" y="359" font-family="'SF Mono', Monaco, monospace" font-size="8.5" letter-spacing="1.5" fill="#C5A46D" font-weight="600" text-anchor="middle">04 · VOICE AI</text>
+      
+      <!-- Title -->
+      <text x="533" y="364" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#F2EAE0">VoxCare</text>
+      
+      <!-- Tagline -->
+      <text x="533" y="386" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-style="italic" fill="#C5A46D">Voice-First Healthcare Clinical Assistant</text>
+      
+      <!-- Divider -->
+      <line x1="533" y1="398" x2="952" y2="398" stroke="#40202B" stroke-width="0.8" stroke-dasharray="3,3"/>
+      
+      <!-- Description -->
+      <text font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#A79A98">
+        <tspan x="533" y="418">Interactive clinical assistant allowing patients to communicate symptoms</tspan>
+        <tspan x="533" y="436">via conversational speech with structured clinical triage.</tspan>
+      </text>
+      
+      <!-- Tags -->
+      
+      <rect x="533" y="462" width="53.0" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="559.5" y="475" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">Python</text>
+      <rect x="592.0" y="462" width="33.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="608.75" y="475" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">STT</text>
+      <rect x="631.5" y="462" width="33.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="648.25" y="475" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">LLM</text>
+      <rect x="671.0" y="462" width="59.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="700.75" y="475" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">FastAPI</text>
+      <rect x="736.5" y="462" width="46.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="759.75" y="475" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">React</text>
+      
+      <!-- Footer Link Row -->
+      <line x1="533" y1="492" x2="952" y2="492" stroke="#40202B" stroke-width="0.5"/>
+      <text x="533" y="510" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#A79A98">Focus: <tspan fill="#F2EAE0">Speech processing · Conversational AI</tspan></text>
+      <text x="952" y="510" font-family="'SF Mono', Monaco, monospace" font-size="9.5" font-weight="600" fill="#C5A46D" text-anchor="end">Showcase ↗</text>
+    </g>
+
+    <!-- Project Card: TweetSense -->
+    <g>
+      <rect x="30" y="538" width="455" height="194" rx="12" fill="url(#proj-card-bg)" stroke="#40202B" stroke-width="1.2"/>
+      <circle cx="44" cy="552" r="2" fill="#C5A46D" opacity="0.6"/>
+      <circle cx="471" cy="552" r="2" fill="#C5A46D" opacity="0.6"/>
+      
+      <!-- Category Badge -->
+      <rect x="375" y="552" width="96" height="20" rx="10" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="423" y="565" font-family="'SF Mono', Monaco, monospace" font-size="8.5" letter-spacing="1.5" fill="#C5A46D" font-weight="600" text-anchor="middle">05 · NLP STREAM</text>
+      
+      <!-- Title -->
+      <text x="48" y="570" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#F2EAE0">TweetSense</text>
+      
+      <!-- Tagline -->
+      <text x="48" y="592" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-style="italic" fill="#C5A46D">Large-Scale Sentiment Analysis Pipeline</text>
+      
+      <!-- Divider -->
+      <line x1="48" y1="604" x2="467" y2="604" stroke="#40202B" stroke-width="0.8" stroke-dasharray="3,3"/>
+      
+      <!-- Description -->
+      <text font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#A79A98">
+        <tspan x="48" y="624">Social stream sentiment classification engine deployed as containerized</tspan>
+        <tspan x="48" y="642">REST API processing high-volume text streams into signals.</tspan>
+      </text>
+      
+      <!-- Tags -->
+      
+      <rect x="48" y="668" width="53.0" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="74.5" y="681" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">Python</text>
+      <rect x="107.0" y="668" width="92.0" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="153.0" y="681" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">Scikit-learn</text>
+      <rect x="205.0" y="668" width="40.0" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="225.0" y="681" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">NLTK</text>
+      <rect x="251.0" y="668" width="46.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="274.25" y="681" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">Flask</text>
+      <rect x="303.5" y="668" width="53.0" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="330.0" y="681" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">Pandas</text>
+      
+      <!-- Footer Link Row -->
+      <line x1="48" y1="698" x2="467" y2="698" stroke="#40202B" stroke-width="0.5"/>
+      <text x="48" y="716" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#A79A98">Focus: <tspan fill="#F2EAE0">Text classification · API optimization</tspan></text>
+      <text x="467" y="716" font-family="'SF Mono', Monaco, monospace" font-size="9.5" font-weight="600" fill="#C5A46D" text-anchor="end">Showcase ↗</text>
+    </g>
+
+    <!-- Project Card: InternX -->
+    <g>
+      <rect x="515" y="538" width="455" height="194" rx="12" fill="url(#proj-card-bg)" stroke="#40202B" stroke-width="1.2"/>
+      <circle cx="529" cy="552" r="2" fill="#C5A46D" opacity="0.6"/>
+      <circle cx="956" cy="552" r="2" fill="#C5A46D" opacity="0.6"/>
+      
+      <!-- Category Badge -->
+      <rect x="860" y="552" width="96" height="20" rx="10" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="908" y="565" font-family="'SF Mono', Monaco, monospace" font-size="8.5" letter-spacing="1.5" fill="#C5A46D" font-weight="600" text-anchor="middle">06 · PLATFORM</text>
+      
+      <!-- Title -->
+      <text x="533" y="570" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#F2EAE0">InternX</text>
+      
+      <!-- Tagline -->
+      <text x="533" y="592" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-style="italic" fill="#C5A46D">Academic & Internship Management Platform</text>
+      
+      <!-- Divider -->
+      <line x1="533" y1="604" x2="952" y2="604" stroke="#40202B" stroke-width="0.8" stroke-dasharray="3,3"/>
+      
+      <!-- Description -->
+      <text font-family="Georgia, 'Times New Roman', serif" font-size="11" fill="#A79A98">
+        <tspan x="533" y="624">Learning coordination portal with automated session scheduling,</tspan>
+        <tspan x="533" y="642">assignment delivery, progress tracking, and mentor channels.</tspan>
+      </text>
+      
+      <!-- Tags -->
+      
+      <rect x="533" y="668" width="46.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="556.25" y="681" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">React</text>
+      <rect x="585.5" y="668" width="59.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="615.25" y="681" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">Node.js</text>
+      <rect x="651.0" y="668" width="59.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="680.75" y="681" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">Express</text>
+      <rect x="716.5" y="668" width="59.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="746.25" y="681" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">MongoDB</text>
+      <rect x="782.0" y="668" width="72.5" height="20" rx="5" fill="#12070e" stroke="#40202B" stroke-width="0.8"/>
+      <text x="818.25" y="681" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#F2EAE0" text-anchor="middle">REST APIs</text>
+      
+      <!-- Footer Link Row -->
+      <line x1="533" y1="698" x2="952" y2="698" stroke="#40202B" stroke-width="0.5"/>
+      <text x="533" y="716" font-family="'SF Mono', Monaco, monospace" font-size="9" fill="#A79A98">Focus: <tspan fill="#F2EAE0">Role-based access · Workflow tracking</tspan></text>
+      <text x="952" y="716" font-family="'SF Mono', Monaco, monospace" font-size="9.5" font-weight="600" fill="#C5A46D" text-anchor="end">Showcase ↗</text>
+    </g>
+</svg>
