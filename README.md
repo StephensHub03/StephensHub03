@@ -340,10 +340,9 @@ Comprehensive internship and learning coordination portal with automated session
     <td width="35%" valign="middle" align="center">
       <a href="https://stephen-s-portfolio-psi.vercel.app/" target="_blank" rel="noopener noreferrer">
         <img
-          src="public/me2.png"
+          src="public/me2-nobg.png"
           width="210"
-          style="border-radius: 14px; border: 1.5px solid #40202B;"
-          alt="Jeya Stephen — Studio Portrait"
+          alt="Jeya Stephen — Portrait"
         />
       </a>
       <br/>
