@@ -101,21 +101,42 @@ class FetchTests(unittest.TestCase):
                 g.fetch_calendar("token")
 
 
+def pages(default, years=None):
+    """Fake profile fetcher: '' -> rolling-window page, '?from=YYYY-..' -> calendar-year page."""
+    return lambda q: default if not q else years[q[6:10]]
+
+
 class ProfileTests(unittest.TestCase):
     def test_matching_profile_passes(self):
         snap = make_snap(counts={"2026-07-12": 27, "2026-10-28": 1})
-        g.verify_against_profile(snap, profile_html(snap))
+        g.verify_against_profile(snap, pages(profile_html(snap)))
 
     def test_count_mismatch_detected(self):
         snap = make_snap(counts={"2026-07-12": 2})
         other = copy.deepcopy(snap); other["days"][-1].update(count=1, level="FIRST_QUARTILE")
         with self.assertRaisesRegex(g.ValidationError, "2026-10-28"):
-            g.verify_against_profile(snap, profile_html(other, total=snap["totalContributions"]))
+            g.verify_against_profile(snap, pages(profile_html(other, total=snap["totalContributions"])))
 
     def test_total_mismatch_detected(self):
         snap = make_snap()
         with self.assertRaisesRegex(g.ValidationError, "profile total 93"):
-            g.verify_against_profile(snap, profile_html(snap, total=93))
+            g.verify_against_profile(snap, pages(profile_html(snap, total=93)))
+
+    def test_utc_profile_one_day_behind_ist_api_passes(self):
+        # Actions run at 18:33 UTC: the IST API calendar already has 29 Oct (1 contribution),
+        # the logged-out profile still ends on 28 Oct UTC. Totals 240 vs 239.
+        snap = make_snap(last="2026-10-29", counts={"2026-07-12": 27, "2026-10-29": 1})
+        utc = make_snap(last="2026-10-28", counts={"2026-07-12": 27})
+        year = make_snap(first="2026-01-01", last="2026-12-31", counts={"2026-07-12": 27, "2026-10-29": 1})
+        with mock.patch("sys.stdout"):
+            g.verify_against_profile(snap, pages(profile_html(utc), {"2026": profile_html(year)}))
+
+    def test_edge_day_count_mismatch_detected(self):
+        snap = make_snap(last="2026-10-29", counts={"2026-10-29": 2})
+        utc = make_snap(last="2026-10-28")
+        year = make_snap(first="2026-01-01", last="2026-12-31", counts={"2026-10-29": 1})
+        with self.assertRaisesRegex(g.ValidationError, "2026-10-29: API count 2 != profile 1"):
+            g.verify_against_profile(snap, pages(profile_html(utc), {"2026": profile_html(year)}))
 
 
 class RenderTests(unittest.TestCase):

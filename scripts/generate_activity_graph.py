@@ -169,8 +169,8 @@ def fetch_calendar(token):
     }
 
 
-def fetch_profile_html():
-    req = urllib.request.Request(PROFILE_URL, headers={"User-Agent": "Mozilla/5.0"})
+def fetch_profile_html(query=""):
+    req = urllib.request.Request(PROFILE_URL + query, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=20) as resp:
         return resp.read().decode("utf-8")
 
@@ -244,23 +244,50 @@ def parse_profile(page):
     return {k: tuple(v) for k, v in cells.items()}, total
 
 
-def verify_against_profile(snap, page):
-    cells, total = parse_profile(page)
-    if not cells:
-        raise ValidationError("Could not parse any days from the profile calendar")
-    problems = []
-    if total is not None and total != snap["totalContributions"]:
-        problems.append(f"profile total {total} != API total {snap['totalContributions']}")
+def verify_against_profile(snap, fetch=fetch_profile_html):
+    """Compare the API calendar with the public profile.
+
+    The logged-out profile's rolling window ends on the UTC date, while the owner's
+    API calendar ends on the owner's local date, so the two windows can be a day
+    apart. Days are bucketed identically, so counts are compared on every API day
+    (edge days via the profile's calendar-year view) and the totals are reconciled
+    across the edge days. Levels are relative to the window shown, so they are only
+    compared when both windows are identical.
+    """
+    cells, total = parse_profile(fetch(""))
+    if not cells or total is None:
+        raise ValidationError("Could not parse the profile calendar")
     api = {d["date"]: (d["count"], LEVEL_MAP[d["level"]]) for d in snap["days"]}
-    if set(api) != set(cells):
+    same_window = set(api) == set(cells)
+
+    counts = {day: c for day, (c, _) in cells.items()}
+    for year in sorted({day[:4] for day in set(api) - set(cells)}):
+        year_cells, _ = parse_profile(fetch(f"?from={year}-01-01&to={year}-12-31"))
+        for day in set(api) - set(cells):
+            if day in year_cells:
+                counts[day] = year_cells[day][0]
+
+    problems = []
+    for day in sorted(api):
+        if day not in counts:
+            problems.append(f"{day}: missing from profile")
+        elif api[day][0] != counts[day]:
+            problems.append(f"{day}: API count {api[day][0]} != profile {counts[day]}")
+        elif same_window and api[day][1] != cells[day][1]:
+            problems.append(f"{day}: API level {api[day][1]} != profile {cells[day][1]}")
+
+    profile_only = sum(c for day, (c, _) in cells.items() if day not in api)
+    api_only = sum(c for day, (c, _) in api.items() if day not in cells)
+    if total - profile_only + api_only != snap["totalContributions"]:
         problems.append(
-            f"date range differs: API {min(api)}..{max(api)}, profile {min(cells)}..{max(cells)}"
+            f"profile total {total} (window {min(cells)}..{max(cells)}) does not reconcile with "
+            f"API total {snap['totalContributions']} (window {min(api)}..{max(api)})"
         )
-    for day in sorted(set(api) & set(cells)):
-        if api[day] != cells[day]:
-            problems.append(f"{day}: API count/level {api[day]} != profile {cells[day]}")
     if problems:
         raise ValidationError("Profile mismatch:\n  " + "\n  ".join(problems[:20]))
+    if not same_window:
+        print(f"Note: profile window {min(cells)}..{max(cells)} (UTC) vs API window "
+              f"{min(api)}..{max(api)}; edge days checked via calendar-year view")
 
 
 # ─── Render ───────────────────────────────────────────────────────────────
@@ -517,7 +544,7 @@ def main(argv=None):
                 print("Warning: profile cross-check skipped; snapshot marked profileVerified=false")
             else:
                 print(f"Cross-checking against {PROFILE_URL} ...")
-                verify_against_profile(snap, fetch_profile_html())
+                verify_against_profile(snap)
                 snap["profileVerified"] = True
         svg = render_svg(snap)
     except Exception as e:  # keep the last verified graph on any failure
