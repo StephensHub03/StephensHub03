@@ -4,11 +4,6 @@ on:
   schedule:
     - cron: '0 0 * * *' # Every night at midnight UTC
   workflow_dispatch: # Allows manual trigger from GitHub Actions tab
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - 'assets/section-06-activity.svg'
 
 permissions:
   contents: write
