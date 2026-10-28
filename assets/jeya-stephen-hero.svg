@@ -147,10 +147,6 @@
       font-family="Georgia, 'Times New Roman', serif"
       font-size="88" font-weight="700"
       fill="#F2EAE0">Stephen</text>
-    <text x="382" y="258"
-      font-family="Georgia, 'Times New Roman', serif"
-      font-size="88" font-weight="700"
-      fill="#C5A46D" filter="url(#jsh-gold-glow)">.</text>
 
     <!-- Thin luminous antique-gold underline -->
     <rect x="34" y="274" width="365" height="1.5" fill="url(#jsh-gold-line)"/>
