@@ -20,16 +20,21 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Generate Activity SVG
+      # GH_TOKEN must be a personal access token of StephensHub03 itself. The default
+      # GITHUB_TOKEN cannot see private contributions and produces a smaller calendar.
+      # If fetching or validation fails, the script exits non-zero without writing,
+      # so the last verified graph stays committed.
+      - name: Generate and verify activity SVG
         run: python3 scripts/generate_activity_graph.py
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_PAT: ${{ secrets.GH_PAT }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Run tests
+        run: python3 -m unittest scripts/test_generate_activity_graph.py
 
       - name: Commit and push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add assets/section-06-activity.svg
+          git add assets/section-06-activity.svg assets/section-06-activity.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "chore(activity): refresh GitHub contribution graph [skip ci]" && git push)
-
