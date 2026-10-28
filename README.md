@@ -140,6 +140,16 @@
 <br/>
 
 <div align="center">
+  <a href="https://github.com/StephensHub03">
+    <img
+      src="assets/section-06-activity.svg"
+      width="100%"
+      alt="Jeya Stephen — Commit Log &amp; Real GitHub Activity"
+    />
+  </a>
+</div>
+
+<br/>
 
 <p align="center">
   <a href="https://github.com/StephensHub03">
@@ -158,29 +168,6 @@
     />
   </a>
 </p>
-
-<p align="center">
-  <a href="https://github.com/StephensHub03">
-    <img
-      src="https://github-readme-streak-stats.herokuapp.com/?user=StephensHub03&theme=dark&background=160910&border=40202B&stroke=C5A46D&ring=C5A46D&fire=C5A46D&currStreakNum=F2EAE0&sideNums=F2EAE0&currStreakLabel=C5A46D&sideLabels=A79A98&dates=A79A98"
-      height="165"
-      alt="Jeya Stephen Contribution Streak"
-    />
-  </a>
-</p>
-
-<!-- GitHub Contribution Snake Animation -->
-<p align="center">
-  <a href="https://github.com/StephensHub03">
-    <img
-      src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg"
-      width="100%"
-      alt="GitHub Contribution Calendar Snake Animation"
-    />
-  </a>
-</p>
-
-</div>
 
 <br/>
 
