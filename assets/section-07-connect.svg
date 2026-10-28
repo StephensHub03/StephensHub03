@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 480" width="1000" height="480" role="img" aria-label="Connect — Let's build something worth explaining">
+  <title>Connect — Let's build something worth explaining</title>
+  <defs>
+    <!-- Background Card Gradient -->
+    <linearGradient id="soc-card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#160910"/>
+      <stop offset="50%"  stop-color="#1c0c16"/>
+      <stop offset="100%" stop-color="#280f20" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="soc-channel-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#1e0c18" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#12070e" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <linearGradient id="soc-gold-node" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#C5A46D" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#C5A46D" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#C5A46D" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Tech Grid Pattern -->
+    <pattern id="soc-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="40" y2="0" stroke="#76243B" stroke-width="0.5" stroke-opacity="0.1"/>
+      <line x1="0" y1="0" x2="0" y2="40" stroke="#76243B" stroke-width="0.5" stroke-opacity="0.1"/>
+      <circle cx="0" cy="0" r="0.75" fill="#C5A46D" fill-opacity="0.2"/>
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="soc-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ═══ SECTION HEADER ═══ -->
+  <text x="32" y="32" font-family="'SF Mono', Monaco, monospace" font-size="11" letter-spacing="3" fill="#C5A46D" font-weight="600">07  CONNECT</text>
+  <text x="968" y="32" font-family="'SF Mono', Monaco, monospace" font-size="11" letter-spacing="3" fill="#A79A98" text-anchor="end">OPEN INBOX · CHENNAI, INDIA</text>
+
+  <!-- Large Editorial Headline -->
+  <text x="30" y="80" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" fill="#F2EAE0">Let's build something <tspan font-style="italic" fill="#C5A46D">worth explaining.</tspan></text>
+
+  <!-- Thin Horizontal Rule with Center Node -->
+  <line x1="30" y1="104" x2="970" y2="104" stroke="#40202B" stroke-width="1"/>
+  <rect x="380" y="103" width="160" height="2" fill="url(#soc-gold-node)"/>
+  <circle cx="460" cy="104" r="3.5" fill="#C5A46D" filter="url(#soc-glow)"/>
+
+  <!-- ═══ MAIN LARGE ROUNDED PANEL ═══ -->
+  <rect x="30" y="126" width="940" height="328" rx="16" fill="url(#soc-card-bg)" stroke="#40202B" stroke-width="1.2"/>
+  <rect x="30" y="126" width="940" height="328" rx="16" fill="url(#soc-grid)"/>
+
+  <!-- Subtle corner accent dots -->
+  <circle cx="46" cy="142" r="2.5" fill="#C5A46D" opacity="0.6"/>
+  <circle cx="954" cy="142" r="2.5" fill="#C5A46D" opacity="0.6"/>
+
+  <!-- Top Narrative Statement inside Panel -->
+  <g transform="translate(56, 154)">
+    <text font-family="'SF Mono', Monaco, monospace" font-size="10.5" letter-spacing="2" fill="#C5A46D" font-weight="600">LET'S COLLABORATE</text>
+    <text font-family="Georgia, 'Times New Roman', serif" font-size="13.5" fill="#F2EAE0">
+      <tspan x="0" y="28">I am continuously exploring collaborations in <tspan font-weight="bold" fill="#FFFFFF">AI/ML systems, computer vision engineering,</tspan> and <tspan font-weight="bold" fill="#C5A46D">full-stack software</tspan></tspan>
+      <tspan x="0" y="49"><tspan font-weight="bold" fill="#C5A46D">development.</tspan> Whether you have an ambitious platform to build, a research prototype to productionize, or an</tspan>
+      <tspan x="0" y="70">engineering role to discuss, feel free to reach out across any channel below.</tspan>
+    </text>
+  </g>
+
+  <!-- ═══ THREE DISPATCH CHANNELS ═══ -->
+  <!-- Channel 1: Email -->
+  <g transform="translate(56, 256)">
+    <rect width="286" height="122" rx="10" fill="url(#soc-channel-bg)" stroke="#40202B" stroke-width="1"/>
+    <path d="M12,0 L0,0 L0,12" fill="none" stroke="#C5A46D" stroke-width="1.5" opacity="0.8"/>
+    <polygon points="20,24 25,19 30,24 25,29" fill="#C5A46D" filter="url(#soc-glow)"/>
+    <text x="38" y="27" font-family="'SF Mono', Monaco, monospace" font-size="10" letter-spacing="1.5" fill="#C5A46D" font-weight="600">DIRECT DISPATCH</text>
+    <text x="20" y="60" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#F2EAE0">Email Inbox</text>
+    <text x="20" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">connect.stephen01@gmail.com</text>
+    <line x1="20" y1="96" x2="266" y2="96" stroke="#40202B" stroke-width="0.5"/>
+    <text x="20" y="110" font-family="'SF Mono', Monaco, monospace" font-size="8.5" fill="#C5A46D">PRIORITY RESPONSE · 24H ↗</text>
+  </g>
+
+  <!-- Channel 2: LinkedIn -->
+  <g transform="translate(357, 256)">
+    <rect width="286" height="122" rx="10" fill="url(#soc-channel-bg)" stroke="#40202B" stroke-width="1"/>
+    <path d="M12,0 L0,0 L0,12" fill="none" stroke="#C5A46D" stroke-width="1.5" opacity="0.8"/>
+    <polygon points="20,24 25,19 30,24 25,29" fill="#C5A46D" filter="url(#soc-glow)"/>
+    <text x="38" y="27" font-family="'SF Mono', Monaco, monospace" font-size="10" letter-spacing="1.5" fill="#C5A46D" font-weight="600">PROFESSIONAL NETWORK</text>
+    <text x="20" y="60" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#F2EAE0">LinkedIn</text>
+    <text x="20" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">linkedin.com/in/stephen-profile</text>
+    <line x1="20" y1="96" x2="266" y2="96" stroke="#40202B" stroke-width="0.5"/>
+    <text x="20" y="110" font-family="'SF Mono', Monaco, monospace" font-size="8.5" fill="#C5A46D">CONNECT &amp; NETWORK ↗</text>
+  </g>
+
+  <!-- Channel 3: Portfolio -->
+  <g transform="translate(658, 256)">
+    <rect width="286" height="122" rx="10" fill="url(#soc-channel-bg)" stroke="#40202B" stroke-width="1"/>
+    <path d="M12,0 L0,0 L0,12" fill="none" stroke="#C5A46D" stroke-width="1.5" opacity="0.8"/>
+    <polygon points="20,24 25,19 30,24 25,29" fill="#C5A46D" filter="url(#soc-glow)"/>
+    <text x="38" y="27" font-family="'SF Mono', Monaco, monospace" font-size="10" letter-spacing="1.5" fill="#C5A46D" font-weight="600">INTERACTIVE SHOWCASE</text>
+    <text x="20" y="60" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#F2EAE0">Live Portfolio</text>
+    <text x="20" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">stephen-s-portfolio-psi.vercel.app</text>
+    <line x1="20" y1="96" x2="266" y2="96" stroke="#40202B" stroke-width="0.5"/>
+    <text x="20" y="110" font-family="'SF Mono', Monaco, monospace" font-size="8.5" fill="#C5A46D">EXPLORE DEPLOYMENTS ↗</text>
+  </g>
+
+  <!-- Bottom Availability Strip -->
+  <rect x="56" y="396" width="888" height="36" rx="8" fill="#12070e" stroke="#40202B" stroke-width="1"/>
+  <circle cx="76" cy="414" r="4" fill="#C5A46D" filter="url(#soc-glow)">
+    <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="92" y="418" font-family="'SF Mono', Monaco, monospace" font-size="10" font-weight="600" letter-spacing="1.5" fill="#F2EAE0">CURRENT STATUS: <tspan fill="#C5A46D">OPEN TO HIGH-IMPACT ROLES &amp; ENGINEERING COLLABORATIONS</tspan></text>
+  <text x="924" y="418" font-family="'SF Mono', Monaco, monospace" font-size="9" letter-spacing="1" fill="#A79A98" text-anchor="end">CHENNAI, INDIA</text>
+</svg>

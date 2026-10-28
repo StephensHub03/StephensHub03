@@ -52,7 +52,7 @@
       <text x="48" y="158" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#F2EAE0">SentinelVision AI</text>
       
       <!-- Tagline -->
-      <text x="48" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-style="italic" fill="#C5A46D">Real-Time Computer Vision & Site Safety</text>
+      <text x="48" y="180" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-style="italic" fill="#C5A46D">Real-Time Computer Vision &amp; Site Safety</text>
       
       <!-- Divider -->
       <line x1="48" y1="192" x2="467" y2="192" stroke="#40202B" stroke-width="0.8" stroke-dasharray="3,3"/>
@@ -140,7 +140,7 @@
       <text x="48" y="364" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#F2EAE0">HireSense AI</text>
       
       <!-- Tagline -->
-      <text x="48" y="386" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-style="italic" fill="#C5A46D">Resume Screening & Candidate Ranking</text>
+      <text x="48" y="386" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-style="italic" fill="#C5A46D">Resume Screening &amp; Candidate Ranking</text>
       
       <!-- Divider -->
       <line x1="48" y1="398" x2="467" y2="398" stroke="#40202B" stroke-width="0.8" stroke-dasharray="3,3"/>
@@ -272,7 +272,7 @@
       <text x="533" y="570" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#F2EAE0">InternX</text>
       
       <!-- Tagline -->
-      <text x="533" y="592" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-style="italic" fill="#C5A46D">Academic & Internship Management Platform</text>
+      <text x="533" y="592" font-family="Georgia, 'Times New Roman', serif" font-size="12" font-style="italic" fill="#C5A46D">Academic &amp; Internship Management Platform</text>
       
       <!-- Divider -->
       <line x1="533" y1="604" x2="952" y2="604" stroke="#40202B" stroke-width="0.8" stroke-dasharray="3,3"/>

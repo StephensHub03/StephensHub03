@@ -65,16 +65,12 @@
 
 <br/>
 
----
-
-<br/>
-
 <!-- ═══ SECTION 03: ENGINEERING IN MOTION / VIDEO REEL ═══ -->
 <div align="center">
   <table border="0" width="100%" cellspacing="0" cellpadding="0">
     <tr>
       <td align="center" style="background-color: #160910; border: 1.5px solid #40202B; border-radius: 14px; padding: 18px;">
-        <p align="center" style="margin: 0 0 10px 0;">
+        <p align="center" style="margin: 0;">
           <a href="public/github.mp4" title="Click to open full 1080p video reel">
             <img
               src="public/github.gif"
@@ -83,9 +79,6 @@
               alt="Engineering in Motion — System Showcase"
             />
           </a>
-        </p>
-        <p align="center" style="margin: 0;">
-          <sub><b style="color: #C5A46D;">ENGINEERING IN MOTION</b> · Real-time vision systems, intelligent workflows, and interactive web applications · <a href="public/github.mp4"><b>Watch Full 1080p HD Reel (MP4) ↗</b></a></sub>
         </p>
       </td>
     </tr>
@@ -104,33 +97,6 @@
     />
   </a>
 </div>
-
-<br/>
-
-<details>
-<summary><b style="color: #C5A46D;">Explore Project Architectural Specs &amp; Stacks (Expand Table)</b></summary>
-<br/>
-
-| Project | Specialization | Architecture &amp; Stack | Core Impact |
-|---|---|---|---|
-| **🛡️ SentinelVision AI** | Computer Vision &amp; Safety | `Python` `YOLOv8` `OpenCV` `FastAPI` `React` | Sub-second PPE compliance detection and automated site logs |
-| **⚡ Postly** | Autonomous Social Agent | `Next.js` `Node.js` `OpenAI API` `MongoDB` `Tailwind` | Multi-channel AI drafting, tone alignment, and scheduling |
-| **🎯 HireSense AI** | Talent Intelligence &amp; NLP | `Python` `FastAPI` `spaCy` `React` `MongoDB` | Dense vector resume matching and competency ranking engine |
-| **🩺 VoxCare** | Conversational Voice AI | `Python` `Speech-to-Text` `LLM` `FastAPI` `React` | Voice-first clinical intake and automated triage guidance |
-| **📊 TweetSense** | Large-Scale Stream NLP | `Python` `Scikit-learn` `NLTK` `Flask` `Pandas` | Containerized REST sentiment classification for social streams |
-| **🎓 InternX** | Enterprise Management | `React` `Node.js` `Express` `MongoDB` `REST APIs` | Multi-tenant internship portal with RBAC and calendar sync |
-
-<p align="center">
-  <a href="https://stephen-s-portfolio-psi.vercel.app/#projects" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/LIVE%20DEMOS-Explore%20in%20Interactive%20Portfolio%20↗-481326?style=for-the-badge&labelColor=050609&color=481326&logo=vercel&logoColor=C5A46D" alt="Live Demos"/>
-  </a>
-</p>
-
-</details>
-
-<br/>
-
----
 
 <br/>
 
@@ -159,10 +125,6 @@
 | **06 Fundamentals** | Git, GitHub, Postman, Linux, DSA, OOP, DBMS, System Architecture | Version control, CI/CD, modular architecture, distributed system design |
 
 </details>
-
-<br/>
-
----
 
 <br/>
 
@@ -218,13 +180,7 @@
   </a>
 </p>
 
-<sub><i>Live telemetry updated continuously via the GitHub API for <a href="https://github.com/StephensHub03">@StephensHub03</a>.</i></sub>
-
 </div>
-
-<br/>
-
----
 
 <br/>
 
@@ -262,26 +218,14 @@
 
 <br/>
 
----
-
-<br/>
-
-<!-- ═══ SECTION 08: CONNECT ═══ -->
+<!-- ═══ SECTION 07: CONNECT ═══ -->
 <div align="center">
   <img
-    src="assets/header-connect.svg"
+    src="assets/section-07-connect.svg"
     width="100%"
     alt="Connect — Let's build something worth explaining."
   />
 </div>
-
-<br/>
-
-<div align="center">
-
-### Let's Collaborate
-
-I am continuously exploring collaborations in **AI/ML systems, computer vision engineering, and full-stack software development**. Whether you have an ambitious platform to build, a research prototype to productionize, or an engineering role to discuss, feel free to reach out.
 
 <br/>
 
@@ -306,8 +250,6 @@ I am continuously exploring collaborations in **AI/ML systems, computer vision e
     <img src="https://img.shields.io/badge/VIDEO%20REEL-1080p%20HD%20MP4-481326?style=for-the-badge&labelColor=050609&color=481326&logo=quicktime&logoColor=C5A46D" alt="Video Reel"/>
   </a>
 </p>
-
-</div>
 
 <br/>
 
