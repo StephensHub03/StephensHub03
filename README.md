@@ -52,37 +52,16 @@
 
 <br/>
 
-<!-- Editorial Narrative Card with Portrait -->
-<table border="0" width="100%" cellspacing="0" cellpadding="0">
-  <tr>
-    <td width="68%" valign="top">
-
-### Professional Narrative
-
-I am an **AI/ML Engineer and Full-Stack Developer** completing a **B.Tech in Artificial Intelligence and Data Science at Ramco Institute of Technology**. My work spans the continuum from model training and computer vision pipelines to end-to-end full-stack architectures — building resilient systems that perceive, reason, and act.
-
-I focus on production-ready engineering: real-time object detection systems, speech-driven healthcare assistants, LLM-powered SaaS automations, and scalable MERN microservices. I care equally about algorithmic precision, system latency, and crafted user experience.
-
-- **Core Disciplines:** Computer Vision (YOLOv8, OpenCV), LLM Orchestration, NLP Pipelines, Full-Stack Architecture
-- **Engineering Values:** Deterministic systems, verifiable AI outputs, and clean, modular interfaces
-- **Education:** B.Tech AI & Data Science · Ramco Institute of Technology
-- **Current Location:** Chennai, India · Open to high-impact engineering opportunities
-
-  </td>
-  <td width="32%" valign="middle" align="center">
-    <a href="https://stephen-s-portfolio-psi.vercel.app/" target="_blank" rel="noopener noreferrer">
-      <img
-        src="public/IMG_8078.jpg"
-        width="230"
-        style="border-radius: 14px; border: 1.5px solid #40202B;"
-        alt="Jeya Stephen — Professional Portrait"
-      />
-    </a>
-    <br/>
-    <sub><code style="color: #C5A46D;">JEYA STEPHEN · CHENNAI, INDIA</code></sub>
-  </td>
-</tr>
-</table>
+<!-- ═══ SECTION 02: PROFESSIONAL NARRATIVE ═══ -->
+<div align="center">
+  <a href="https://stephen-s-portfolio-psi.vercel.app/" target="_blank" rel="noopener noreferrer">
+    <img
+      src="assets/section-02-narrative.svg"
+      width="100%"
+      alt="Jeya Stephen — Professional Narrative &amp; Core Disciplines"
+    />
+  </a>
+</div>
 
 <br/>
 
