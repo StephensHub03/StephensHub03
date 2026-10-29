@@ -20,6 +20,7 @@ function updateExperienceMotion() {
 }
 
 function updateNavigation() {
+  document.documentElement.classList.toggle('is-scrolled', window.scrollY > 40);
   const marker = window.innerHeight * 0.3;
   let current = sections[0];
   for (const section of sections) {

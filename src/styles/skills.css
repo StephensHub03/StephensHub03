@@ -17,8 +17,13 @@
 .skills-heading h2{font:400 7.8cqw/.83 'Bodoni Moda',Georgia,serif;letter-spacing:-.045em;margin:0;text-transform:uppercase;color:#fff2e3}
 .skills-scene__subtitle{font-size:.88cqw;letter-spacing:.53em;text-transform:uppercase;margin:.85cqw 0 0;white-space:nowrap}
 .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.05cqw .8cqw}
-.skill-card{min-width:0;margin:0;padding:1.1cqw .95cqw 1.2cqw;border:1px solid #bd945976;border-radius:.6cqw;background:linear-gradient(135deg,#39291c75,#090907dc 48%,#100d08e8);box-shadow:inset 0 0 .55cqw #ecb76726,0 .25cqw 1cqw #0007;backdrop-filter:blur(5px);transition:transform .35s,border-color .35s,box-shadow .35s}
-.skill-card:hover{transform:translateY(-3px);border-color:#d5ab6c;box-shadow:inset 0 0 1.2cqw #ecb76724,0 .5cqw 1.8cqw #0009}
+.skill-card{position:relative;overflow:hidden;min-width:0;margin:0;padding:1.1cqw .95cqw 1.2cqw;border:1px solid #bd945976;border-radius:.6cqw;background:linear-gradient(135deg,#39291c75,#090907dc 48%,#100d08e8);box-shadow:inset 0 0 .55cqw #ecb76726,0 .25cqw 1cqw #0007;backdrop-filter:blur(5px);transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .35s,box-shadow .35s}
+.skill-card:hover{transform:translateY(-5px) scale(1.015);border-color:#d5ab6c;box-shadow:inset 0 0 1.2cqw #ecb76724,0 .8cqw 2.4cqw #000b,0 0 16px #ecb7672b}
+.skill-card::after{content:'';position:absolute;top:-60%;left:-70%;width:45%;height:220%;background:linear-gradient(90deg,transparent,rgba(239,200,140,0.12),transparent);transform:rotate(28deg);pointer-events:none}
+@media(prefers-reduced-motion:no-preference){
+  .skill-card::after{animation:skill-card-sheen 8.5s ease-in-out infinite;animation-delay:calc(var(--order,0)*1.3s)}
+}
+@keyframes skill-card-sheen{0%,65%{left:-70%;opacity:0}75%{opacity:1}100%{left:160%;opacity:0}}
 .skill-card header{display:flex;gap:.8cqw;align-items:center;margin-bottom:1.25cqw;white-space:nowrap}
 .skill-number{font-size:1.25cqw;color:#c39b6b;font-weight:300}
 .skill-card h3{font-size:.98cqw;font-weight:400;letter-spacing:.02em;text-transform:uppercase;margin:0}
@@ -26,16 +31,28 @@
 .skill-card header p{font-size:.52cqw;letter-spacing:.12em;text-transform:uppercase;color:#9e9585;margin:0}
 .skill-card ul{display:grid;grid-template-columns:repeat(var(--items),minmax(0,1fr));gap:.6cqw;padding:0;margin:0;list-style:none}
 .skill-card li{min-width:0;text-align:center}
-.skill-symbol{height:3.7cqw;display:grid;place-items:center;border:1px solid #ac87551a;background:linear-gradient(145deg,#090a08,#070706);border-radius:.55cqw;box-shadow:0 .2cqw .5cqw #0005;transition:transform .3s}
+.skill-symbol{height:3.7cqw;display:grid;place-items:center;border:1px solid #ac87551a;background:linear-gradient(145deg,#090a08,#070706);border-radius:.55cqw;box-shadow:0 .2cqw .5cqw #0005;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s,border-color .3s}
 .skill-symbol svg{width:2.25cqw;height:2.25cqw}
 .skill-symbol b{font:600 1.05cqw/1 Arial,sans-serif}
-.skill-card li:hover .skill-symbol{transform:translateY(-2px) scale(1.04)}
+.skill-card li:hover .skill-symbol{transform:translateY(-3px) scale(1.08);border-color:#d5ab6c;box-shadow:0 .4cqw 1cqw #0008,0 0 12px currentColor}
 .skill-card li>span{display:block;font-size:.67cqw;line-height:1.25;margin-top:.45cqw;color:#dcd6ce;overflow-wrap:anywhere}
 .skills-scene__script{position:absolute;right:5.3%;top:5.4%;font:italic 1.65cqw/1.1 'Bodoni Moda',cursive;color:#bc8b4e;transform:rotate(-15deg);margin:0;text-align:center}
 .skills-navigation{position:absolute;right:2.3%;bottom:2.7%;font-size:.65cqw;letter-spacing:.14em;text-transform:uppercase}
-.skills-navigation a{color:#bc9c70;text-decoration:none;padding:10px}
+.skills-navigation a{color:#bc9c70;text-decoration:none;padding:10px;display:inline-flex;align-items:center;gap:6px}
 .skills-navigation a:focus-visible{outline:2px solid #d5ab6c;outline-offset:4px}
-.skills-composition.is-visible .skill-card{animation:skills-reveal .85s both;animation-delay:calc(var(--order)*90ms)}
+.skills-navigation a span{display:inline-block;transition:transform .3s ease}
+@media(prefers-reduced-motion:no-preference){
+  .skills-navigation a span{animation:skills-arrow-hop 2.2s ease-in-out infinite}
+  .skills-wall-note{animation:skills-note-float 5.5s ease-in-out infinite alternate}
+  .skills-portrait-caption{animation:skills-caption-float 6s ease-in-out infinite alternate}
+  .skills-scene__script{animation:skills-script-float 6.5s ease-in-out infinite alternate}
+}
+@keyframes skills-arrow-hop{0%,100%{transform:translate(0,0)}50%{transform:translate(4px,-4px);color:#fff}}
+@keyframes skills-note-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes skills-caption-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes skills-script-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.skills-composition.is-visible .skill-card{animation:skills-reveal .85s both,skill-card-float 5.8s ease-in-out infinite alternate;animation-delay:calc(var(--order)*90ms),calc(1s + var(--order)*500ms)}
+@keyframes skill-card-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 @keyframes skills-reveal{from{opacity:0;translate:0 14px;filter:blur(3px)}to{opacity:1;translate:0 0;filter:blur(0)}}
 @keyframes skills-light{from{opacity:.25}to{opacity:1}}
 @media(min-width:901px) and (max-width:1063px){.skills-composition{min-height:0}}

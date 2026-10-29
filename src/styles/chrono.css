@@ -73,6 +73,52 @@
 .chrono.is-live .chrono__hint { transition-delay: .25s; }
 .chrono.is-live .chrono__note { transition-delay: .3s; }
 
+@media (prefers-reduced-motion: no-preference) {
+  .chrono.is-live .chrono__hint {
+    animation: chrono-hint-float 5s ease-in-out infinite alternate;
+  }
+  .chrono.is-live .chrono__hint i {
+    animation: hint-radar-pulse 2.4s ease-in-out infinite;
+  }
+  .chrono.is-live .chrono__title {
+    animation: chrono-title-breathe 7s ease-in-out infinite alternate;
+  }
+  .chrono.is-live .chrono__note--bl {
+    animation: chrono-note-drift-l 6.5s ease-in-out infinite alternate;
+  }
+  .chrono.is-live .chrono__note--br {
+    animation: chrono-note-drift-r 6.5s ease-in-out infinite alternate;
+  }
+  .chrono.is-live .chrono__rail i,
+  .chrono.is-live .chrono__note i {
+    animation: chrono-line-glow 3s ease-in-out infinite alternate;
+  }
+}
+@keyframes chrono-hint-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+@keyframes hint-radar-pulse {
+  0%, 100% { width: 26px; opacity: 0.6; background: #6a5a4c; }
+  50% { width: 42px; opacity: 1; background: var(--amber); box-shadow: 0 0 10px var(--amber); }
+}
+@keyframes chrono-title-breathe {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+@keyframes chrono-note-drift-l {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+@keyframes chrono-note-drift-r {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+@keyframes chrono-line-glow {
+  0%, 100% { opacity: 0.6; width: 26px; }
+  50% { opacity: 1; width: 34px; background: #9a6a44; box-shadow: 0 0 6px #9a6a44; }
+}
+
 .chrono__title {
   left: clamp(18px, 3vw, 54px);
   top: clamp(26px, 5.5vh, 62px);
@@ -182,6 +228,19 @@
     0 0 18px rgba(255, 70, 20, .5),
     0 0 42px rgba(255, 40, 10, .3);
 }
+@media (prefers-reduced-motion: no-preference) {
+  .yr-tag.is-active {
+    animation: yr-tag-glow 2.8s ease-in-out infinite alternate;
+  }
+}
+@keyframes yr-tag-glow {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(255, 170, 90, .45), 0 0 18px rgba(255, 70, 20, .5), 0 0 42px rgba(255, 40, 10, .3);
+  }
+  50% {
+    text-shadow: 0 0 8px rgba(255, 200, 120, .8), 0 0 26px rgba(255, 90, 30, .85), 0 0 56px rgba(255, 60, 20, .55);
+  }
+}
 
 .yr {
   position: absolute;
@@ -224,7 +283,54 @@
     0 0 calc(6px + 46px * var(--near, 0))
       rgba(255, 62, 20, calc(.05 + .40 * var(--near, 0))),
     inset 0 1px 0 rgba(255, 190, 140, .07);
-  transition: border-color .45s ease, box-shadow .45s ease, background .45s ease;
+  transition: border-color .45s ease, box-shadow .45s ease, background .45s ease, transform .45s ease;
+  overflow: hidden;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .yr__frame {
+    animation: yr-frame-levitate 4.6s ease-in-out infinite alternate;
+  }
+  .yr:nth-child(2n) .yr__frame {
+    animation-delay: -2.3s;
+  }
+  .yr.is-active .yr__frame {
+    animation: yr-active-ember-glow 3.4s ease-in-out infinite alternate;
+  }
+}
+@keyframes yr-frame-levitate {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+@keyframes yr-active-ember-glow {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 18px 46px -18px rgba(0, 0, 0, .9), 0 0 46px rgba(255, 62, 20, .45), inset 0 1px 0 rgba(255, 190, 140, .15);
+  }
+  50% {
+    transform: translateY(-5px);
+    box-shadow: 0 24px 54px -14px rgba(0, 0, 0, .95), 0 0 68px rgba(255, 90, 30, .75), inset 0 1px 0 rgba(255, 220, 170, .35);
+  }
+}
+.yr__frame::after {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -70%;
+  width: 50%;
+  height: 220%;
+  background: linear-gradient(90deg, transparent, rgba(255, 180, 120, 0.12), transparent);
+  transform: rotate(25deg);
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .yr.is-active .yr__frame::after {
+    animation: yr-sheen 6s ease-in-out infinite;
+  }
+}
+@keyframes yr-sheen {
+  0%, 60% { left: -70%; opacity: 0; }
+  70% { opacity: 1; }
+  100% { left: 160%; opacity: 0; }
 }
 .yr.is-active .yr__frame {
   border-color: rgba(255, 92, 44, .95);

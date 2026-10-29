@@ -487,17 +487,26 @@ screens.addEventListener('focusin', (event) => {
 const world = section.querySelector('.experience__world');
 const finePointer = matchMedia('(hover: hover) and (pointer: fine)');
 const motion = { x: 0, y: 0, tx: 0, ty: 0, presence: 0, targetPresence: 0, raf: 0, last: 0 };
+let roomOnScreen = false;
 const canTilt = () => finePointer.matches && !narrow.matches && !reduced.matches && !dialog.open;
 
-function paintRoom() {
-  world.style.setProperty('--room-x', `${(motion.x * 9).toFixed(3)}px`);
-  world.style.setProperty('--room-y', `${(motion.y * 5).toFixed(3)}px`);
-  world.style.setProperty('--room-rx', `${(-motion.y * 3).toFixed(3)}deg`);
-  world.style.setProperty('--room-ry', `${(motion.x * 4).toFixed(3)}deg`);
-  world.style.setProperty('--room-scale', (1 + motion.presence * .035).toFixed(5));
-  world.style.setProperty('--room-light-x', `${50 + motion.x * 35}%`);
-  world.style.setProperty('--room-light-y', `${50 + motion.y * 35}%`);
-  world.style.setProperty('--room-light', motion.presence.toFixed(4));
+function paintRoom(now = performance.now()) {
+  const idle = (roomOnScreen && !reduced.matches && !dialog.open)
+    ? (1 - motion.presence)
+    : 0;
+  const idleX = idle * Math.sin(now * 0.00075) * 0.28;
+  const idleY = idle * Math.cos(now * 0.00055) * 0.20;
+  const curX = motion.x + idleX;
+  const curY = motion.y + idleY;
+
+  world.style.setProperty('--room-x', `${(curX * 9).toFixed(3)}px`);
+  world.style.setProperty('--room-y', `${(curY * 5).toFixed(3)}px`);
+  world.style.setProperty('--room-rx', `${(-curY * 3).toFixed(3)}deg`);
+  world.style.setProperty('--room-ry', `${(curX * 4).toFixed(3)}deg`);
+  world.style.setProperty('--room-scale', (1 + Math.max(motion.presence, 0.25 * idle) * .035).toFixed(5));
+  world.style.setProperty('--room-light-x', `${50 + curX * 35}%`);
+  world.style.setProperty('--room-light-y', `${50 + curY * 35}%`);
+  world.style.setProperty('--room-light', Math.max(motion.presence, 0.35 * idle).toFixed(4));
 }
 
 function animateRoom(now) {
@@ -514,9 +523,10 @@ function animateRoom(now) {
     motion.y = motion.ty;
     motion.presence = motion.targetPresence;
   }
-  paintRoom();
-  motion.raf = settled ? 0 : requestAnimationFrame(animateRoom);
-  if (settled && !motion.presence) section.classList.remove('is-tracking');
+  paintRoom(now);
+  const shouldLoop = (roomOnScreen && !reduced.matches && !dialog.open) || !settled;
+  motion.raf = shouldLoop ? requestAnimationFrame(animateRoom) : 0;
+  if (!shouldLoop && !motion.presence) section.classList.remove('is-tracking');
 }
 
 function wakeRoom() {
@@ -556,6 +566,8 @@ document.addEventListener('visibilitychange', () => {
 });
 if ('IntersectionObserver' in window) {
   new IntersectionObserver(([entry]) => {
-    if (!entry.isIntersecting) resetRoom(true);
+    roomOnScreen = entry.isIntersecting;
+    if (roomOnScreen) wakeRoom();
+    else resetRoom(true);
   }).observe(section);
 }

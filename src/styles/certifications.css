@@ -13,30 +13,94 @@
 .cert-room__script { font-family: 'Bodoni Moda', Georgia, serif; font-style: italic; color: #e9a959; font-size: 1.7cqw; font-weight: 400; line-height: 1.2; text-shadow: 0 2px 8px #000; }
 .cert-room__script--top { position: absolute; top: 9%; left: 44%; margin: 0; transform: rotate(-8deg); }
 .cert-room__script span { padding-left: 2cqw; }
+@media (prefers-reduced-motion: no-preference) {
+  .cert-room__script--top {
+    animation: cert-script-float 6.5s ease-in-out infinite alternate;
+  }
+}
+@keyframes cert-script-float {
+  0%, 100% { transform: rotate(-8deg) translateY(0); }
+  50% { transform: rotate(-8deg) translateY(-4px); }
+}
 .cert-room__wall { position: absolute; left: 44%; top: 20%; width: 41%; transform: perspective(1600px) rotateY(-5deg) rotateZ(-3deg); transform-origin: center; }
 .cert-room__wall-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-bottom: .7cqw; border-bottom: 1px solid #c496525e; margin-bottom: .8cqw; }
 .cert-room__wall-heading h3, .cert-room__milestone-title { font-size: .7cqw; font-weight: 400; letter-spacing: .3em; text-transform: uppercase; margin: 0; }
 .cert-room__wall-heading > span { color: #d2ac77; font-size: .6cqw; letter-spacing: .13em; }
 .cert-room__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2cqw; }
-.cert-room__frame { position: relative; min-width: 0; padding: .65cqw; border: 1px solid #e3ae64; background: linear-gradient(145deg, #a77c4038, #100e0b9e); color: #e9d3b2; box-shadow: 0 0 5px #ffb65d77, inset 0 0 8px #ffb65d22, 0 8px 15px #0008; cursor: zoom-in; transition: transform .3s, box-shadow .3s; }
+.cert-room__frame { position: relative; overflow: hidden; min-width: 0; padding: .65cqw; border: 1px solid #e3ae64; background: linear-gradient(145deg, #a77c4038, #100e0b9e); color: #e9d3b2; box-shadow: 0 0 5px #ffb65d77, inset 0 0 8px #ffb65d22, 0 8px 15px #0008; cursor: zoom-in; transition: transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s, border-color .35s; }
 .cert-room__frame[hidden] { display: none; }
-.cert-room__frame::before { content: ''; position: absolute; top: -3px; left: 12%; width: 4px; height: 4px; background: #ffe8bc; box-shadow: 0 0 9px 3px #ffa537; border-radius: 50%; }
-.cert-room__frame img { display: block; width: 100%; height: 7.5cqw; object-fit: contain; background: #e9e3d9; }
+.cert-room__frame::before { content: ''; position: absolute; top: -3px; left: 12%; width: 5px; height: 5px; background: #ffe8bc; box-shadow: 0 0 9px 3px #ffa537; border-radius: 50%; z-index: 2; }
+.cert-room__frame::after { content: ''; position: absolute; top: -60%; left: -70%; width: 45%; height: 220%; background: linear-gradient(90deg, transparent, rgba(255, 230, 180, 0.16), transparent); transform: rotate(25deg); pointer-events: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .cert-room__frame::before {
+    animation: pin-beacon-pulse 2.8s ease-in-out infinite;
+  }
+  .cert-room__frame:nth-child(2n)::before { animation-delay: -1.4s; }
+  .cert-room__frame::after {
+    animation: cert-glass-sheen 8s ease-in-out infinite;
+  }
+  .cert-room__frame:nth-child(2n)::after { animation-delay: 2.6s; }
+  .cert-room__frame:nth-child(3n)::after { animation-delay: 5.2s; }
+  .cert-room.is-visible .cert-room__frame {
+    animation: cert-light-in .9s both, cert-frame-levitate 5.2s ease-in-out infinite alternate;
+  }
+  .cert-room.is-visible .cert-room__frame:nth-child(3n+1) { animation-delay: 0s, 1s; }
+  .cert-room.is-visible .cert-room__frame:nth-child(3n+2) { animation-delay: .12s, 1.6s; }
+  .cert-room.is-visible .cert-room__frame:nth-child(3n+3) { animation-delay: .24s, 2.2s; }
+}
+@keyframes pin-beacon-pulse {
+  0%, 100% { transform: scale(0.9); box-shadow: 0 0 7px 2px #ffa537, 0 0 14px rgba(255, 165, 55, 0.4); }
+  50% { transform: scale(1.35); box-shadow: 0 0 16px 4px #ffc57a, 0 0 26px rgba(255, 165, 55, 0.85); }
+}
+@keyframes cert-glass-sheen {
+  0%, 65% { left: -70%; opacity: 0; }
+  75% { opacity: 1; }
+  100% { left: 160%; opacity: 0; }
+}
+@keyframes cert-frame-levitate {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+.cert-room__frame img { display: block; width: 100%; height: 7.5cqw; object-fit: contain; background: #e9e3d9; transition: transform .4s ease; }
 .cert-room__frame > span { display: flex; justify-content: space-between; align-items: center; gap: 4px; font: 400 .57cqw var(--ui); text-align: left; margin-top: .5cqw; min-height: 1.5em; }
-.cert-room__frame b { font-size: .9cqw; font-weight: 400; }
-@media (hover: hover) { .cert-room__frame:hover { transform: translateY(-4px) scale(1.035); box-shadow: 0 0 16px #ffb65d88, 0 10px 25px #000; z-index: 1; } }
+.cert-room__frame b { font-size: .9cqw; font-weight: 400; transition: transform .3s ease; }
+@media (hover: hover) {
+  .cert-room__frame:hover { transform: translateY(-5px) scale(1.04); border-color: #ffd28d; box-shadow: 0 0 20px #ffb65da0, 0 12px 28px #000c; z-index: 1; }
+  .cert-room__frame:hover img { transform: scale(1.03); }
+  .cert-room__frame:hover b { transform: translate(2px, -2px); }
+}
 .cert-room__browse { display: flex; justify-content: space-between; align-items: center; margin: .8cqw 0 1.1cqw; }
 .cert-room__browse > span { font-size: .55cqw; color: #ddbf92; text-transform: uppercase; letter-spacing: .2em; }
 .cert-room__browse > div { display: flex; gap: .5cqw; }
-.cert-room__browse button { border: 1px solid #bd9057; background: #110e0bb3; color: #efca93; width: 2.7cqw; height: 1.9cqw; font-size: 1.2cqw; cursor: pointer; }
+.cert-room__browse button { border: 1px solid #bd9057; background: #110e0bb3; color: #efca93; width: 2.7cqw; height: 1.9cqw; font-size: 1.2cqw; cursor: pointer; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
+.cert-room__browse button:not(:disabled):hover { transform: translateY(-2px); border-color: #ffd28d; background: #261b11; }
 .cert-room__browse button:disabled { opacity: .3; cursor: default; }
 .cert-room__milestone-title { margin-bottom: .7cqw; font-size: .6cqw; }
 .cert-room__milestones { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .6cqw; }
-.cert-room__milestones article { border: 1px solid #c2924e88; padding: 1cqw .65cqw; background: linear-gradient(150deg, #0b0a09b0, #30251966); box-shadow: 0 0 6px #e4a04e22; }
+.cert-room__milestones article { border: 1px solid #c2924e88; padding: 1cqw .65cqw; background: linear-gradient(150deg, #0b0a09b0, #30251966); box-shadow: 0 0 6px #e4a04e22; transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
+.cert-room__milestones article:hover { transform: translateY(-4px); border-color: #efc88f; box-shadow: 0 8px 20px #0008, 0 0 14px rgba(239, 200, 143, 0.35); }
 .cert-room__milestones article > span { display: block; color: #f6cf93; font-size: 1.7cqw; line-height: 1; margin-bottom: .9cqw; text-align: center; }
+@media (prefers-reduced-motion: no-preference) {
+  .cert-room__milestones article > span {
+    animation: milestone-symbol-sparkle 4s ease-in-out infinite alternate;
+  }
+  .cert-room__milestones article:nth-child(2) > span { animation-delay: 1s; }
+  .cert-room__milestones article:nth-child(3) > span { animation-delay: 2s; }
+  .cert-room__milestones article:nth-child(4) > span { animation-delay: 3s; }
+}
+@keyframes milestone-symbol-sparkle {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.85; filter: drop-shadow(0 0 2px #f6cf93); }
+  50% { transform: scale(1.18) rotate(6deg); opacity: 1; filter: drop-shadow(0 0 8px #f6cf93); }
+}
 .cert-room__milestones h4 { margin: 0 0 .5cqw; font-size: .78cqw; font-weight: 400; }
 .cert-room__milestones p { margin: 0; font-size: .61cqw; line-height: 1.7; color: #d0c2af; font-weight: 300; }
 .cert-room__script--bottom { text-align: right; margin: 1.7cqw 1cqw 0 0; font-size: 1.45cqw; }
+@media (prefers-reduced-motion: no-preference) {
+  .cert-room__script--bottom {
+    animation: cert-script-float 7s ease-in-out infinite alternate;
+    animation-delay: -3.5s;
+  }
+}
 .cert-room__footer { position: absolute; bottom: 2.5%; left: 0; right: 0; text-align: center; text-transform: uppercase; font-size: .6cqw; letter-spacing: .4em; }
 .cert-room__footer i { display: block; width: 2.5cqw; height: 1px; background: #bd9057; margin: 1cqw auto 0; }
 .cert-room button:focus-visible, .cert-room a:focus-visible { outline: 2px solid #ffe1ae; outline-offset: 4px; }
