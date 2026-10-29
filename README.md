@@ -154,7 +154,7 @@
 <p align="center">
   <a href="https://github.com/StephensHub03">
     <img
-      src="https://github-readme-stats.vercel.app/api?username=StephensHub03&show_icons=true&bg_color=160910&title_color=C5A46D&icon_color=C5A46D&text_color=F2EAE0&border_color=40202B&hide_border=false&rank_icon=github"
+      src="https://github-stats-extended.vercel.app/api?username=StephensHub03&show_icons=true&bg_color=160910&title_color=C5A46D&icon_color=C5A46D&text_color=F2EAE0&border_color=40202B&hide_border=false&rank_icon=github"
       height="165"
       alt="Jeya Stephen GitHub Statistics"
     />
@@ -162,7 +162,7 @@
   &nbsp;
   <a href="https://github.com/StephensHub03">
     <img
-      src="https://github-readme-stats.vercel.app/api/top-langs/?username=StephensHub03&layout=compact&bg_color=160910&title_color=C5A46D&text_color=F2EAE0&border_color=40202B&hide_border=false"
+      src="https://github-stats-extended.vercel.app/api/top-langs/?username=StephensHub03&layout=compact&bg_color=160910&title_color=C5A46D&text_color=F2EAE0&border_color=40202B&hide_border=false"
       height="165"
       alt="Jeya Stephen Top Languages"
     />
