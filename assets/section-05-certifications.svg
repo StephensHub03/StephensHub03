@@ -28,6 +28,26 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+
+    <!-- Traveling specular sheen for headline -->
+    <linearGradient id="soc-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#C5A46D" stop-opacity="0.85"/>
+      <stop offset="30%"  stop-color="#FFFFFF"/>
+      <stop offset="60%"  stop-color="#F2EAE0"/>
+      <stop offset="100%" stop-color="#C5A46D" stop-opacity="0.85"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-300 0; 500 0; 500 0" dur="4.8s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Clip path and scan beam for certifications panel -->
+    <clipPath id="soc-card-clip">
+      <rect x="30" y="126" width="940" height="330" rx="16"/>
+    </clipPath>
+
+    <linearGradient id="soc-scan-beam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#C5A46D" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#C5A46D" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#C5A46D" stop-opacity="0"/>
+    </linearGradient>
   </defs>
 
   <!-- ═══ SECTION HEADER (MATCHING REFERENCE IMAGE 5) ═══ -->
@@ -35,15 +55,31 @@
   <text x="968" y="32" font-family="'SF Mono', Monaco, monospace" font-size="11" letter-spacing="3" fill="#A79A98" text-anchor="end">AWS · ACCENTURE · CISCO · GUVI · INFOSYS</text>
 
   <!-- Large Editorial Headline -->
-  <text x="30" y="80" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" fill="#F2EAE0">Twelve credentials, <tspan font-style="italic" fill="#C5A46D">verified.</tspan></text>
+  <text x="30" y="80" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" fill="#F2EAE0">Twelve credentials, <tspan font-style="italic" fill="url(#soc-sheen)">verified.</tspan></text>
 
-  <!-- Thin Horizontal Rule with Center Node -->
+  <!-- Thin Horizontal Rule with Active Traveling Energy Beam -->
   <line x1="30" y1="102" x2="970" y2="102" stroke="#40202B" stroke-width="1"/>
-  <rect x="360" y="101" width="160" height="2" fill="url(#soc-gold-node)"/>
-  <circle cx="440" cy="102" r="3.5" fill="#C5A46D" filter="url(#soc-gold-glow)"/>
+  <rect x="30" y="101" width="140" height="2" fill="url(#soc-gold-node)">
+    <animate attributeName="x" values="30; 830; 30" dur="6s" repeatCount="indefinite"/>
+  </rect>
+  <circle cx="100" cy="102" r="3.5" fill="#C5A46D" filter="url(#soc-gold-glow)">
+    <animate attributeName="cx" values="100; 900; 100" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="100" cy="102" r="3.5" fill="none" stroke="#C5A46D" stroke-width="1">
+    <animate attributeName="cx" values="100; 900; 100" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="3.5; 8; 13" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2s" repeatCount="indefinite"/>
+  </circle>
 
   <!-- ═══ MAIN LARGE ROUNDED PANEL ═══ -->
   <rect x="30" y="126" width="940" height="330" rx="16" fill="url(#soc-card-bg)" stroke="#40202B" stroke-width="1.2"/>
+
+  <!-- Active Scanline Gliding across Panel -->
+  <g clip-path="url(#soc-card-clip)">
+    <rect x="30" y="126" width="940" height="70" fill="url(#soc-scan-beam)">
+      <animate attributeName="y" values="126; 400; 126" dur="5.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 
   <!-- ═════════ ROW 1 (4 CARDS) ═════════ -->
 
@@ -53,6 +89,10 @@
     <text x="16" y="24" font-family="'SF Mono', Monaco, monospace" font-size="9" letter-spacing="1.5" fill="#C5A46D" font-weight="600">AWS · FORAGE</text>
     <circle cx="186" cy="20" r="2.5" fill="#C5A46D"/>
     <circle cx="194" cy="20" r="2.5" fill="#C5A46D"/>
+    <circle cx="194" cy="20" r="2.5" fill="none" stroke="#C5A46D" stroke-width="0.8">
+      <animate attributeName="r" values="2.5; 6; 9.5" dur="2.4s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2.4s" begin="0s" repeatCount="indefinite"/>
+    </circle>
     <text x="16" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#F2EAE0">Solutions Architecture</text>
     <text x="16" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">Cloud Architecture</text>
     <text x="16" y="100" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#76243B">AWS Core Services</text>
@@ -65,6 +105,10 @@
     <circle cx="178" cy="20" r="2.5" fill="#C5A46D"/>
     <circle cx="186" cy="20" r="2.5" fill="#C5A46D"/>
     <circle cx="194" cy="20" r="2.5" fill="#C5A46D"/>
+    <circle cx="194" cy="20" r="2.5" fill="none" stroke="#C5A46D" stroke-width="0.8">
+      <animate attributeName="r" values="2.5; 6; 9.5" dur="2.4s" begin="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2.4s" begin="0.6s" repeatCount="indefinite"/>
+    </circle>
     <text x="16" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#F2EAE0">Software Engineering</text>
     <text x="16" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">System Architecture</text>
     <text x="16" y="100" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#76243B">Testing &amp; Code Quality</text>
@@ -75,6 +119,10 @@
     <rect width="210" height="136" rx="10" fill="url(#soc-tile-bg)" stroke="#40202B" stroke-width="1"/>
     <text x="16" y="24" font-family="'SF Mono', Monaco, monospace" font-size="9" letter-spacing="1.5" fill="#C5A46D" font-weight="600">ERROR MAKES CLEVER</text>
     <circle cx="194" cy="20" r="2.5" fill="#C5A46D"/>
+    <circle cx="194" cy="20" r="2.5" fill="none" stroke="#C5A46D" stroke-width="0.8">
+      <animate attributeName="r" values="2.5; 6; 9.5" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+    </circle>
     <text x="16" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#F2EAE0">Full Stack Development</text>
     <text x="16" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">Prompt Engineering</text>
     <text x="16" y="100" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#76243B">Modern Web Applications</text>
@@ -86,6 +134,10 @@
     <text x="16" y="24" font-family="'SF Mono', Monaco, monospace" font-size="9" letter-spacing="1.5" fill="#C5A46D" font-weight="600">GUVI</text>
     <circle cx="186" cy="20" r="2.5" fill="#C5A46D"/>
     <circle cx="194" cy="20" r="2.5" fill="#C5A46D"/>
+    <circle cx="194" cy="20" r="2.5" fill="none" stroke="#C5A46D" stroke-width="0.8">
+      <animate attributeName="r" values="2.5; 6; 9.5" dur="2.4s" begin="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2.4s" begin="1.8s" repeatCount="indefinite"/>
+    </circle>
     <text x="16" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#F2EAE0">Python Programming</text>
     <text x="16" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">Data Structures</text>
     <text x="16" y="100" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#76243B">Algorithms &amp; Logic</text>
@@ -102,6 +154,10 @@
     <circle cx="178" cy="20" r="2" fill="#C5A46D"/>
     <circle cx="186" cy="20" r="2" fill="#C5A46D"/>
     <circle cx="194" cy="20" r="2" fill="#C5A46D"/>
+    <circle cx="194" cy="20" r="2" fill="none" stroke="#C5A46D" stroke-width="0.8">
+      <animate attributeName="r" values="2; 5.5; 8.5" dur="2.4s" begin="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2.4s" begin="2.4s" repeatCount="indefinite"/>
+    </circle>
     <text x="16" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#F2EAE0">Data Science</text>
     <text x="16" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">Data Analytics Essentials</text>
     <text x="16" y="100" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#76243B">Statistical Analysis</text>
@@ -112,6 +168,10 @@
     <rect width="210" height="136" rx="10" fill="url(#soc-tile-bg)" stroke="#40202B" stroke-width="1"/>
     <text x="16" y="24" font-family="'SF Mono', Monaco, monospace" font-size="9" letter-spacing="1.5" fill="#C5A46D" font-weight="600">INFOSYS</text>
     <circle cx="194" cy="20" r="2.5" fill="#C5A46D"/>
+    <circle cx="194" cy="20" r="2.5" fill="none" stroke="#C5A46D" stroke-width="0.8">
+      <animate attributeName="r" values="2.5; 6; 9.5" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+    </circle>
     <text x="16" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#F2EAE0">Machine Learning</text>
     <text x="16" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">ML with Python</text>
     <text x="16" y="100" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#76243B">Predictive Modeling</text>
@@ -122,6 +182,10 @@
     <rect width="210" height="136" rx="10" fill="url(#soc-tile-bg)" stroke="#40202B" stroke-width="1"/>
     <text x="16" y="24" font-family="'SF Mono', Monaco, monospace" font-size="9" letter-spacing="1.5" fill="#C5A46D" font-weight="600">SCALER TOPICS</text>
     <circle cx="194" cy="20" r="2.5" fill="#C5A46D"/>
+    <circle cx="194" cy="20" r="2.5" fill="none" stroke="#C5A46D" stroke-width="0.8">
+      <animate attributeName="r" values="2.5; 6; 9.5" dur="2.4s" begin="1.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2.4s" begin="1.4s" repeatCount="indefinite"/>
+    </circle>
     <text x="16" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#F2EAE0">Quora System Design</text>
     <text x="16" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">Scalable Feed Architecture</text>
     <text x="16" y="100" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#76243B">Distributed Systems</text>
@@ -132,6 +196,10 @@
     <rect width="210" height="136" rx="10" fill="url(#soc-tile-bg)" stroke="#40202B" stroke-width="1"/>
     <text x="16" y="24" font-family="'SF Mono', Monaco, monospace" font-size="9" letter-spacing="1.5" fill="#C5A46D" font-weight="600">SIMPLILEARN</text>
     <circle cx="194" cy="20" r="2.5" fill="#C5A46D"/>
+    <circle cx="194" cy="20" r="2.5" fill="none" stroke="#C5A46D" stroke-width="0.8">
+      <animate attributeName="r" values="2.5; 6; 9.5" dur="2.4s" begin="2.0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2.4s" begin="2.0s" repeatCount="indefinite"/>
+    </circle>
     <text x="16" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="14.5" font-weight="700" fill="#F2EAE0">AWS S3 Cloud</text>
     <text x="16" y="82" font-family="'SF Mono', Monaco, monospace" font-size="10.5" fill="#A79A98">Storage Architecture</text>
     <text x="16" y="100" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#76243B">Cloud Security &amp; IAM</text>

@@ -22,6 +22,31 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+
+    <!-- Traveling Sheen Gradient -->
+    <linearGradient id="proj-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#C5A46D" stop-opacity="0.8"/>
+      <stop offset="25%"  stop-color="#C5A46D" stop-opacity="0.9"/>
+      <stop offset="48%"  stop-color="#FFF8E7" stop-opacity="1"/>
+      <stop offset="52%"  stop-color="#FFF8E7" stop-opacity="1"/>
+      <stop offset="75%"  stop-color="#C5A46D" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#C5A46D" stop-opacity="0.8"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-300 0; 500 0; 500 0" dur="4.8s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Card Scan Beam Gradient -->
+    <linearGradient id="proj-scan-beam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#C5A46D" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#C5A46D" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#C5A46D" stop-opacity="0"/>
+    </linearGradient>
+
+    <clipPath id="proj-clip-1"><rect x="30" y="126" width="455" height="194" rx="12"/></clipPath>
+    <clipPath id="proj-clip-2"><rect x="515" y="126" width="455" height="194" rx="12"/></clipPath>
+    <clipPath id="proj-clip-3"><rect x="30" y="332" width="455" height="194" rx="12"/></clipPath>
+    <clipPath id="proj-clip-4"><rect x="515" y="332" width="455" height="194" rx="12"/></clipPath>
+    <clipPath id="proj-clip-5"><rect x="30" y="538" width="455" height="194" rx="12"/></clipPath>
+    <clipPath id="proj-clip-6"><rect x="515" y="538" width="455" height="194" rx="12"/></clipPath>
   </defs>
 
   <!-- ═══ SECTION HEADER ═══ -->
@@ -29,19 +54,39 @@
   <text x="968" y="32" font-family="'SF Mono', Monaco, monospace" font-size="11" letter-spacing="3" fill="#A79A98" text-anchor="end">AI · COMPUTER VISION · FULL-STACK</text>
 
   <!-- Large Editorial Headline -->
-  <text x="30" y="80" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" fill="#F2EAE0">Crafted with <tspan font-style="italic" fill="#C5A46D">intelligence.</tspan></text>
+  <text x="30" y="80" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" fill="#F2EAE0">Crafted with <tspan font-style="italic" fill="url(#proj-sheen)">intelligence.</tspan></text>
 
-  <!-- Thin Horizontal Rule with Center Node -->
+  <!-- Thin Horizontal Rule with Active Traveling Energy Pulse -->
   <line x1="30" y1="104" x2="970" y2="104" stroke="#40202B" stroke-width="1"/>
-  <rect x="420" y="103" width="160" height="2" fill="url(#proj-gold-node)"/>
-  <circle cx="500" cy="104" r="3.5" fill="#C5A46D" filter="url(#proj-glow)"/>
+  <rect y="103" width="160" height="2" fill="url(#proj-gold-node)">
+    <animate attributeName="x" values="30; 810; 30" dur="6s" repeatCount="indefinite"/>
+  </rect>
+  <circle cy="104" r="3.5" fill="#C5A46D" filter="url(#proj-glow)">
+    <animate attributeName="cx" values="110; 890; 110" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="3; 5; 3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cy="104" r="6" fill="none" stroke="#C5A46D" stroke-width="1" opacity="0.6">
+    <animate attributeName="cx" values="110; 890; 110" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="4; 10; 4" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8; 0.1; 0.8" dur="2s" repeatCount="indefinite"/>
+  </circle>
 
   <!-- ═══ 6 PROJECT CARDS (2x3 GRID) ═══ -->
   
     <!-- Project Card: SentinelVision AI -->
     <g>
       <rect x="30" y="126" width="455" height="194" rx="12" fill="url(#proj-card-bg)" stroke="#40202B" stroke-width="1.2"/>
-      <circle cx="44" cy="140" r="2" fill="#C5A46D" opacity="0.6"/>
+      <!-- Active Laser Scan Beam -->
+      <g clip-path="url(#proj-clip-1)">
+        <rect x="30" y="126" width="455" height="30" fill="url(#proj-scan-beam)" opacity="0.35">
+          <animate attributeName="y" values="126; 290; 126" dur="4.2s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      <circle cx="44" cy="140" r="2" fill="#C5A46D" opacity="0.8"/>
+      <circle cx="44" cy="140" r="2" fill="none" stroke="#C5A46D" stroke-width="0.8">
+        <animate attributeName="r" values="2; 6; 10" dur="2.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2.4s" repeatCount="indefinite"/>
+      </circle>
       <circle cx="471" cy="140" r="2" fill="#C5A46D" opacity="0.6"/>
       
       <!-- Category Badge -->
@@ -85,7 +130,17 @@
     <!-- Project Card: Postly -->
     <g>
       <rect x="515" y="126" width="455" height="194" rx="12" fill="url(#proj-card-bg)" stroke="#40202B" stroke-width="1.2"/>
-      <circle cx="529" cy="140" r="2" fill="#C5A46D" opacity="0.6"/>
+      <!-- Active Laser Scan Beam -->
+      <g clip-path="url(#proj-clip-2)">
+        <rect x="515" y="126" width="455" height="30" fill="url(#proj-scan-beam)" opacity="0.35">
+          <animate attributeName="y" values="126; 290; 126" dur="4.2s" begin="0.7s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      <circle cx="529" cy="140" r="2" fill="#C5A46D" opacity="0.8"/>
+      <circle cx="529" cy="140" r="2" fill="none" stroke="#C5A46D" stroke-width="0.8">
+        <animate attributeName="r" values="2; 6; 10" dur="2.4s" begin="0.7s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2.4s" begin="0.7s" repeatCount="indefinite"/>
+      </circle>
       <circle cx="956" cy="140" r="2" fill="#C5A46D" opacity="0.6"/>
       
       <!-- Category Badge -->
@@ -129,7 +184,17 @@
     <!-- Project Card: HireSense AI -->
     <g>
       <rect x="30" y="332" width="455" height="194" rx="12" fill="url(#proj-card-bg)" stroke="#40202B" stroke-width="1.2"/>
-      <circle cx="44" cy="346" r="2" fill="#C5A46D" opacity="0.6"/>
+      <!-- Active Laser Scan Beam -->
+      <g clip-path="url(#proj-clip-3)">
+        <rect x="30" y="332" width="455" height="30" fill="url(#proj-scan-beam)" opacity="0.35">
+          <animate attributeName="y" values="332; 496; 332" dur="4.2s" begin="1.4s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      <circle cx="44" cy="346" r="2" fill="#C5A46D" opacity="0.8"/>
+      <circle cx="44" cy="346" r="2" fill="none" stroke="#C5A46D" stroke-width="0.8">
+        <animate attributeName="r" values="2; 6; 10" dur="2.4s" begin="1.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2.4s" begin="1.4s" repeatCount="indefinite"/>
+      </circle>
       <circle cx="471" cy="346" r="2" fill="#C5A46D" opacity="0.6"/>
       
       <!-- Category Badge -->
@@ -173,7 +238,17 @@
     <!-- Project Card: VoxCare -->
     <g>
       <rect x="515" y="332" width="455" height="194" rx="12" fill="url(#proj-card-bg)" stroke="#40202B" stroke-width="1.2"/>
-      <circle cx="529" cy="346" r="2" fill="#C5A46D" opacity="0.6"/>
+      <!-- Active Laser Scan Beam -->
+      <g clip-path="url(#proj-clip-4)">
+        <rect x="515" y="332" width="455" height="30" fill="url(#proj-scan-beam)" opacity="0.35">
+          <animate attributeName="y" values="332; 496; 332" dur="4.2s" begin="2.1s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      <circle cx="529" cy="346" r="2" fill="#C5A46D" opacity="0.8"/>
+      <circle cx="529" cy="346" r="2" fill="none" stroke="#C5A46D" stroke-width="0.8">
+        <animate attributeName="r" values="2; 6; 10" dur="2.4s" begin="2.1s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2.4s" begin="2.1s" repeatCount="indefinite"/>
+      </circle>
       <circle cx="956" cy="346" r="2" fill="#C5A46D" opacity="0.6"/>
       
       <!-- Category Badge -->
@@ -217,7 +292,17 @@
     <!-- Project Card: TweetSense -->
     <g>
       <rect x="30" y="538" width="455" height="194" rx="12" fill="url(#proj-card-bg)" stroke="#40202B" stroke-width="1.2"/>
-      <circle cx="44" cy="552" r="2" fill="#C5A46D" opacity="0.6"/>
+      <!-- Active Laser Scan Beam -->
+      <g clip-path="url(#proj-clip-5)">
+        <rect x="30" y="538" width="455" height="30" fill="url(#proj-scan-beam)" opacity="0.35">
+          <animate attributeName="y" values="538; 702; 538" dur="4.2s" begin="2.8s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      <circle cx="44" cy="552" r="2" fill="#C5A46D" opacity="0.8"/>
+      <circle cx="44" cy="552" r="2" fill="none" stroke="#C5A46D" stroke-width="0.8">
+        <animate attributeName="r" values="2; 6; 10" dur="2.4s" begin="2.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2.4s" begin="2.8s" repeatCount="indefinite"/>
+      </circle>
       <circle cx="471" cy="552" r="2" fill="#C5A46D" opacity="0.6"/>
       
       <!-- Category Badge -->
@@ -261,7 +346,17 @@
     <!-- Project Card: InternX -->
     <g>
       <rect x="515" y="538" width="455" height="194" rx="12" fill="url(#proj-card-bg)" stroke="#40202B" stroke-width="1.2"/>
-      <circle cx="529" cy="552" r="2" fill="#C5A46D" opacity="0.6"/>
+      <!-- Active Laser Scan Beam -->
+      <g clip-path="url(#proj-clip-6)">
+        <rect x="515" y="538" width="455" height="30" fill="url(#proj-scan-beam)" opacity="0.35">
+          <animate attributeName="y" values="538; 702; 538" dur="4.2s" begin="3.5s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      <circle cx="529" cy="552" r="2" fill="#C5A46D" opacity="0.8"/>
+      <circle cx="529" cy="552" r="2" fill="none" stroke="#C5A46D" stroke-width="0.8">
+        <animate attributeName="r" values="2; 6; 10" dur="2.4s" begin="3.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2.4s" begin="3.5s" repeatCount="indefinite"/>
+      </circle>
       <circle cx="956" cy="552" r="2" fill="#C5A46D" opacity="0.6"/>
       
       <!-- Category Badge -->

@@ -11,11 +11,32 @@
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <!-- Traveling Sheen Gradient -->
+    <linearGradient id="ha-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#C5A46D" stop-opacity="0.8"/>
+      <stop offset="25%"  stop-color="#C5A46D" stop-opacity="0.9"/>
+      <stop offset="48%"  stop-color="#FFF8E7" stop-opacity="1"/>
+      <stop offset="52%"  stop-color="#FFF8E7" stop-opacity="1"/>
+      <stop offset="75%"  stop-color="#C5A46D" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#C5A46D" stop-opacity="0.8"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-300 0; 500 0; 500 0" dur="4.8s" repeatCount="indefinite"/>
+    </linearGradient>
   </defs>
   <text x="32" y="32" font-family="'SF Mono', Monaco, monospace" font-size="11" letter-spacing="3" fill="#C5A46D" font-weight="600">05  COMMIT LOG</text>
   <text x="968" y="32" font-family="'SF Mono', Monaco, monospace" font-size="11" letter-spacing="3" fill="#A79A98" text-anchor="end">REAL DATA · REFRESHED DAILY</text>
-  <text x="30" y="80" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" fill="#F2EAE0">A year of <tspan font-style="italic" fill="#C5A46D">building.</tspan></text>
+  <text x="30" y="80" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="700" fill="#F2EAE0">A year of <tspan font-style="italic" fill="url(#ha-sheen)">building.</tspan></text>
+  <!-- Thin Horizontal Rule with Active Traveling Energy Pulse -->
   <line x1="30" y1="104" x2="970" y2="104" stroke="#40202B" stroke-width="1"/>
-  <rect x="220" y="103" width="160" height="2" fill="url(#ha-gold-node)"/>
-  <circle cx="300" cy="104" r="3.5" fill="#C5A46D" filter="url(#ha-glow)"/>
+  <rect y="103" width="160" height="2" fill="url(#ha-gold-node)">
+    <animate attributeName="x" values="30; 810; 30" dur="6s" repeatCount="indefinite"/>
+  </rect>
+  <circle cy="104" r="3.5" fill="#C5A46D" filter="url(#ha-glow)">
+    <animate attributeName="cx" values="110; 890; 110" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="3; 5; 3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cy="104" r="6" fill="none" stroke="#C5A46D" stroke-width="1" opacity="0.6">
+    <animate attributeName="cx" values="110; 890; 110" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="4; 10; 4" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8; 0.1; 0.8" dur="2s" repeatCount="indefinite"/>
+  </circle>
 </svg>

@@ -54,6 +54,35 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+
+    <!-- Traveling Sheen Gradient -->
+    <linearGradient id="son-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#C5A46D" stop-opacity="0.8"/>
+      <stop offset="25%"  stop-color="#C5A46D" stop-opacity="0.9"/>
+      <stop offset="48%"  stop-color="#FFF8E7" stop-opacity="1"/>
+      <stop offset="52%"  stop-color="#FFF8E7" stop-opacity="1"/>
+      <stop offset="75%"  stop-color="#C5A46D" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#C5A46D" stop-opacity="0.8"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-300 0; 500 0; 500 0" dur="5s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Card Scan Beam -->
+    <linearGradient id="son-scan-beam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#C5A46D" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#C5A46D" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#C5A46D" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Portrait Laser Scan Beam -->
+    <linearGradient id="son-portrait-scan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#C5A46D" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#FFF8E7" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#C5A46D" stop-opacity="0"/>
+    </linearGradient>
+
+    <clipPath id="son-panel-clip">
+      <rect x="30" y="124" width="940" height="368" rx="16"/>
+    </clipPath>
   </defs>
 
   <!-- ═══ SECTION HEADER ═══ -->
@@ -61,16 +90,33 @@
   <text x="968" y="32" font-family="'SF Mono', Monaco, monospace" font-size="11" letter-spacing="3" fill="#A79A98" text-anchor="end">WHO I AM &amp; WHAT I BUILD</text>
 
   <!-- Large Editorial Headline -->
-  <text x="30" y="80" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700" fill="#F2EAE0">Professional Narrative</text>
+  <text x="30" y="80" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700" fill="#F2EAE0">Professional <tspan font-style="italic" fill="url(#son-sheen)">Narrative</tspan></text>
 
-  <!-- Thin Horizontal Rule with Center Node -->
+  <!-- Thin Horizontal Rule with Active Traveling Energy Pulse -->
   <line x1="30" y1="102" x2="970" y2="102" stroke="#40202B" stroke-width="1"/>
-  <rect x="420" y="101" width="160" height="2" fill="url(#son-gold-node)"/>
-  <circle cx="500" cy="102" r="3.5" fill="#C5A46D" filter="url(#son-gold-glow)"/>
+  <rect y="101" width="160" height="2" fill="url(#son-gold-node)">
+    <animate attributeName="x" values="30; 810; 30" dur="5.5s" repeatCount="indefinite"/>
+  </rect>
+  <circle cy="102" r="3.5" fill="#C5A46D" filter="url(#son-gold-glow)">
+    <animate attributeName="cx" values="110; 890; 110" dur="5.5s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="3; 5; 3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cy="102" r="6" fill="none" stroke="#C5A46D" stroke-width="1" opacity="0.6">
+    <animate attributeName="cx" values="110; 890; 110" dur="5.5s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="4; 10; 4" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8; 0.1; 0.8" dur="2s" repeatCount="indefinite"/>
+  </circle>
 
   <!-- ═══ MAIN LARGE ROUNDED PANEL ═══ -->
   <rect x="30" y="124" width="940" height="368" rx="16" fill="url(#son-card-bg)" stroke="#40202B" stroke-width="1.2"/>
   <rect x="30" y="124" width="940" height="368" rx="16" fill="url(#son-grid)"/>
+
+  <!-- Active Card Laser Scan Beam -->
+  <g clip-path="url(#son-panel-clip)">
+    <rect x="30" y="124" width="940" height="40" fill="url(#son-scan-beam)">
+      <animate attributeName="y" values="124; 452; 124" dur="6.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 
   <!-- Subtle corner accent dots -->
   <circle cx="46" cy="140" r="2.5" fill="#C5A46D" opacity="0.6"/>
@@ -144,14 +190,29 @@
     <!-- Subtle Vignette Overlay -->
     <rect x="680" y="146" width="252" height="280" rx="14" fill="url(#son-frame-overlay)"/>
 
+    <!-- Active Portrait Laser Scan Beam -->
+    <g clip-path="url(#son-portrait-clip)">
+      <rect x="680" y="146" width="252" height="32" fill="url(#son-portrait-scan)">
+        <animate attributeName="y" values="140; 396; 140" dur="4.2s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
     <!-- Outer Luxury Border Stroke -->
     <rect x="680" y="146" width="252" height="280" rx="14" fill="none" stroke="url(#son-frame-stroke)" stroke-width="1.8"/>
 
-    <!-- Corner Node Accents on Portrait -->
+    <!-- Corner Node Accents on Portrait with Radar Beacons -->
     <circle cx="680" cy="146" r="2.5" fill="#C5A46D" filter="url(#son-soft-glow)"/>
     <circle cx="932" cy="146" r="2.5" fill="#C5A46D" filter="url(#son-soft-glow)"/>
     <circle cx="680" cy="426" r="2.5" fill="#C5A46D" filter="url(#son-soft-glow)"/>
     <circle cx="932" cy="426" r="2.5" fill="#C5A46D" filter="url(#son-soft-glow)"/>
+    <circle cx="680" cy="146" r="2.5" fill="none" stroke="#C5A46D" stroke-width="1">
+      <animate attributeName="r" values="2.5; 7; 11" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="932" cy="426" r="2.5" fill="none" stroke="#C5A46D" stroke-width="1">
+      <animate attributeName="r" values="2.5; 7; 11" dur="2.5s" begin="1.25s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2.5s" begin="1.25s" repeatCount="indefinite"/>
+    </circle>
 
     <!-- Bottom Signature Pill Plaque -->
     <rect x="680" y="438" width="252" height="32" rx="8" fill="#12070e" stroke="#40202B" stroke-width="1"/>
@@ -159,6 +220,10 @@
     <!-- Plaque Content -->
     <circle cx="696" cy="454" r="3.5" fill="#C5A46D" filter="url(#son-gold-glow)">
       <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="696" cy="454" r="3.5" fill="none" stroke="#C5A46D" stroke-width="1">
+      <animate attributeName="r" values="3.5; 8; 12" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2s" repeatCount="indefinite"/>
     </circle>
     <text x="708" y="458" font-family="'SF Mono', Monaco, monospace" font-size="10" font-weight="700" letter-spacing="1.5" fill="#F2EAE0">JEYA STEPHEN</text>
     <text x="842" y="458" font-family="'SF Mono', Monaco, monospace" font-size="9" letter-spacing="1" fill="#C5A46D">· CHENNAI</text>

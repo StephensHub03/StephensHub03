@@ -8,18 +8,48 @@
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+
+    <clipPath id="status-clip">
+      <rect x="30" y="2" width="940" height="40" rx="8"/>
+    </clipPath>
+
+    <linearGradient id="status-scan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C5A46D" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#C5A46D" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#C5A46D" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Traveling text sheen -->
+    <linearGradient id="status-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C5A46D"/>
+      <stop offset="35%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#F2EAE0"/>
+      <stop offset="100%" stop-color="#C5A46D"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-350 0; 550 0; 550 0" dur="4.2s" repeatCount="indefinite"/>
+    </linearGradient>
   </defs>
 
   <!-- Status Bar Container -->
   <rect x="30" y="2" width="940" height="40" rx="8" fill="#12070e" stroke="#40202B" stroke-width="1"/>
 
-  <!-- Pulsing Amber/Gold LED -->
+  <!-- Active Scanline Beam -->
+  <g clip-path="url(#status-clip)">
+    <rect x="30" y="2" width="120" height="40" fill="url(#status-scan)">
+      <animate attributeName="x" values="30; 850; 30" dur="5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Pulsing Amber/Gold LED with Expanding Radar Ring -->
   <circle cx="52" cy="22" r="4" fill="#C5A46D" filter="url(#gold-glow)">
-    <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="52" cy="22" r="4" fill="none" stroke="#C5A46D" stroke-width="1">
+    <animate attributeName="r" values="4; 9; 14" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2s" repeatCount="indefinite"/>
   </circle>
 
   <!-- Status Text -->
-  <text x="68" y="26" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="600" letter-spacing="1.5" fill="#F2EAE0">CURRENT STATUS: <tspan fill="#C5A46D">OPEN TO HIGH-IMPACT ROLES &amp; ENGINEERING COLLABORATIONS</tspan></text>
+  <text x="72" y="26" font-family="'SF Mono', Monaco, monospace" font-size="10.5" font-weight="600" letter-spacing="1.5" fill="#F2EAE0">CURRENT STATUS: <tspan fill="url(#status-sheen)">OPEN TO HIGH-IMPACT ROLES &amp; ENGINEERING COLLABORATIONS</tspan></text>
 
   <!-- Geolocation Tag -->
   <text x="948" y="26" font-family="'SF Mono', Monaco, monospace" font-size="9.5" letter-spacing="1" fill="#A79A98" text-anchor="end">CHENNAI, INDIA</text>
