@@ -337,29 +337,25 @@ html.is-booting .hdr { opacity: 0; }
   opacity: 1;
   filter: blur(0);
   transform: translate(-50%, -50%);
+  animation: welcome-levitate 3.2s ease-in-out infinite alternate;
+  animation-delay: 0.8s;
   /* fast, confident entrance that overshoots a touch, then settles */
   transition:
     transform .82s cubic-bezier(.14, .86, .22, 1.06),
     opacity .34s ease-out,
     filter .5s var(--ease-out);
 }
-@media (prefers-reduced-motion: no-preference) {
-  .is-welcome .welcome {
-    animation: welcome-float 5.5s ease-in-out infinite alternate;
-    animation-delay: 1.1s;
-  }
-  .is-welcome .welcome__dots {
-    animation: welcome-dot-pulse 3.2s ease-in-out infinite;
-  }
+.is-welcome .welcome__dots {
+  animation: welcome-dots-glow 1.8s ease-in-out infinite alternate;
 }
-@keyframes welcome-float {
+@keyframes welcome-levitate {
   0% { transform: translate(-50%, -50%) translateY(0); }
-  50% { transform: translate(-50%, -50%) translateY(-5px); }
+  50% { transform: translate(-50%, -50%) translateY(-12px); }
   100% { transform: translate(-50%, -50%) translateY(0); }
 }
-@keyframes welcome-dot-pulse {
-  0%, 100% { color: #fff; filter: drop-shadow(0 0 1px #fff); }
-  50% { color: var(--ink-hot); filter: drop-shadow(0 0 8px var(--ink-hot)); }
+@keyframes welcome-dots-glow {
+  0%, 100% { color: #fff; text-shadow: 0 0 3px #fff; }
+  50% { color: #ff1428; text-shadow: 0 0 16px #ff1428, 0 0 28px #ff1428; }
 }
 
 /* --- inverted chips ----------------------------------------------------- */
@@ -424,23 +420,21 @@ html.is-booting .hdr { opacity: 0; }
 }
 .is-arrows .arrows--r i { transition-delay: calc((4 - var(--i)) * .06s); }
 
-@media (prefers-reduced-motion: no-preference) {
-  .is-arrows .arrows--l i {
-    animation: arrow-flow-left 2.6s ease-in-out infinite;
-    animation-delay: calc(1s + var(--i) * 0.16s);
-  }
-  .is-arrows .arrows--r i {
-    animation: arrow-flow-right 2.6s ease-in-out infinite;
-    animation-delay: calc(1s + (4 - var(--i)) * 0.16s);
-  }
+.is-arrows .arrows--l i {
+  animation: arrow-flow-left 1.8s ease-in-out infinite;
+  animation-delay: calc(0.6s + var(--i) * 0.14s);
+}
+.is-arrows .arrows--r i {
+  animation: arrow-flow-right 1.8s ease-in-out infinite;
+  animation-delay: calc(0.6s + (4 - var(--i)) * 0.14s);
 }
 @keyframes arrow-flow-left {
-  0%, 100% { transform: translateX(0); opacity: 0.7; }
-  50% { transform: translateX(6px); opacity: 1; filter: drop-shadow(0 0 5px var(--ink-hot)); }
+  0%, 100% { transform: translateX(0); opacity: 0.65; border-left-color: var(--paper); }
+  50% { transform: translateX(14px); opacity: 1; border-left-color: #ff1428; filter: drop-shadow(0 0 8px #ff1428); }
 }
 @keyframes arrow-flow-right {
-  0%, 100% { transform: translateX(0); opacity: 0.7; }
-  50% { transform: translateX(-6px); opacity: 1; filter: drop-shadow(0 0 5px var(--ink-hot)); }
+  0%, 100% { transform: translateX(0); opacity: 0.65; border-left-color: var(--paper); }
+  50% { transform: translateX(-14px); opacity: 1; border-left-color: #ff1428; filter: drop-shadow(0 0 8px #ff1428); }
 }
 
 /* --- corner dot grids --------------------------------------------------- */
@@ -469,15 +463,13 @@ html.is-booting .hdr { opacity: 0; }
   transition: transform .5s var(--ease-out), opacity .34s linear;
   transition-delay: calc(var(--i) * .022s);
 }
-@media (prefers-reduced-motion: no-preference) {
-  .is-dots .grid-dots i {
-    animation: grid-dot-twinkle 3.4s ease-in-out infinite;
-    animation-delay: calc(1.2s + var(--i) * 0.1s);
-  }
+.is-dots .grid-dots i {
+  animation: grid-dot-twinkle 2.2s ease-in-out infinite;
+  animation-delay: calc(0.8s + var(--i) * 0.12s);
 }
 @keyframes grid-dot-twinkle {
-  0%, 100% { transform: scale(1); opacity: 0.65; }
-  50% { transform: scale(1.35); opacity: 1; filter: drop-shadow(0 0 4px #fff); }
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.6); opacity: 1; background: #ff2a2b; box-shadow: 0 0 10px #ff2a2b; }
 }
 
 /* --- scroll to explore cue ---------------------------------------------- */
@@ -508,22 +500,18 @@ html.is-booting .hdr { opacity: 0; }
   transition: color .3s ease;
 }
 .is-welcome .hero-scroll-cue {
-  opacity: .85;
+  opacity: 1;
+  animation: hero-cue-float 1.8s ease-in-out infinite;
+  animation-delay: 0.8s;
 }
 html.is-scrolled .hero-scroll-cue {
   opacity: 0 !important;
   pointer-events: none;
-  transform: translateX(-50%) translateY(12px);
+  transform: translateX(-50%) translateY(14px);
 }
-@media (prefers-reduced-motion: no-preference) {
-  .is-welcome .hero-scroll-cue {
-    animation: hero-cue-bounce 2.4s ease-in-out infinite;
-    animation-delay: 1.2s;
-  }
-}
-@keyframes hero-cue-bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); opacity: .7; }
-  50% { transform: translateX(-50%) translateY(7px); opacity: 1; color: #fff; filter: drop-shadow(0 0 6px var(--ink-hot)); }
+@keyframes hero-cue-float {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: .7; color: var(--dim); }
+  50% { transform: translateX(-50%) translateY(14px); opacity: 1; color: #ff1428; filter: drop-shadow(0 0 10px #ff1428); }
 }
 
 /* ==========================================================================
@@ -889,8 +877,14 @@ html.is-scrolled .hero-scroll-cue {
 .hdr__nav a::after { width: 100%; height: 2px; left: 0; bottom: calc(14px - var(--hdr-h) / 2); margin: 0; border-radius: 0; background: #ff1428; box-shadow: 0 -2px 12px 3px #ff142880; }
 .hdr__metaLabel { font-size: clamp(8px, .8vw, 13px); }
 .hdr__pips { gap: 9px; }
-.hdr__pips i { width: 9px; height: 9px; border: 1px solid #ff1428; background: transparent; }
-.hdr__pips i:first-child { background: #ff1428; }
+.hdr__pips i { width: 9px; height: 9px; border: 1px solid #ff1428; border-radius: 50%; background: transparent; animation: pip-radar-ping 1.8s ease-in-out infinite; }
+.hdr__pips i:first-child { background: #ff1428; box-shadow: 0 0 10px #ff1428; }
+.hdr__pips i:nth-child(2) { animation-delay: 0.4s; }
+.hdr__pips i:nth-child(3) { animation-delay: 0.8s; }
+@keyframes pip-radar-ping {
+  0%, 100% { transform: scale(0.85); opacity: 0.5; }
+  50% { transform: scale(1.4); opacity: 1; background: #ff1428; box-shadow: 0 0 12px #ff1428; }
+}
 .welcome { font-weight: 300; letter-spacing: .35em; gap: .9em; }
 .welcome__text em { color: #ff1428; font-style: normal; }
 .welcome__dots { font-size: 1em; letter-spacing: .12em; }

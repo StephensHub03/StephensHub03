@@ -11,16 +11,11 @@
 .cert-room__statement { margin: 1.5cqw 0; }
 .cert-room__ritual::before, .cert-room__ritual::after { content: ''; display: block; width: 2cqw; height: 1px; background: #d1be9b; margin: 1.3cqw 0; }
 .cert-room__script { font-family: 'Bodoni Moda', Georgia, serif; font-style: italic; color: #e9a959; font-size: 1.7cqw; font-weight: 400; line-height: 1.2; text-shadow: 0 2px 8px #000; }
-.cert-room__script--top { position: absolute; top: 9%; left: 44%; margin: 0; transform: rotate(-8deg); }
+.cert-room__script--top { position: absolute; top: 9%; left: 44%; margin: 0; transform: rotate(-8deg); animation: cert-script-float 3.6s ease-in-out infinite alternate; }
 .cert-room__script span { padding-left: 2cqw; }
-@media (prefers-reduced-motion: no-preference) {
-  .cert-room__script--top {
-    animation: cert-script-float 6.5s ease-in-out infinite alternate;
-  }
-}
 @keyframes cert-script-float {
   0%, 100% { transform: rotate(-8deg) translateY(0); }
-  50% { transform: rotate(-8deg) translateY(-4px); }
+  50% { transform: rotate(-8deg) translateY(-8px); }
 }
 .cert-room__wall { position: absolute; left: 44%; top: 20%; width: 41%; transform: perspective(1600px) rotateY(-5deg) rotateZ(-3deg); transform-origin: center; }
 .cert-room__wall-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-bottom: .7cqw; border-bottom: 1px solid #c496525e; margin-bottom: .8cqw; }
@@ -31,35 +26,34 @@
 .cert-room__frame[hidden] { display: none; }
 .cert-room__frame::before { content: ''; position: absolute; top: -3px; left: 12%; width: 5px; height: 5px; background: #ffe8bc; box-shadow: 0 0 9px 3px #ffa537; border-radius: 50%; z-index: 2; }
 .cert-room__frame::after { content: ''; position: absolute; top: -60%; left: -70%; width: 45%; height: 220%; background: linear-gradient(90deg, transparent, rgba(255, 230, 180, 0.16), transparent); transform: rotate(25deg); pointer-events: none; }
-@media (prefers-reduced-motion: no-preference) {
-  .cert-room__frame::before {
-    animation: pin-beacon-pulse 2.8s ease-in-out infinite;
-  }
-  .cert-room__frame:nth-child(2n)::before { animation-delay: -1.4s; }
-  .cert-room__frame::after {
-    animation: cert-glass-sheen 8s ease-in-out infinite;
-  }
-  .cert-room__frame:nth-child(2n)::after { animation-delay: 2.6s; }
-  .cert-room__frame:nth-child(3n)::after { animation-delay: 5.2s; }
-  .cert-room.is-visible .cert-room__frame {
-    animation: cert-light-in .9s both, cert-frame-levitate 5.2s ease-in-out infinite alternate;
-  }
-  .cert-room.is-visible .cert-room__frame:nth-child(3n+1) { animation-delay: 0s, 1s; }
-  .cert-room.is-visible .cert-room__frame:nth-child(3n+2) { animation-delay: .12s, 1.6s; }
-  .cert-room.is-visible .cert-room__frame:nth-child(3n+3) { animation-delay: .24s, 2.2s; }
+.cert-room__frame::before {
+  animation: pin-beacon-pulse 1.8s ease-in-out infinite;
 }
+.cert-room__frame:nth-child(2n)::before { animation-delay: -0.9s; }
+.cert-room__frame::after {
+  animation: cert-glass-sheen 3.8s ease-in-out infinite;
+}
+.cert-room__frame:nth-child(2n)::after { animation-delay: 1.2s; }
+.cert-room__frame:nth-child(3n)::after { animation-delay: 2.4s; }
+.cert-room.is-visible .cert-room__frame {
+  animation: cert-light-in .9s both, cert-frame-levitate 3.2s ease-in-out infinite alternate;
+}
+.cert-room.is-visible .cert-room__frame:nth-child(3n+1) { animation-delay: 0s, 0s; }
+.cert-room.is-visible .cert-room__frame:nth-child(3n+2) { animation-delay: .12s, -1.1s; }
+.cert-room.is-visible .cert-room__frame:nth-child(3n+3) { animation-delay: .24s, -2.2s; }
+
 @keyframes pin-beacon-pulse {
   0%, 100% { transform: scale(0.9); box-shadow: 0 0 7px 2px #ffa537, 0 0 14px rgba(255, 165, 55, 0.4); }
-  50% { transform: scale(1.35); box-shadow: 0 0 16px 4px #ffc57a, 0 0 26px rgba(255, 165, 55, 0.85); }
+  50% { transform: scale(1.45); box-shadow: 0 0 20px 6px #ffc57a, 0 0 35px rgba(255, 165, 55, 0.95); }
 }
 @keyframes cert-glass-sheen {
-  0%, 65% { left: -70%; opacity: 0; }
-  75% { opacity: 1; }
+  0%, 55% { left: -70%; opacity: 0; }
+  65% { opacity: 0.9; }
   100% { left: 160%; opacity: 0; }
 }
 @keyframes cert-frame-levitate {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
+  50% { transform: translateY(-10px); }
 }
 .cert-room__frame img { display: block; width: 100%; height: 7.5cqw; object-fit: contain; background: #e9e3d9; transition: transform .4s ease; }
 .cert-room__frame > span { display: flex; justify-content: space-between; align-items: center; gap: 4px; font: 400 .57cqw var(--ui); text-align: left; margin-top: .5cqw; min-height: 1.5em; }
@@ -79,34 +73,28 @@
 .cert-room__milestones { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .6cqw; }
 .cert-room__milestones article { border: 1px solid #c2924e88; padding: 1cqw .65cqw; background: linear-gradient(150deg, #0b0a09b0, #30251966); box-shadow: 0 0 6px #e4a04e22; transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
 .cert-room__milestones article:hover { transform: translateY(-4px); border-color: #efc88f; box-shadow: 0 8px 20px #0008, 0 0 14px rgba(239, 200, 143, 0.35); }
-.cert-room__milestones article > span { display: block; color: #f6cf93; font-size: 1.7cqw; line-height: 1; margin-bottom: .9cqw; text-align: center; }
-@media (prefers-reduced-motion: no-preference) {
-  .cert-room__milestones article > span {
-    animation: milestone-symbol-sparkle 4s ease-in-out infinite alternate;
-  }
-  .cert-room__milestones article:nth-child(2) > span { animation-delay: 1s; }
-  .cert-room__milestones article:nth-child(3) > span { animation-delay: 2s; }
-  .cert-room__milestones article:nth-child(4) > span { animation-delay: 3s; }
+.cert-room__milestones article > span {
+  display: block; color: #f6cf93; font-size: 1.7cqw; line-height: 1; margin-bottom: .9cqw; text-align: center;
+  animation: milestone-symbol-sparkle 2.5s ease-in-out infinite alternate;
 }
+.cert-room__milestones article:nth-child(2) > span { animation-delay: 0.6s; }
+.cert-room__milestones article:nth-child(3) > span { animation-delay: 1.2s; }
+.cert-room__milestones article:nth-child(4) > span { animation-delay: 1.8s; }
+
 @keyframes milestone-symbol-sparkle {
   0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.85; filter: drop-shadow(0 0 2px #f6cf93); }
-  50% { transform: scale(1.18) rotate(6deg); opacity: 1; filter: drop-shadow(0 0 8px #f6cf93); }
+  50% { transform: scale(1.3) rotate(16deg); opacity: 1; filter: drop-shadow(0 0 12px #ffc57a); }
 }
 .cert-room__milestones h4 { margin: 0 0 .5cqw; font-size: .78cqw; font-weight: 400; }
 .cert-room__milestones p { margin: 0; font-size: .61cqw; line-height: 1.7; color: #d0c2af; font-weight: 300; }
-.cert-room__script--bottom { text-align: right; margin: 1.7cqw 1cqw 0 0; font-size: 1.45cqw; }
-@media (prefers-reduced-motion: no-preference) {
-  .cert-room__script--bottom {
-    animation: cert-script-float 7s ease-in-out infinite alternate;
-    animation-delay: -3.5s;
-  }
+.cert-room__script--bottom {
+  text-align: right; margin: 1.7cqw 1cqw 0 0; font-size: 1.45cqw;
+  animation: cert-script-float 3.6s ease-in-out infinite alternate;
+  animation-delay: -1.8s;
 }
 .cert-room__footer { position: absolute; bottom: 2.5%; left: 0; right: 0; text-align: center; text-transform: uppercase; font-size: .6cqw; letter-spacing: .4em; }
 .cert-room__footer i { display: block; width: 2.5cqw; height: 1px; background: #bd9057; margin: 1cqw auto 0; }
 .cert-room button:focus-visible, .cert-room a:focus-visible { outline: 2px solid #ffe1ae; outline-offset: 4px; }
-.cert-room.is-visible .cert-room__frame { animation: cert-light-in .9s both; }
-.cert-room.is-visible .cert-room__frame:nth-child(3n+2) { animation-delay: .12s; }
-.cert-room.is-visible .cert-room__frame:nth-child(3n+3) { animation-delay: .24s; }
 @keyframes cert-light-in { from { opacity: .25; translate: 0 10px; } to { opacity: 1; translate: 0 0; } }
 .cert-room__dialog { width: min(1050px, 94vw); max-height: 94svh; background: #14110c; color: #eee1cd; border: 1px solid #b58c52; padding: 20px; }
 .cert-room__dialog::backdrop { background: #000e; backdrop-filter: blur(8px); }

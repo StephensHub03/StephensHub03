@@ -494,19 +494,19 @@ function paintRoom(now = performance.now()) {
   const idle = (roomOnScreen && !reduced.matches && !dialog.open)
     ? (1 - motion.presence)
     : 0;
-  const idleX = idle * Math.sin(now * 0.00075) * 0.28;
-  const idleY = idle * Math.cos(now * 0.00055) * 0.20;
+  const idleX = idle * Math.sin(now * 0.0011) * 0.85;
+  const idleY = idle * Math.cos(now * 0.0008) * 0.65;
   const curX = motion.x + idleX;
   const curY = motion.y + idleY;
 
-  world.style.setProperty('--room-x', `${(curX * 9).toFixed(3)}px`);
-  world.style.setProperty('--room-y', `${(curY * 5).toFixed(3)}px`);
-  world.style.setProperty('--room-rx', `${(-curY * 3).toFixed(3)}deg`);
-  world.style.setProperty('--room-ry', `${(curX * 4).toFixed(3)}deg`);
-  world.style.setProperty('--room-scale', (1 + Math.max(motion.presence, 0.25 * idle) * .035).toFixed(5));
-  world.style.setProperty('--room-light-x', `${50 + curX * 35}%`);
-  world.style.setProperty('--room-light-y', `${50 + curY * 35}%`);
-  world.style.setProperty('--room-light', Math.max(motion.presence, 0.35 * idle).toFixed(4));
+  world.style.setProperty('--room-x', `${(curX * 18).toFixed(3)}px`);
+  world.style.setProperty('--room-y', `${(curY * 12).toFixed(3)}px`);
+  world.style.setProperty('--room-rx', `${(-curY * 5.5).toFixed(3)}deg`);
+  world.style.setProperty('--room-ry', `${(curX * 7.5).toFixed(3)}deg`);
+  world.style.setProperty('--room-scale', (1 + Math.max(motion.presence, 0.45 * idle) * .045).toFixed(5));
+  world.style.setProperty('--room-light-x', `${50 + curX * 45}%`);
+  world.style.setProperty('--room-light-y', `${50 + curY * 45}%`);
+  world.style.setProperty('--room-light', Math.max(motion.presence, 0.55 * idle).toFixed(4));
 }
 
 function animateRoom(now) {
