@@ -266,10 +266,6 @@
   <a href="https://stephen-s-portfolio-psi.vercel.app/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/PORTFOLIO-stephen--s--portfolio--psi.vercel.app-481326?style=for-the-badge&labelColor=050609&color=481326&logo=vercel&logoColor=C5A46D" alt="Interactive Portfolio"/>
   </a>
-  &nbsp;
-  <a href="public/github.mp4">
-    <img src="https://img.shields.io/badge/VIDEO%20REEL-1080p%20HD%20MP4-481326?style=for-the-badge&labelColor=050609&color=481326&logo=quicktime&logoColor=C5A46D" alt="Video Reel"/>
-  </a>
 </p>
 
 <br/>

@@ -441,6 +441,28 @@ def render_svg(snap):
       <line x1="0" y1="0" x2="40" y2="0" stroke="#76243B" stroke-width="0.4" stroke-opacity="0.08"/>
       <line x1="0" y1="0" x2="0" y2="40" stroke="#76243B" stroke-width="0.4" stroke-opacity="0.08"/>
     </pattern>
+
+    <!-- Traveling Sheen Gradient -->
+    <linearGradient id="act-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#E27396" stop-opacity="0.8"/>
+      <stop offset="25%"  stop-color="#E27396" stop-opacity="0.9"/>
+      <stop offset="48%"  stop-color="#FFF8E7" stop-opacity="1"/>
+      <stop offset="52%"  stop-color="#FFF8E7" stop-opacity="1"/>
+      <stop offset="75%"  stop-color="#E27396" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#E27396" stop-opacity="0.8"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-300 0; 500 0; 500 0" dur="4.8s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Heatmap Radar Scan Beam -->
+    <linearGradient id="act-grid-scan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#e25b86" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#e25b86" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#e25b86" stop-opacity="0"/>
+    </linearGradient>
+
+    <clipPath id="act-heatmap-clip">
+      <rect x="90" y="170" width="875" height="120" rx="4"/>
+    </clipPath>
   </defs>
 
   <!-- Card Container -->
@@ -448,13 +470,21 @@ def render_svg(snap):
   <rect width="1000" height="440" rx="20" fill="url(#act-glow)"/>
   <rect width="1000" height="440" rx="20" fill="url(#act-pattern)"/>
 
-  <!-- Corner accent dots -->
-  <circle cx="22" cy="22" r="2.5" fill="#C5A46D" opacity="0.35"/>
-  <circle cx="978" cy="22" r="2.5" fill="#C5A46D" opacity="0.35"/>
+  <!-- Corner accent dots with Radar Beacon -->
+  <circle cx="22" cy="22" r="2.5" fill="#C5A46D" opacity="0.6"/>
+  <circle cx="22" cy="22" r="2.5" fill="none" stroke="#C5A46D" stroke-width="1">
+    <animate attributeName="r" values="2.5; 7; 11" dur="2.4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="978" cy="22" r="2.5" fill="#C5A46D" opacity="0.6"/>
+  <circle cx="978" cy="22" r="2.5" fill="none" stroke="#C5A46D" stroke-width="1">
+    <animate attributeName="r" values="2.5; 7; 11" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8; 0.2; 0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+  </circle>
 
   <!-- ═══ TOP-LEFT: EDITORIAL HEADLINE ═══ -->
   <text x="44" y="56" font-family="'SF Mono', Monaco, monospace" font-size="10" letter-spacing="2" fill="#C58B98" font-weight="600">COMMIT LOG · REAL GITHUB ACTIVITY</text>
-  <text x="44" y="92" font-family="Georgia, 'Times New Roman', serif" font-size="21.5" font-weight="700" fill="#F2EAE0">A year of building, <tspan font-style="italic" fill="#E27396">one square</tspan> at a time.</text>
+  <text x="44" y="92" font-family="Georgia, 'Times New Roman', serif" font-size="21.5" font-weight="700" fill="#F2EAE0">A year of building, <tspan font-style="italic" fill="url(#act-sheen)">one square</tspan> at a time.</text>
 
   <!-- ═══ TOP-RIGHT: 4 STAT METRICS ═══ -->
   <!-- Col 1: Contributions (GitHub's totalContributions) -->
@@ -492,6 +522,13 @@ def render_svg(snap):
   <text x="80" y="201" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#9E8C94" text-anchor="end">Mon</text>
   <text x="80" y="234" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#9E8C94" text-anchor="end">Wed</text>
   <text x="80" y="267" font-family="'SF Mono', Monaco, monospace" font-size="9.5" fill="#9E8C94" text-anchor="end">Fri</text>
+
+  <!-- ═══ HEATMAP SCANLINE BEAM ═══ -->
+  <g clip-path="url(#act-heatmap-clip)">
+    <rect x="90" y="170" width="80" height="120" fill="url(#act-grid-scan)">
+      <animate attributeName="x" values="90; 860; 90" dur="6.5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
 
   <!-- ═══ HEATMAP CELLS ═══ -->
   {"".join(svg_cells)}
