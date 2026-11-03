@@ -8,7 +8,7 @@
 <!-- ═══ SECTION 01: CINEMATIC HERO ═══ -->
 <a href="https://stephen-s-portfolio-psi.vercel.app/" target="_blank" rel="noopener noreferrer">
   <img
-    src="assets/jeya-stephen-hero.svg"
+    src="assets/hero-spectrum.svg"
     width="100%"
     alt="Jeya Stephen — AI/ML Engineer · Full-Stack Developer · AI &amp; Data Science"
   />

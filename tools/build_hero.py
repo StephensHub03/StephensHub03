@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build assets/jeya-stephen-hero.svg — neon-violet spectrum hero card.
+"""Build assets/hero-spectrum.svg — neon-violet spectrum hero card.
 
 Usage: python3 tools/build_hero.py
 The portrait is embedded as base64 because GitHub renders README SVGs via
@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 PORTRAIT = ROOT / "public" / "portrait-executive.jpg"
-OUT = ROOT / "assets" / "jeya-stephen-hero.svg"
+OUT = ROOT / "assets" / "hero-spectrum.svg"
 
 W, H = 1000, 412
 SERIF = "Georgia, 'Times New Roman', 'DejaVu Serif', serif"
