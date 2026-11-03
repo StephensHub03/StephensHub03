@@ -8,7 +8,7 @@
 <!-- ═══ SECTION 01: CINEMATIC HERO ═══ -->
 <a href="https://stephen-s-portfolio-psi.vercel.app/" target="_blank" rel="noopener noreferrer">
   <img
-    src="assets/hero-spectrum.svg"
+    src="assets/hero-burgundy.svg"
     width="100%"
     alt="Jeya Stephen — AI/ML Engineer · Full-Stack Developer · AI &amp; Data Science"
   />
@@ -18,23 +18,15 @@
 
 <!-- ═══ HERO SOCIAL BADGES STRIP ═══ -->
 <p align="center">
-  <a href="https://stephen-s-portfolio-psi.vercel.app/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/PORTFOLIO-stephen--s--portfolio--psi.vercel.app-5B21B6?style=for-the-badge&labelColor=07050D&logo=vercel&logoColor=C084FC" alt="Portfolio"/>
-  </a>
-  &nbsp;
-  <a href="https://www.linkedin.com/in/stephen-profile/" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/LINKEDIN-stephen--profile-3B1D73?style=for-the-badge&labelColor=07050D" alt="LinkedIn"/>
-  </a>
+  <a href="https://stephen-s-portfolio-psi.vercel.app/" target="_blank" rel="noopener noreferrer"><img src="assets/badges/portfolio.svg" height="40" alt="Portfolio — stephen-s-portfolio-psi.vercel.app"/></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/stephen-profile/" target="_blank" rel="noopener noreferrer"><img src="assets/badges/linkedin.svg" height="40" alt="LinkedIn — stephen-profile"/></a>
   <br/>
-  <a href="https://github.com/StephensHub03" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.shields.io/badge/GITHUB-StephensHub03-5B21B6?style=for-the-badge&labelColor=07050D&logo=github&logoColor=C084FC" alt="GitHub"/>
-  </a>
-  &nbsp;
-  <a href="mailto:connect.stephen01@gmail.com">
-    <img src="https://img.shields.io/badge/EMAIL-connect.stephen01%40gmail.com-3B1D73?style=for-the-badge&labelColor=07050D&logo=gmail&logoColor=C084FC" alt="Email"/>
-  </a>
-  &nbsp;
-  <img src="https://komarev.com/ghpvc/?username=StephensHub03&label=VIEWS&color=A855F7&style=for-the-badge" alt="Profile Views"/>
+  <a href="https://github.com/StephensHub03" target="_blank" rel="noopener noreferrer"><img src="assets/badges/github.svg" height="40" alt="GitHub — StephensHub03"/></a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="mailto:connect.stephen01@gmail.com"><img src="assets/badges/email.svg" height="40" alt="Email — connect.stephen01@gmail.com"/></a>
+  &nbsp;&nbsp;&nbsp;
+  <img src="https://komarev.com/ghpvc/?username=StephensHub03&label=VIEWS&color=D9B48A&labelColor=2B2424&style=for-the-badge" height="34" alt="Profile Views"/>
 </p>
 
 </div>
