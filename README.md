@@ -116,7 +116,7 @@
 | **05 Data &amp; Infra** | MongoDB, PostgreSQL, Pinecone Vector DB, Firebase, Docker, AWS, Vercel | Relational & NoSQL schemas, vector search, containerization, cloud hosting |
 | **06 Fundamentals** | Git, GitHub, Postman, Linux, DSA, OOP, DBMS, System Architecture | Version control, CI/CD, modular architecture, distributed system design |
 
-</detailss>
+</details>
 
 <br/>
 
