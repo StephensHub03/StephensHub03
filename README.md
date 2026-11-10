@@ -1,6 +1,6 @@
 <!-- ═══════════════════════════════════════════════════════════════════
      JEYA STEPHEN — GITHUB PROFILE README
-     Dark Cinematic Obsidian · Deep Burgundy · Antique Gold Palette
+     Dark Cinematic Obsidian · Deep Burgundy · Antique Gold Palett
      ═══════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
