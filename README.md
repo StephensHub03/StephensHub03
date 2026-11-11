@@ -1,5 +1,5 @@
 <!-- ═══════════════════════════════════════════════════════════════════
-     JEYA STEPHEN — GITHUB PROFILE READ
+     JEYA STEPHEN — GITHUB PROFILE README
      Dark Cinematic Obsidian · Deep Burgundy · Antique Gold Palette
      ═══════════════════════════════════════════════════════════════════ -->
 
